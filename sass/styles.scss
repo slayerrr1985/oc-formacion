@@ -3,12 +3,14 @@ $fonts_path: "../fonts/";
 $base_font: "roboto";
 $base_font_size: 17px;
 $base_font_color: #000000;
-$content_width: 1000px;
+$featured_color: #ababab1f;
+$content_width: 960px;
 
 $verde_oc: #6eb7a6;
 $azul_oc: #a6c2dd;
 $verde_oscuro_oc: #008d76;
 $azul_oscuro_oc: #0063a6;
+
 
 
 @import "_roboto.scss";
@@ -21,8 +23,8 @@ $azul_oscuro_oc: #0063a6;
 
 .introduction{
     padding: 0.5em 1.5em;
-    background-color: $verde_oc;
-
+    background-color: $featured_color;
+    border-radius: 5px;
 }
 
 .tutorial{
