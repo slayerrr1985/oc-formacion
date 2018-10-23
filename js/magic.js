@@ -1,13 +1,3 @@
-/*$(window).scroll(function() {
-    if ($(this).scrollTop() > 50 ) {
-        $('.scrolltop:hidden').stop(true, true).fadeIn();
-    } else {
-        $('.scrolltop').stop(true, true).fadeOut();
-    }
-});
-$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
-*/
-console.log("holi");
 // ===== Scroll to Top ==== 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
