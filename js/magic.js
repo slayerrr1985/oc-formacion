@@ -11,3 +11,34 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+
+
+$('.drawer-button').click(function() {
+    if (!$('.drawer').hasClass('hidden-drawer')){
+        $('.drawer').addClass('hidden-drawer');
+        $('.drawer-button').addClass('hidden-button');
+        $('body').css("margin-left","0");
+    } else{
+        $('.drawer').removeClass('hidden-drawer');
+        $('.drawer-button').removeClass('hidden-button');
+        $('body').css("margin-left","250px");
+    }
+});
+
+
+
+$('a[href^="#"]').click(function(e) {    
+    var id = $(this).attr('href');  
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    e.preventDefault();
+    console.log($id.offset().top);
+
+    var pos = $id.offset().top + 2;
+    console.log(pos);
+    $('body,html').animate({
+        scrollTop: pos
+    }, 1000);
+});

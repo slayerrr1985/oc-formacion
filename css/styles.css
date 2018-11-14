@@ -44,12 +44,15 @@ body {
 header {
   margin: 0;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 120px; }
 
 .container {
   margin: 0 auto;
   padding: 0;
-  max-width: 960px; }
+  max-width: 960px;
+  min-height: calc(100vh - 212px);
+  width: 92%; }
 
 h2 {
   line-height: 1.3em; }
@@ -80,7 +83,8 @@ footer {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 75px; }
   footer .footer-content {
     width: 80%;
     margin: 25px auto; }
@@ -92,6 +96,32 @@ footer {
 .header_logo {
   margin: 0 auto;
   display: block; }
+
+.main_menu {
+  margin: 1em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .main_menu .card {
+    margin: 1em;
+    border-radius: 5px; }
+    .main_menu .card img {
+      border-radius: 5px; }
+    .main_menu .card p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 0.9em; }
+    .main_menu .card a {
+      text-decoration: none;
+      color: #000000; }
+  .main_menu .card:hover img {
+    opacity: 0.8; }
 
 .introduction {
   padding: 0.5em 1.5em;
@@ -162,3 +192,93 @@ footer {
 #return-to-top:hover i {
   color: #fff;
   top: 5px; }
+
+.drawer {
+  height: 100%;
+  /* 100% Full-height */
+  width: 250px;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61); }
+  .drawer h2 {
+    padding: 0.5em;
+    color: #f5f5f5;
+    margin: 0;
+    height: 70px;
+    line-height: 1.8em;
+    vertical-align: middle;
+    display: inline-block; }
+  .drawer ul {
+    display: block;
+    background-color: #333333;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em; }
+    .drawer ul li {
+      list-style: none;
+      border-bottom: 1px solid #111;
+      padding: 0;
+      margin: 0; }
+      .drawer ul li a {
+        display: block;
+        padding: 0.5em;
+        color: #f5f5f5;
+        text-decoration: none; }
+      .drawer ul li a:hover {
+        background-color: #0063a6; }
+    .drawer ul ul {
+      font-size: 0.9em;
+      padding-left: 1em; }
+      .drawer ul ul a:hover {
+        background-color: #008d76; }
+
+.drawer-button {
+  display: block;
+  background-color: #111;
+  color: #f5f5f5;
+  position: fixed;
+  /* Stay in place */
+  left: 180px;
+  top: 0;
+  /* Stay at the top */
+  z-index: 1;
+  /* Stay on top */
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  height: 30px;
+  width: 70px;
+  line-height: 25px;
+  margin: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 7px 7px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61); }
+
+.body_with_drawer {
+  margin-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.hidden-drawer {
+  left: -250px; }
+
+.hidden-button {
+  left: -70px; }

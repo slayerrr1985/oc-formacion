@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>Esta formación de creación de ejercicios de secundaria, está centrada en conocer los aspectos que hay que tener en cuenta a la hora de crear un ejercicio. Para ello vamos a ir viendo desde los aspectos más generales, tipos de ejercicios, su visualización, o su creación desde cero de un ejercicio, teniendo como apoyo solamente la documentación que nos aporta la editorial.</p>
+        </section>
+        <section class="tutorial">
+            <h3>¿Qué es un ejercicio?</h3>
+            <p>Es el medio con el cual un profesor puede evaluar los conocimientos y el progreso de sus alumnos.</p>
+            <p>Con la llegada de las tecnologías digitales, los libros de texto de papel se están adaptando y pasando a nuevos formatos, desde lo cuales el profesor puede llevar un control más exhaustivo del progreso de sus alumnos, llegando en algunos casos a ser en tiempo real.</p>
+            <p>En este punto es el que entramos nosotros, nuestro trabajo es ser el puente entre el formato papel y el digital, en este caso centrándonos en la digitalización de los ejercicios.</p>
+            <p>Ejemplo de ejercicio digitalizado:</p>
+            <video controls>
+                <source src="video/Ejercicio_muestra.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="tutorial">
+            <h3>Adaptación - Papel vs Digital</h3>
+            <p>A la hora de adaptar un ejercicio pensado para papel a formato digital, se tienen que tener en cuenta una serie de puntos.</p>
+            <ul>
+                <li><b>Atención al detalle</b>
+                    <p>Este es el aspecto más importante a la hora de adaptar un ejercicio.</p>
+                    <p>El objetivo principal de esta adaptación es mantenerse lo más fiel posible al formato original. Para ello, tenemos que intentar mantener el estilo original, dentro de lo que sea posible, usando la misma terminología, los mismos estilos, etc. Todo ello dentro de lo que nos permintan nuestras herramientas.</p>
+                </li>
+                <li><b>Formato</b></li>
+                <p>El espacio con el que contamos para realizar los ejercicios es limitado.</p>
+                <p>Tenemos dos espacios principales, el espacio de enunciado y el espacio de desarrollo del ejercicio. Cada uno de ellos tiene una posición y espacio diferente.</p>
+                <ul>
+                    <li>El enunciado aparece en la parte superior y es donde desarrollamos la pregunta o preguntas que va a tener que resolver el alumno.</li>
+                    <li>La zona de desarrollo de ejercicio, es donde el alumno va a responder a las preguntas que se han planteado en el enunciado. Esta zona cuenta con distintos elementos de apoyo, los cuales veremos más adelante.</li>
+                </ul>
+                <video controls>
+                    <source src="video/Formato.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <li>Tipo de respuesta
+                    <p>A la hora de puntuar los ejercicios tenemos que tener en cuenta el tipo de respuesta. Vamos a trabajar con dos tipo de respuesta:
+                    </p>
+                    <ul>
+                        <li>Ejercicios de respuesta abierta: son aquellos en los que el ejercicio no se autocorrige y es el profesor quien lo puntua.</li>
+                        <li>Ejercicios de respuesta cerrada: son aquellos que se autocorrigen de forma inmediata por el alumnos al clickar sobre el botón de comprobar.</li>
+                        <video controls>
+                            <source src="video/Respuestas.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="tutorial">
+            <h3>Tipos de ejercicios:</h3>
+            <p>Para la adaptación de los ejercicios, contamos con varias tipologías de ejercicios</p>
+            <ul>
+                <li>Keying:
+                    <p>Ejercicios en los que el alumno escribe la respuesta.</p>
+                    <video controls>
+                        <source src="video/Keying.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <p>Ejemplos de ejercicios keying: </p>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/01-Tuto_keying_cerrada.json">Preview respuesta cerrada</a></li>
+                        <li>
+                            <p><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/01-Tuto_keying_abierta.json">Preview respuesta abierta</a></p>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>Dropdown:
+                    <p>Selección de opciones en una caja desplegable.</p>
+                    <p>Son siempre de respuesta cerrada.</p>
+                    <video controls>
+                        <source src="video/Dropdown.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <p>Ejemplos de ejercicios dropdown:</p>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/02-Tuto_dropdown.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Click:
+                    <p>Selección de palabras o imágenes</p>
+                    <video controls>
+                        <source src="video/Click.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <p>Ejemplos de ejercicios click:</p>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/03-Tuto_click.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Checkbox:
+                    <p>Selección de opciones de forma cuadrada.</p>
+                    <video controls>
+                        <source src="video/Check.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <p>Ejemplos de ejercicios checkbox:</p>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/04-Tuto_checkbox.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Drag and drop:
+                    <p>Permite arrastrar elementos, textos, imágenes, etc. a una imagen, a una tabla, etc.</p>
+                    <video controls>
+                        <source src="video/Drag.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/05-Tuto_drag.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Reorder:
+                    <p>Ordenación de elementos, pueden ser textos o imágenes.</p>
+                    <video controls>
+                        <source src="video/Reorder.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/07-Tuto_reorder.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Facsímil:
+                    <p>Ejercicios que se realizan sobre una imagen.</p>
+                    <p>Sobre la imagen se pueden utilizar las siguentes tipologías: keying, dropdown, drag and drop y dropdown.</p>
+                    <video controls>
+                        <source src="video/Facsimil_base.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/08-facsimil.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Uso de dos tipos de ejercicio en uno.
+                    <p>En algunas ocasiones es necesario utilizar dos tipos de ejercicios de forma combinada para conseguir recrear de forma correcta el ejercicio.</p>
+                    <video controls>
+                        <source src="video/Mix.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/09-Tuto_mix.json">Preview</a></li>
+                    </ul>
+                </li>
+                <li>Linking-lines:
+                    <p>Unir con flechas, puede ser con dos o con tres columnas.</p>
+                    <video controls>
+                        <source src="video/Linking.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/010a-linking-lines_example.json">Preview de dos columnas</a></li>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/010b-linking-lines-triple_empty.json">Preview de tres columnas</a></li>
+                    </ul>
+                </li>
+                <li>Evaluation:
+                    <p>Ejercicio de tipo test. Son varios checkbox consecutivos.</p>
+                    <video controls>
+                        <source src="video/Teste.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <ul>
+                        <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/011-evaluation_empty.json">Preview</a></li>
+                    </ul>
+                    <li>Wordsearch:
+                        <p>Sopa de letras.</p>
+                        <video controls>
+                            <source src="video/Sopa.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/012-wordsearch_empty.json">Preview</a></li>
+                        </ul>
+                    </li>
+                    <li>Crossword:
+                        <p>Crucigrama.</p>
+                        <video controls>
+                            <source src="video/Cross.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/013-crossword_empty.json">Preview</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </section>
+        <section class="tutorial">
+            <h3>Manuscritos</h3>
+            <p>Para poder realizar todos estos tipos de ejercicios, utilizamos unas plantillas de word, a las que llamamos manuscritos.</p>
+            <p>En estos manuscritos, es donde se carga el contenido del ejercicio, enunciado, desarrollo de la pregunta, imágenes, audios, etc.</p>
+            <p>Los manuscritos se componen de distintas cajas, cada una de ellas tiene una función diferente, las tres primeras cajas son comunes para todos los manuscritos:</p>
+            <ul>
+                <li>Caja Manuscript: es donde se indica el tipo de ejercicio y la clase de formato que va a tener el ejercicio.</li>
+                <li>Caja Metadata: en está caja se indica donde se encuetra el ejercicio con respecto al libro.</li>
+                <li>Caja Rubric: en está caja es donde se escribe el enunciado del ejercicio.
+                    <video controls>
+                        <source src="video/Cajas_manuscrito.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li>La última caja básica, cambia según el formato del ejercicio, es donde se desarrolla el ejercicio.
+                    <ul>
+                        <li>Manuscrito básico:
+                            <p>Caja text-block: se utiliza en ejercicios sin ningún adorno.</p>
+                            <p>Acepta la mayor parte de las tipologías de ejercicios, exceptuando linking-lines, crucigramas y sopa de letras.</p>
+                            <p>Id manuscrito: 01</p>
+                            <video controls>
+                                <source src="video/Caja_basica.mp4" type="video/mp4"> Your browser does not support the video tag.
+                            </video>
+                            <ul>
+                                <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/01-Tuto_keying_cerrada.json">Preview</a></li>
+                            </ul>
+                        </li>
+                        <li>Manuscrito bullets o labeled:
+                            <p>Caja list:</p>
+                            <p>Acepta la mayor parte de las tipologías de ejercicios, exceptuando linking-lines, crucigramas y sopa de letras.</p>
+                            <p>Bullet, se utiliza en ejercicios donde aparece un punto (bullet) al principio de una palabra u oración.</p>
+                            <p>Labeled, se utiliza en ejercicios donde aparece un número o letra al principio de una palabra u oración.</p>
+
+                            <p>Id manuscrito: bullets-15, labeled-11</p>
+                            <video controls>
+                                <source src="video/Caja_bullet.mp4" type="video/mp4"> Your browser does not support the video tag.
+                            </video>
+                            <ul>
+                                <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/015-list_bulleted_drag.json">Preview bullet</a></li>
+                                <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/014-list_labeled_keying.json">Preview labeled</a></li>
+                            </ul>
+                        </li>
+                        <li>Manuscrito para tablas:
+                            <p>Caja table: se utiliza en ejercicios donde aparece una tabla o en ejercicios con texto debajo de una imagen.</p>
+                            <p>En los ejercicios de tabla, suelen usarse las siguientes tipologías: keying, dropdown, drag and drop y checkbox.</p>
+                            <p>Existen distintos tipos de tabla, cada una de ellas utiliza una id de manuscrito diferente:</p>
+                            <ul>
+                                <li>Tabla con la cabecera en al parte superior, id manuscrito: 07</li>
+                                <p>
+                                    <a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/018-table_column_headers_drag.json">Preview</a></p>
+                                <li>Tabla con la cabecera en al parte izquierda, id manuscrito: 08</li>
+                                <p><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/017-table_row_headers_drag.json">Preview</a></p>
+                                <li>Tabla con la cabecera en al parte superior y en el lado izquierdo, id manuscrito: 09</li>
+                                <p><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/016-table_both_headers_keying_empty.json">Preview</a>
+                                    <video controls>
+                                        <source src="video/Caja_tabla.mp4" type="video/mp4"> Your browser does not support the video tag.</video>
+                                </p>
+                            </ul>
+                            <p>Con esta misma caja, pero con diferente id, se realizan los ejercicios con una imagen en la parte superior. Id manuscrito: 02</p>
+                            <p>
+                                <video controls>
+                                    <source src="video/Debajo_imagen.mp4" type="video/mp4"> Your browser does not support the video tag.
+                                </video><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/019-under_images_drag_empty.json">Preview</a></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            Algunos ejercicios necesitan un manuscrito en particular:
+            <ul>
+                <ul>
+                    <li>Manuscrito facsímil:
+                        <p>Caja faithfull: se utiliza en ejercicios de facsímil.</p>
+                        <p>Id manuscrito: 06</p>
+                        <video controls>
+                            <source src="video/Facsimil.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/08-facsimil.json">Preview</a></li>
+                        </ul>
+                    </li>
+                    <li>Manuscrito linking-lines:
+                        <p>Id manuscrito: 05</p>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/010a-linking-lines_example.json">Preview</a></li>
+                        </ul>
+                    </li>
+                    <li>Manuscrito triple linking-lines:
+                        <p>Id manuscrito: 05</p>
+                        <video controls>
+                            <source src="video/Linkinlines.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/010b-linking-lines-triple_empty.json">Preview</a></li>
+                        </ul>
+                    </li>
+                    <li>Manuscrito crossword:
+                        <p>Id manuscrito: 10</p>
+                        <video controls>
+                            <source src="video/Crossword.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/013-crossword_empty.json">Preview</a></li>
+                        </ul>
+                    </li>
+                    <li>Manuscrito wordsearch:
+                        <p>Id manuscrito: 12</p>
+                        <video controls>
+                            <source src="video/Wordsearch.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/012-wordsearch_empty.json">Preview</a></li>
+                        </ul>
+                    </li>
+                    <li>Manuscrito evaluation:
+                        <p>Id manuscrito: evaluation</p>
+                        <video controls>
+                            <source src="video/Test.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <ul>
+                            <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/011-evaluation_empty.json">Preview</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </section>
+        <section class="tutorial">
+            <h3>Cajas complementarias</h3>
+            <p>En algunos casos para realizar de forma óptima un ejercicio es necesario la ayuda de algunos complementos:</p>
+            <ul>
+                <li>Caja media:</li>
+                <p>Esta caja sirve para colocar imágenes y audios.</p>
+            </ul>
+            <video controls>
+                <source src="video/Caja_medias.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <ul>
+                <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/021-Tuto_keying_abierta-media.json">Preview</a></li>
+            </ul>
+            <ul>
+                <li>Caja wordpool:</li>
+                <p>Esta caja sirve para poner como ejemplo una serie de palabras o un texto, que ayudan a realizar el ejercicio.</p>
+                <video controls>
+                    <source src="video/Wordpool.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <ul>
+                    <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/020-Tuto_keying_abierta-wordpool.json">Preview</a></li>
+                </ul>
+                <li>Tokenbank:</li>
+                <p>Está caja no tiene un efecto en el resultado visual del ejercicio, ya que sirve de apoyo para los ejercicios de drag and drop. Los cuales siempre van acompañados de esta caja. Sirve para escribir las distintas palabras que van a ser arrastradas.</p>
+                <video controls>
+                    <source src="video/Tokenbank.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <ul>
+                    <li><a target="_blank" href="https://ftd.oneclick.es/cat/i2c_html_editor/gateway.php?action=preview&project=svn://ftd.oneclick.es:3693/DEMO&user=amF2aWVyLnNlcnJhbm8%3D&password=cmlhYW5pdmUxNw%3D%3D&json=ejercicios/models/022-ejemplo_tokenbank.json">Preview</a></li>
+                </ul>
+            </ul>
+        </section>
+        <section class="tutorial">
+            <h3>Subversión</h3>
+            <p>Apache Subversion (a menudo abreviado SVN, después del nombre de comando svn) es un sistema de control de versiones y revisiones de software distribuido como software libre. Los editores pueden usar Subversion para mantener versiones actuales e históricas de la documentación. SVN utiliza un modelo de servidor / cliente: esto significa que el repositorio está ubicado en un servidor remoto y el usuario necesita un programa o cliente local para descargar, confirmar y actualizar los cambios en el servidor. El cliente SVN más popular es TortoiseSVN. Una vez instalado, está totalmente integrado dentro del sistema shell de Windows</p>
+            <p>Todos los proyectos se almacenan en un repositorio central (servidor web). Los editores mantienen una copia local del proyecto en sus ordenadores. Los editores comparten regularmente información con el servidor para mantenerla actualizada con sus copias. Cada vez que los cambios se confirman en el servidor, se genera una nueva versión de los archivos modificados. Los usuarios siempre pueden volver a la revisión previa de cada archivo si es necesario.</p>
+            <p>Para empezar tenemos que tener instalado el Tortoise.</p>
+            <p><a target="_blank" href="https://tortoisesvn.net/downloads.html">Descarga Tortoise</a></p>
+            <p>Operaciones básicas:</p>
+            <ul>
+                <li><b>Checkout:</b> Esta opción se utiliza la primera vez que los usuarios descargan una copia de un proyecto. Tenemos que conocer la URL del proyecto. Todas las URL de SVN comienzan con "svn: //".</li>
+                <li><b>Update:</b> Esta operción se realiza cada vez que necesitamos actualizar nuestro repositorio. Ya que algún compañero a podido hacer algún cambio que afecte a nuestros archivos. Al tener el repositorio actualizado se evitan los conflictos.</li>
+                <li><b>Commit:</b> Los editores utilizan el comando Confirmar para sincronizar sus contenidos locales en el repositorio en el lado del servidor y compartirlos con otros editores. En otras palabras, cuando un editor realiza una serie de cambios en un repositorio, debe de compartirlos, comitear, para que el resto de compañeros tengan acceso a cambio realizado.</li>
+                <li><b>Revert:</b> Sirve para revertir el cambio realizado en los archivos del repositorio, se tiene que realizar antes de que esos cambios sean comiteados.</li>
+                <li><b>Resolve:</b> En algunas ocasiones surgen conflictos entre los archivos locales de un editor, ya que puede haber un archivo que no se haya actualizado.</li>
+                <li><b>Clean up:</b> Sirve para hacer una limpieza más a fondo del repositorio, eliminando los archivos que no sean correctos.</li>
+            </ul>
+            <video controls>
+                <source src="video/Subversion.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="tutorial">
+            <h3>Parseo</h3>
+            <p>Es el proceso en el cual el manuscritos que tenemos pasa a ser visible en un navegador. Generando un archivo html y un json.</p>
+            <p>Este proceso está totalmente automatizado, y desde los manuscritos solo tenemos que clickar en el icono que hemos dispuesto para ello.</p>
+            <video controls>
+                <source src="video/Parseo.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="tutorial">
+            <h3>Creación de ejercicios</h3>
+            <p>Una vez ya conocemos los tipos de ejercicios que podemos crear y las distintas visualizaciones que podemos utilizar, vamos a crear un ejercicio desde cero.</p>
+            <p>El tipo de ejercicio: lo más fácil para decidir si escoger un tipo de ejercicio u otro es intentar ser lo más fiel posible al libro de texto que tenemos que adaptar. En algunas ocasiones no es posible y tenemos que adaptar el ejercicio a las herramientas de las que disponemos.</p>
+            <p>En el video vamos a crear un ejercicio desde el principio. Pudiendo observar la nomenclatura básica a la hora de crear un ejercicio.</p>
+            <video controls>
+                <source src="video/Ejercicio_0.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+            <p>Nomenclatura especifica en la creación de ejercicios:</p>
+            <ul>
+                <li><b>[]</b> - Para crear una incógnita usamos los corchetes, exceptuando los ejercicios que llevan un tipo de manuscrito concreto, como puede ser un crucigrama. La tipología de ejercicios que usan esta nomenclatura son: Keying, Dropdown, Checkbox, Click Drag and drop y Reorder.</li>
+                <li><b>[opción 1|opción 2]</b> - Dentro de los ejercicios que usan los corchetes para crear la incógnita, todos aquellos que son de seleccionar una opción u otra, llevan una línea vertical, <b>|</b> creada con altgr + 1, que separa las distintas opciones.
+                    <p>Otro uso de la línea vertical se da en los ejercicios de tipo keying. En este tipo de ejercicios se usa para dar distintas opciones en una misma incógnita. Se puede dar el caso en el que queramos permitir al alumno que una misma palabra se escriba de formas diferentes, por ejemplo [Caballo|caballo| CABALLO]. Al escribirlo de esta manera, da igual como se escriba la palabra, siempre dará una de estas opciones como válida.</p>
+                </li>
+                <li><b>[texto*]</b> - En los ejercicios que tienen distitas opciones, para marcar cual es la correcta se utiliza el asterisco <b>*</b>.</li>
+                <li><b>[texto+]</b> - En los ejercicios en los que necesitemos que una de las respuestas se muestre a modo de ejemplo se usa el <b>+</b></li>
+                <li><b>[(group:a):][(group:a):]</b> - Dentro de los corchetes se pueden incluir algunas clases para que modifiquen su comportamiento. En este caso al utilizar la clase: group, las distintas palabras que vayan dentro de un mismo grupo, se resuelven en común. Se utiliza en ejercicios de keying, para poder escribir dos palabras diferentes en dos posiciones y las dos sean correctas. También se usa en los drag and drop, para que el drag depositado se pueda poner en distintas posiciones.</li>
+                <li><b>[(evaluate:false):]</b> - Es una clase que se utiliza para convertir el ejercicio en abierto y no tenga puntuación.</li>
+                <li><b>{U01_02_03.png} o {U01_02_03.mp3}</b> - Este tipo de nomenclatura se usa para incluir un auido o una imagen en el ejercicio.</li>
+                <li><b>{model-answer:Respuesta modelo}</b> - Esta clase se usa para incorporar una respuesta modelo.</li>
+                <li><b>[\2 + 3\]</b> - En algunos casos es necesario utilizar símbolos que no funcionan ya que tienen otra función, para solucionar este problema, se usas las dos barras <b>\texto\</b> altgr + º, para que se puedan mostrar. En este caso el símbolo +.</li>
+                <li>Para poder utilizar distintos tipos de ejercicios en un solo manuscrito, tenemos que escribir dentro de los corchetes la tipología del ejercicio. Un ejemplo sería, dentro de un documento keying, si queremos que aparezca un dropdown, se tendría que esciribir lo siguiente dentro de los corchetes: <b>[dropdown:opción 1|opción 2]</b>.</li>
+            </ul>
+            <video controls>
+                <source src="video/Ejercicio_0.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="tutorial">
+            <h3>Manipulación del contenido</h3>
+            <p>El contenido que va en las cajas de enunciado o en la de desarrollo de ejercicio, puede ser modificado para que se parezca lo máximo al original.</p>
+            <p>Se pueden usar diferentes elementos:</p>
+            <ul>
+                <li><b>Etiquetas html:</b> aunque usemos documentos de word para la carga de contenido, al transformarlos en contenido digital algunos elementos pueden dar problemas, algunos casos son la negrita o la cursiva, que en algunas ocasiones producen espacios no deseados. Para solucionar este problema usamos dos etiquetas html, para escribir en negrita, el texto va dentro de la etiqueta &lt;b&gt;texto&lt;/b&gt;, el resultado sería: <b>ejemplo</b>. Si el texto tiene que ir en cursiva usamos la etiqueta &lt;i&gt;texto&lt;/i&gt;, el resultado sería: <i>ejemplo</i>. Además de estas dos etiquetas se pueden utiliza</li>
+                <li><b>Entidades html:</b> Son aquellos elementos que tienen una forma de escribirse muy concreta y que el manuscrito convierte en simbolos o letras que necesitamos y no se pueden escribir con el teclado. Un ejemplo sería &amp;rarr;, este codigo equivale a una flecha hacia la derecha, el resultado sería: &rarr;.</li>
+                <li><b>Estilo en línea:</b> este tipo de estilos se deben usar lo menos posible, un ejemplo, sería &lt;span style="color:blue"&gt;Texto&lt;/span&gt; el resultado sería: <span style="color:blue">Texto</span>.</li>
+                <video controls>
+                    <source src="video/MANIPULACION_EJERCICIOS01.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <li>También existen unas etiquetas, denominadas <b>clases</b>, que se han creado de forma especifica para que funcione en estos manuscritos. Se han creado clases, para poder escribir fracciones, radicales, etc.</li>
+                <video controls>
+                    <source src="video/Elementos_modificadores.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+            </ul>
+        </section>
+        <section class="tutorial">
+            <h3>Photoshop</h3>
+            <p>A la hora de editar las imágenes se pueden dar dos situaciones:</p>
+            <p>Que ya tengamos las imágenes recortadas o que tengamos que recortarlas.</p>
+            <p>Si la imagen ya está recortada, solo habría que darle el tamaño adecuado.</p>
+            <p>Para realizar estas acciones vamos a usar unos comandos básicos de photoshop: cambiar tamaño y recortar.</p>
+            <ul>
+                <li>Si la imagen ya nos la han dado recortada, solo hay que cambiar su tamaño, para ello podemos ir al menú de arriba, pinchar en imagen y seleccionar Tamaño de imagen o pulsar ctrl + alt + I. Nos abrirá un diálogo donde pondremos el tamaño que se adecue más al ejercicio.</li>
+                <video controls>
+                    <source src="video/Tamano_01.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <li>Si la imagen la tenemos que obtener del pdf, tendríamos que dar algún paso más: se hace un pantallazo al pdf, se pega en un nuevo documento de photoshop, ctrl + N, y lo recortaremos, seleccionamos la imagen que queremos, pulsando la M, una vez seleccionada la imagen la recortamos, pulsando C y enter. Una vez recortado solo habría que cambiar el tamaño y guardar.</li>
+                <video controls>
+                    <source src="video/Tamano_02.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+                <li>Una vez obtenida la imagen deseada, pasaríamos a guardarla. Para guardarla podemos ir al menú Archivo y seleccionar guardar para página web o pulsar Ctrl + Alt + Shift + S. En el diálogo que aparece seleccionamos png-24, clickamos en salvar y seleccionamos la carpeta donde tiene que ir la imagen.</li>
+            </ul>
+        </section>
+        <section class="tutorial">
+            <h3>Objetivos-Kpi (key performance indicator)</h3>
+            <p></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
