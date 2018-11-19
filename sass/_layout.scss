@@ -15,12 +15,15 @@ header{
 	margin:0;
     padding:0;
     overflow: hidden;
+    height:120px;
 }
 
 .container{
     margin: 0 auto;
     padding: 0;
     max-width: $content_width;
+    min-height: calc(100vh - 212px);
+    width: 92%;
 }
 
 
@@ -62,6 +65,7 @@ footer{
 	margin:0;
     padding:0;
     overflow: hidden;
+    height: 75px;
     .footer-content{
         width: 80%;
         margin: 25px auto;

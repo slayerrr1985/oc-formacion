@@ -1,3 +1,25 @@
+setTimeout(function(){ 
+    if (window.innerWidth < 800){
+        $('body').css("margin-left","0");
+        $('.drawer').addClass('hidden-drawer');
+        $('.drawer-button').addClass('hidden-button');
+    }
+}, 1000);
+
+$('.container').before("<ul></ul>")
+
+$('.introduction').attr('id', 'introduction');
+$(".drawer ul").append('<li><a href="#introduction">Introducción</a></li>');
+
+
+$('h3').each(function (index){
+    $(this).attr('id', 'menu_' + index);
+    $(".drawer ul").append('<li><a href="#menu_' + index + '">' + $(this).html() + '</a></li>');
+
+});
+
+
+
 // ===== Scroll to Top ==== 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
@@ -12,7 +34,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
     }, 500);
 });
 
-
+/* Drawer Menu */
 $('.drawer-button').click(function() {
     if (!$('.drawer').hasClass('hidden-drawer')){
         $('.drawer').addClass('hidden-drawer');
@@ -25,7 +47,7 @@ $('.drawer-button').click(function() {
     }
 });
 
-
+/* Smooth link scrolling */
 
 $('a[href^="#"]').click(function(e) {    
     var id = $(this).attr('href');  
@@ -42,3 +64,4 @@ $('a[href^="#"]').click(function(e) {
         scrollTop: pos
     }, 1000);
 });
+
