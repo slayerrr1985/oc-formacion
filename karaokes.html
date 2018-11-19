@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<!-- Return to Top -->
+<a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>Los KARAOKES son módulos, que forman parte de un libro educativo interactivo, en el que una canción se acompaña de texto e imágenes sincronizadas. Por tanto, tienen tres componentes:</p>
+                    <ol>
+                    <li>La canción en sí, en formato .mp3.</li>
+                    <li>El texto, que es la letra de la canción.</li>
+                    <li>Las imágenes, que reflejan de forma visual la canción.</li>
+                    </ol>
+            <p>El objetivo de este manual es describir el proceso mediante el cual se toman los tres elementos (canción, letra e imágenes) y se sincronizan y se preparan para que estén disponibles en el libro interactivo final.</p>
+            <p>Para ello, vamos a utilizar dos aplicaciones:</p>
+                    <ul>
+                    <li>Enhanced LRC Maker</li>
+                    <li>LRC to JQuery converter</li>
+                    </ul>
+            <p>Y el fichero .json del KARAOKE que se edita mediante un programa editor de código (por ejemplo Brackets).</p>
+            <p>Es un proceso manual que se basa principalmente en el oído musical de la persona. El tempo de la música y los ritmos de la canción son los que dan las pautas para la correcta sincronización de los KARAOKES. Todo ello ha de depurarse hasta quedar correcto. Esto quiere decir que, comenzaremos con la primera sincronización del texto, pasaremos a la sincronización de las imágenes y probablemente tengamos que retocar ambos después para que el resultado sea satisfactorio (posiblemente varias veces).</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Estructura de carpetas y archivos de un karaoke</h3>
+            <p>Vamos a comprobar que tenemos todos los archivos necesarios para trabajar. En el repositorio del karaoke tiene que haber dos carpetas y un archivo .json.</p>
+            <img src="img/karaokes/carpetas_karaoke.png">
+                    <ul>
+                    <li>Carpeta audio</li>
+                    <li>Carpeta image</li>
+                    <li>Archivo data.json</li>
+                    </ul>
+            <p>En el caso de no existir estas carpetas hay que crearlas y el archivo .json se puede copiar y pegar de otra canción anterior para modificarlo. Todos son iguales, sólo cambian los tiempos de sincronización de imagen y audio dependiendo de la canción.</p>
+            <p><b>En la carpeta de audio</b> se copia la canción (archivo proporcionado por la editorial) en formato .mp3 y .ogg. El nombre tiene que ser "cancion" (sin acento). Quedaría así:</p>
+            <img src="img/karaokes/carpetas_karaoke2.png">
+            <p><b>En la carpeta image</b> tienen que estar las imágenes previamente preparadas (proporcionadas originalmente por la Editorial) pero redimensionadas a 700x500 pixeles y resolución de 72ppp. Se nombran como cancion00.jpg, cancion01.jpg, cancion02.jpg,… etc.</p>
+            <img src="img/karaokes/carpetas_karaoke3.png">
+            <p>Finalmente está <b>el fichero .json</b> que para editarlo se abre con la aplicación Brackets.</p>            
+        </section>
+
+        <section class="tutorial">
+            <h3>Sincronización de la Letra</h3>
+            <p>En este apartado vamos a sincronizar la letra de la canción (el texto en un archivo .txt o Word) a la canción en si (fichero .mp3) que en ambos casos nos facilita la Editorial.</p>
+            <p>La herramienta para realizar esta operación es Enhanced LRC Maker. Se utiliza en un navegador de internet. Las capturas de pantalla que vamos a incluir son de la aplicación Firefox, pueden variar algo en otros navegadores pero son básicamente iguales.</p>
+            <p>Cuando se abre la aplicación en el navegador vemos lo siguiente:</p>
+            <img src="img/karaokes/sincro_letra.png">
+            <p>En general su funcionamiento consiste en que se carga en la aplicación un archivo de texto con la letra y un archivo de audio con la canción. Mientras se reproduce el archivo de audio se asigna cada palabra con la posición temporal de reproducción.</p>
+            <p>Esto se puede realizar mediante el uso del teclado o del ratón, lo que hace avanzar un cursor a lo largo del texto.</p>
+            <p>Las palabras que vayan teniendo asignados sus tiempos pasan a tener color verde.</p>            
+        </section>        
+
+        <section class="tutorial">
+            <h3>Carga de archivos en la aplicación</h3>
+            <p><b>El archivo de audio</b> simplemente hay que arrastrarlo a la pantalla de la aplicación y queda cargado. Se puede apreciar que esto ha sucedido porque aparecen el tiempo de duración de la misma, un control de reproducción/volumen y una barra de progreso en la parte superior de la pantalla.</p>
+            <img src="img/karaokes/carga_archivos.png">
+            <p>Antes de cargar <b>el archivo de texto</b> hay que prepararlo. Tenemos que definir las “frases-estrofas” de la canción. En la aplicación todo el texto se ve en un párrafo, y no vamos a poder diferenciar las frases para luego poder separarlas. Esto se hace poniendo un punto al final de cada frase.</p>
+            <p>El texto de la canción de ejemplo que vamos a seguir en este manual es:</p>
+            <section class="template">
+            <table>
+            <tr>
+            <th><b>Texto original de la canción</b></th>
+            <th><b>Texto preparado con puntos</b></th>
+            </tr>
+            <tr>
+            <td>
+                EN MEDIO DEL DESIERTO<br>
+                HABÍA UN BELLO JARDÍN<br>
+                DONDE VIVÍA UN PUEBLO<br>
+                MUY RICO Y FELIZ.<br>
+                A ORILLAS DEL RÍO NILO<br>
+                NACIÓ UN FARAÓN,<br>
+                QUE DIBUJÓ EN UN PAPIRO<br>
+                UNA PIRÁMIDE Y UN SOL.<br>
+                ¡EGIPTO! ¡EGIPTO!<br>
+                ¡MOMIAS! ¡COCODRILOS!<br>
+                ¡EGIPTO! ¡EGIPTO!<br>
+                ¡SARCÓFAGOS! ¡JEROGLÍFICOS!<br>
+                HACE AÑOS INVENTARON<br>
+                LOS NÚMEROS Y EL ARADO,<br>
+                EL BARCO DE VELA<br>
+                Y TAMBIÉN EL CALENDARIO.<br>
+                <br>
+                ¡EGIPTO! ¡EGIPTO!<br>
+                ¡MOMIAS! ¡COCODRILOS!<br>
+                ¡EGIPTO! ¡EGIPTO!<br>
+                ¡SARCÓFAGOS! ¡JEROGLÍFICOS!<br>
+                <br>
+                ¡EGIPTO! ¡EGIPTO!<br>
+                ¡MOMIAS! ¡COCODRILOS!<br>
+                ¡EGIPTO! ¡EGIPTO!<br>
+                ¡SARCÓFAGOS! ¡JEROGLÍFICOS!<br>
+            </td>
+            <td>
+                EN MEDIO DEL DESIERTO.<br>
+                HABÍA UN BELLO JARDÍN.<br>
+                DONDE VIVÍA UN PUEBLO.<br>
+                MUY RICO Y FELIZ.<br>
+                A ORILLAS DEL RÍO NILO.<br>
+                NACIÓ UN FARAÓN,.<br>
+                QUE DIBUJÓ EN UN PAPIRO.<br>
+                UNA PIRÁMIDE Y UN SOL.<br>
+                ¡EGIPTO! ¡EGIPTO!.<br>
+                ¡MOMIAS! ¡COCODRILOS!.<br>
+                ¡EGIPTO! ¡EGIPTO!.<br>
+                ¡SARCÓFAGOS! ¡JEROGLÍFICOS!.<br>
+                HACE AÑOS INVENTARON.<br>
+                LOS NÚMEROS Y EL ARADO,.<br>
+                EL BARCO DE VELA.<br>
+                Y TAMBIÉN EL CALENDARIO.<br>
+                <br>    
+                ¡EGIPTO! ¡EGIPTO!.<br>
+                ¡MOMIAS! ¡COCODRILOS!.<br>
+                ¡EGIPTO! ¡EGIPTO!.<br>
+                ¡SARCÓFAGOS! ¡JEROGLÍFICOS!.<br>
+                <br>
+                ¡EGIPTO! ¡EGIPTO!.<br>
+                ¡MOMIAS! ¡COCODRILOS!.<br>
+                ¡EGIPTO! ¡EGIPTO!.<br>
+                ¡SARCÓFAGOS! ¡JEROGLÍFICOS!.<br> 
+            </td>
+            </tr>
+            </table>
+            </section>
+            <p> En todas las frases que no acaban con un punto “.” hemos añadido uno (en las que ya lo tienen no es necesario). Al final del proceso hay que quitarlos para que no aparezcan, son sólo marcas para orientarnos durante la sincronización.</p>
+            <p>Cuando ya está preparado se pulsa el botón Import</p>
+            <img src="img/karaokes/sincro_letra2.png">
+            <p>Y se pega en la ventana de introducción de texto que aparece</p>
+            <img src="img/karaokes/sincro_letra3.png">
+            <p>Finalmente se pulsa el botón Parse & Load y ya tendríamos la aplicación preparada para iniciar la sincronización.</p>
+            <img src="img/karaokes/sincro_letra4.png">
+        </section>
+        
+        <section class="tutorial">
+            <h3>Proceso de sincronización de la letra</h3>
+            <p>Las dos líneas rojas debajo de la primera palabra son el cursor que indica cual es la palabra que vamos a definir el tiempo.</p>
+            <p>Lo controles posibles dentro de una canción son:</p>
+                    <ul>
+                    <li>Barra espaciadora: pulsándola indicamos el momento exacto en que comienza una palabra cuando lo escuchamos.</li>
+                    <li>Tecla letra “E” (estrofa): al pulsar tenemos el mismo efecto que la anterior (marcamos el inicio exacto de una palabra) pero en este caso indicamos que es el final de una frase.</li>
+                    <li>Tecla letra “I” (instrumental): en este caso marcamos el inicio de una parte instrumental de la canción (en la que no hay palabras), el resultado final en la pantalla es que aparecen notas musicales (♫ ♫) y marca un espacio de tiempo sin letra en la canción.</li>
+                    </ul>
+            <p>En cuanto pulsamos el botón de reproducción o la barra espaciadora en el teclado, comienza a reproducirse la canción.</p>
+            <img src="img/karaokes/proces_sincro.png">
+            <p>Tenemos que escuchar atentamente y en cada principio de palabra hay que pulsar la barra espaciadora del teclado. Excepto en las palabras que llevan punto, en estas palabras para marcar el fin de frase hay que pulsar la tecla de la letra “E” cuando comienzan.</p>
+            <p>En el caso de haber un interludio musical amplio, mayor del habitual entre punto de frase e inicio de la frase posterior, después de pulsar la tecla de la letra “E” marcando el inicio de la última palabra de la frase, tenemos que pulsar la tecla de la letra “I” marcando el final de dicha palabra. De este modo en el resultado final tendremos la sincronización correcta.</p>
+            <section class="template">
+                   <h4>Es un proceso que requiere práctica, de cara a clarificarlo, estas serían las pautas:</h4>
+                    <ul>
+                    <li>Hay que pulsar barra espaciadora al comienzo de cada palabra que no esté puntuada. Justo cuando comienza.</li>
+                    <li>Hay que pulsar la tecla de la letra “E” cuando comienza una palabra puntuada (final de frase).</li>
+                    <li>Hay que pulsar la tecla de la letra “I” cuando acaba una palabra detrás de la que hay un interludio musical en el que no continúa la letra de la canción (normalmente puntuada por ser final de frase, aunque puede no serlo).</li>
+                    </ul>     
+                    <p>Es importante señalar que, para una buena sincronización, la frase “justo cuando comienza” es literal. Tenemos que prever el inicio de cada palabra para pulsar la tecla correspondiente justo en ese punto. </p>
+                    <p>El proceso es probable que haya de repetirse varias veces hasta obtener el resultado que consideremos óptimo. Es normal cometer errores al pulsar teclas equivocadas o no pulsarlas cuando hay que hacerlo. Si esto sucede lo mejor es cerrar la página y volver a entrar para evitar que, al quedar algo en el cache del navegador, no tome los tiempos correctos. Se tiene que hacer el proceso completo (la canción entera) de una sola vez.</p>                    
+            </section>
+            <p>Cuando ya tenemos un resultado que consideramos satisfactorio. Pulsamos el botón Export</p>       
+            <img src="img/karaokes/proces_sincro2.png">
+            <p>Y aparece la ventana de exportación</p>  
+            <img src="img/karaokes/proces_sincro3.png">
+            <p>Copiamos todo el texto para pegarlo en la aplicación que lo transforma (LRC to JQuery converter), porque directamente no nos sirve para aplicarlo en el fichero .json por su formato. Pero debemos guardarlo, porque de cara a la sincronización de imágenes posterior puede sernos de utilidad. Los tiempos están en absoluto, es decir, nos indican cuando aparece cada palabra desde el segundo 00:00 de inicio de la canción.</p>  
+        </section>
+        
+        <section class="tutorial">
+            <h3>Transformación del texto para poder aplicarlo al .json</h3>
+            <p>Lo primero es pegar el texto copiado de la aplicación Enhanced LRC Maker en la ventana de introducción de texto (superior) de la aplicación LRC to JQuery converter.</p>
+            <img src="img/karaokes/transf_text.png">
+            <p>Pulsamos “Convert”</p>
+            <img src="img/karaokes/transf_text2.png">
+            <p>Y copiamos de la parte inferior el resultado de la conversión.</p>
+            <p>Este texto, que contiene ya la sincronización que acepta el archivo .json puede ser ya pegada directamente en el mismo (en el editor de código).</p>
+            <img src="img/karaokes/transf_text3.png">
+            <p>Esta es la zona donde se pone la sincronización de texto de la canción (que ya hemos realizado) va en la etiqueta “timings”</p>
+            <p>La sincronización de las imágenes va en la etiqueta “images” justo debajo de la anterior.</p>
+            <img src="img/karaokes/transf_text4.png">
+        </section>  
+
+        <section class="tutorial">
+            <h3>Sincronización de las imágenes</h3>
+            <p>La sincronización de imágenes se realiza en base al archivo original de Word proporcionado por la Editorial. En el archivo vienen definidas las imágenes que se corresponden con las frases de la canción. Esto sería el ejemplo de las dos primeras frases:</p>
+            <img src="img/karaokes/sincro_img.png">
+            
+            <section class="template">
+                <p>Anteriormente guardamos el texto que nos da la aplicación Enhanced LRC Maker en su ventana de exportación. Es ahora cuando vamos a necesitarlo. Con los tiempos del inicio de palabra en la zona del .json de “images” vamos poniendo los tiempos. Tenemos que usar los inicios de palabra de los inicios de frases. En el ejemplo “EN” (de “EN MEDIO DEL DESIERTO”) y “DONDE” (de “DONDE VIVÍA UN PUEBLO”) que se corresponderían con cancion00.jpg y cancion01.jpg. La portada por defecto se pone desde 0 hasta cuando comienza la primera imagen.</p>
+                <p style="padding-left:100px;">"images": [<br>
+            		[<br>
+                	"portada.jpg", [0, 10.5]<br>
+            		],<br>
+            		[<br>
+                	"cancion00.jpg", [10.5, 15.5]<br>
+            		],<br>
+           		[<br>
+                	"cancion01.jpg", [15.5, 21]<br>
+            		],<br>
+                </p>
+                <p>El primer tiempo es cuando aparece la imagen y el segundo cuando desaparece (que siempre coincide con el de inicio de la imagen posterior).</p>
+            </section>
+            
+            <p>Una vez puestos todos los tiempos de todas las imágenes lo que queda es visualizar completamente el KARAOKE y aplicar los pequeños ajustes necesarios para que todo quede perfecto. Normalmente las unidades de tiempo se ajustan con + - 0.5 seg., pero a veces es necesario aplicar cambios de una o dos fracciones de segundo arriba/abajo para que coincidan con la música.</p>
+            <p>El final del proceso es repasar la puntuación de toda la canción en la zona timings del archivo .json (recordemos que antes la alteramos para poder separar las frases-estrofa de la canción).</p>
+        </section>  
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>

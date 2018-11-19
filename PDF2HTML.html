@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<!-- Return to Top -->
+<a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>La herramienta PDF to HTML del CAT permite transformar los contenidos en PDF de los libros en HTML para comenzar con el proceso de digitalización y montaje de los mismos para la plataforma digital.</p>
+            <p>En este manual vamos a ver como se deben tratar los PDF para iniciar todo el proceso dado que este es un procedimiento sencillo, aunque muy importante para el correcto funcionamiento posterior, y su transformación a HTML.</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/PDF2HTML/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/PDF2HTML/02.png"></li> 
+            </ol>
+                        
+        </section>
+
+        <section class="tutorial">
+            <h3>Preparación de PDF</h3>
+            <p>Antes de utilizar la herramienta propiamente dicha, es necesario tratar el PDF del libro.</p>
+            <p>Como ya anticipamos, se trata de una operación sumamente importante, ya que, una vez montado el libro, realizar cambios a este respecto, supone en muchas ocasiones tener que iniciar todo el proceso desde cero.</p>
+            <p>La editorial puede proporcionar el libro en un único PDF (o varios), por lo que en primer lugar habrá que separarlo en tantos archivos como unidades diferentes contenga el Libro a generar. En el caso de que la editorial lo proporcione en varios archivos es imprescindible verificar que tanto el corte como el renombrado de los archivos se ha realizado de forma óptima, tal y como se explica a continuación, en caso contrario se procederá a su modificación siguiendo las siguientes pautas.</p>
+            <p>La nomenclatura de los nuevos archivos es crucial, ya que todo el funcionamiento del CAT (resto de herramientas que se utilizarán en el montaje del libro) depende de como se hayan nombrado estos archivos. En este manual vamos a tratar el montaje del Libro del Alumno, ya que el montaje de otros apartados difiere en diversos aspectos.</p>
+            <img src="img/PDF2HTML/03.png"> 
+            <ol>
+               <li>En primer lugar, se enumera con 2 dígitos el orden que debe llevar cada uno de los PDf.</li> 
+               <li>Separado por guion bajo irá la palabra “Alumno”.</li>
+               <li>Separado por guion medio la unidad a la que corresponde el tema con 3 dígitos. Estos 3 dígitos deben contener U (unidad), R (repaso), T (trimestral) seguido del número de que corresponda precedido de cero en el caso correspondiente.</li> 
+               <li>Separado por guion bajo, la palabra contenidos (o su traducción en el idioma que corresponda, como continguts en la captura precedente).</li> 
+            </ol>
+            <p>Cada uno de estos pdf independientes, debe contener el nº exacto de páginas para ser coincidente con el paginado del libro en papel, de tal manera que, si los uniéramos de nuevo, el pdf resultante coincidiría en paginación con el que aparece en la imagen de cada pág. en la totalidad del libro. </p>
+            <p>Hay que comprobar este aspecto en cada uno de los pdf antes de comenzar el siguiente paso, abriendo uno a uno y comprobando numeración impresa en la página con la que corresponde tanto por la suma de las págs. de los pdf, como por la continuidad en la numeración entre la última pág. de un pdf y la primera del siguiente. Se puede dar el caso de que haya páginas que no tengan numeración impresa, por lo que la paginación deberá ser deducida por la numeración de páginas anteriores y posteriores.</p>
+            <p>Resaltar de nuevo que este punto es crucial, ya que la falta de una sola de las páginas puede provocar posteriores problemas de navegación en web, por tanto, hay que revisar con cuidado la paginación y en el caso que sea necesario, añadir páginas en blanco, en cualquier punto, para conseguir coincidencia entre la paginación. Estas páginas en blanco podrán ser sustituidas o eliminadas en otra fase del proceso, pero son necesarias en el momento inicial.</p>
+            <img src="img/PDF2HTML/04.png">
+            <p>En el ejemplo anterior, se introducen 3 pág. en blanco en el archivo intro (que corresponderían con la cubierta y el índice), para que la paginación sea coincidente con la real del libro.</p>
+            <p>Una vez preparados todos los pdf. Se introducen en la carpeta PDF del repositorio y se comitean.</p>
+        
+        </section>
+
+        <section class="tutorial">
+            <h3>Uso de la Herramienta HTML to PDF</h3>
+            <p>Hasta este momento, no hemos hecho uso del CAT, tan solo nos habíamos logado.</p>
+            <p>Para poder comenzar con el proceso, lo primero que se debe hacer es generar la wc de este proyecto, ya que normalmente será la primera vez que se use el cat en él. Para ello, pulsaremos en el botón “Reader” y esperaremos a que termine todo el proceso. En la mayoría de las ocasiones, es un proceso largo, y puede tardar en finalizarse:</p>
+            <img src="img/PDF2HTML/05.png">
+            <img src="img/PDF2HTML/1.gif">
+            <p>Después, nos aseguraremos de que el proyecto está perfectamente updateado:</p>
+            <img src="img/PDF2HTML/2.gif">
+            <p>Es importante no olvidar este paso, ya que, si empezamos a trabajar sin que se genere la wc, el repositorio puede quedarse bloqueado. Si al updatear el proyecto, en la ventana nos indica que el repositorio está bloqueado, debe avisarse al supervisor.</p>
+            <p>Una vez realizados ambos pasos podemos comenzar a utilizar la herramienta objeto de este manual. Identificamos y pulsamos su botón de acceso:</p>
+            <img src="img/PDF2HTML/06.png">
+            <p>Se iniciará el proceso de sincronización del CAT con el repositorio, y nos mostrará en pantalla todos los archivos .pdf que contenga la carpeta PDF del repositorio.</p>
+            <p>En el ejemplo que nos ocupa, serán los archivos correspondientes al libro del alumno separados por unidades tal y como los habíamos tratado previamente:</p>
+            <img src="img/PDF2HTML/07.png">
+            <p>Seleccionamos en el menú de la izquierda cada uno de los archivos que queremos incluir, en el orden que deben llevar para el correcto montaje del libro:</p>
+            <img src="img/PDF2HTML/08.png">
+            <p>Observaremos que a medida que los pulsamos, van apareciendo en el menú de la izquierda justo en el orden que los hemos ido marcando:</p>
+            <img src="img/PDF2HTML/3.gif">
+            <p>Una vez que tenemos todos seleccionados, en el menú de la derecha procedemos a indicar el nº en el que se debe iniciar la paginación en cada una de las unidades.</p>
+            <p>Al igual que la preparación inicial de los pdfs, esta operación es crucial, ya que una paginación incorrecta, puede arruinar por completo el montaje de un libro y la posterior navegación web de este.</p>
+            <p>Para ello, debemos comprobar en cada uno de los pdf, la numeración correspondiente a la primera y última página del mismo:</p>
+            <img src="img/PDF2HTML/09.png">
+            <img src="img/PDF2HTML/10.png">
+            <img src="img/PDF2HTML/11.png">
+            <img src="img/PDF2HTML/12.png">
+            <img src="img/PDF2HTML/13.png">
+            <p>Este proceso, debe realizarse con todos y cada uno de los archivos que hemos seleccionado:</p>
+            <img src="img/PDF2HTML/4.gif">
+            <p>Una vez finalizado, pulsamos el botón generar. Este procedimiento tardará unos minutos, dependiendo de la cantidad de pág. que contenga el libro será más o menos largo.</p>
+            <p>La herramienta nos avisará una vez haya finalizado, mediante avisos parciales, y mediante mensaje final:</p>
+            <img src="img/PDF2HTML/5.gif">
+            <img src="img/PDF2HTML/6.gif">
+            <p>Cuando aparece el mensaje final, pulsamos aceptar y updateamos el repositorio. Verificando que se nos han generado los archivos correspondientes en la carpeta HTML y thumbs.</p>
+            <img src="img/PDF2HTML/7.gif">
+            <img src="img/PDF2HTML/8.gif">
+            
+        </section>
+
+        <section class="tutorial">
+            <h3>Conclusión</h3>
+            <p>Se trata de una herramienta muy sencilla de utilizar, sin embargo, hay que prestar especial cuidado en la preparación inicial de los pdf y en la paginación de los mismos, dado que todo el montaje posterior de los libros depende de este proceso.</p>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>

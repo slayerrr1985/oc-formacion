@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<!-- Return to Top -->
+<a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>La herramienta PDF to XML (Manifest) del CAT permite generar el manifiesto de un libro. Dicho archivo es el que contiene los datos específicos de cada uno de los libros que permiten su inclusión en la plataforma digital. </p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/PDF2XML/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/PDF2XML/02.png"></li> 
+            </ol>     
+        </section>
+    
+            <section class="template">
+                <h4>Paso previo</h4>
+                <p>Antes de utilizar la herramienta propiamente dicha, es necesario haber realizado el proceso de PDF to HTML explicado en el manual anterior.</p>
+            </section>      
+        
+        <section class="tutorial">
+            <h3>Uso de la Herramienta HTML to XML (Manifes)</h3>
+            <p>Lo primero que se debe hacer al entrar al CAT es asegurarnos que el proyecto está perfectamente updateado:</p>
+            <img src="img/PDF2XML/1.gif">
+            <p>Al igual que en el caso de la herramienta anterior, se trata de una operación sumamente importante, ya que, una vez montado el libro, realizar cambios a este respecto, supone en muchas ocasiones tener que iniciar todo el proceso desde cero.</p>
+            <p>Para comenzar a utilizar la herramienta objeto de este manual. Identificamos y pulsamos su botón de acceso:</p>
+            <img src="img/PDF2XML/03.png">
+            <p>Se iniciará el proceso de sincronización del CAT con el repositorio, y nos mostrará en pantalla todas las carpetas que contenga la carpeta HTML del repositorio.</p>
+            <p>En el ejemplo que nos ocupa, serán las correspondientes a las unidades del libro del alumno tal y como los habíamos preparado previamente:</p>
+            <img src="img/PDF2XML/04.png">
+            <p>Seleccionamos en el menú de la izquierda cada una de las carpetas que queremos incluir, en el orden que deben llevar para el correcto montaje del libro, arrastrándolas hacia la parte derecha en la zona indicada como libro del alumno (el montaje del libro del profesor será objeto de un posterior manual de uso):</p>
+            <img src="img/PDF2XML/2.gif">
+            <p>Una vez que hemos arrastrado todas, pulsamos el botón generar y esperamos hasta que la herramienta nos indique que el proceso ha finalizado:</p>
+            <img src="img/PDF2XML/3.gif">
+            <p>Pulsamos aceptar y updateamos el repositorio.</p>
+            <p>Verificamos que en la carpeta dummie\MANIFIESTOS se nos ha creado el archivo:</p>
+            <p>imsmanifest.xml</p>
+            <img src="img/PDF2XML/05.png">
+            <p>Hacemos copia del mismo, lo pegamos en la carpeta raíz del repositorio y comiteamos:</p>
+            <img src="img/PDF2XML/06.png">
+        </section>
+
+        <section class="tutorial">
+            <h3>Comprobación del manifiesto</h3>
+            <p>Es necesario comprobar que el manifiesto que se ha generado es correcto, verificando que cada una de las paginas del libro están perfectamente numeradas.</p>
+            <p>Para ello, volvemos al cat, updateando de nuevo el proyecto. Necesitamos verificar en la pantalla que se nos abre que se ha añadido el archivo imsmanifest.xml en la carpeta raíz del repositorio:</p>
+            <img src="img/PDF2XML/4.gif">
+            <img src="img/PDF2XML/07.png">
+            <p>Ahora pulsamos una nueva herramienta del cat: Makers Editor</p>
+            <img src="img/PDF2XML/08.png">
+            <p>Se nos abrirá una pantalla, en la que veremos en el menú de la izq. (en adelante TOC) todas y cada una de las pág. del libro, separadas en tantas unidades como hallamos creado en los pasos previos:</p>
+            <img src="img/PDF2XML/5.gif">
+            <p>En este punto, es importante comprobar que <b><u>todas y cada una de las pág.</u></b> tienen su numeración correcta, pulsando cada una de ellas en el TOC y verificando que tanto su nombre como el que aparece en la ventana de makers panel tienen como numeración final el mismo que el que le corresponde a la pág. (siempre serán 3 dígitos):</p>
+            <img src="img/PDF2XML/09.png">
+            <p>Si encontráramos erratas de paginación, habrá que repetir el proceso desde el paso de PDF to HTML hasta conseguir un manifiesto base correcto. No se debe pasar al siguiente paso, sin asegurarse que la paginación es perfecta ya que, de lo contrario, produciría un defecto en la database que impedirá el correcto funcionamiento del libro incluso una vez terminado y publicado.</p>
+            <p>Si se trata de un libro de los denominados “Only Book” el proceso habría concluido, pero si se trata de un libro que va a contener otros módulos como actividades, multimedia, etc., debemos proceder al siguiente paso.</p>
+        </section>
+            
+        <section class="tutorial">
+            <h3>Generación de módulos</h3>
+            <p>Para generar el resto de los módulos que puede contener un libro, necesitamos utilizar un script incluido en la propia herramienta que nos modificará el manifiesto y dará lugar a la inclusión de estos. Siempre será la editorial la que nos debe indicar si se incluyen módulos en el libro, por tanto, no debe realizarse este paso si no se ha verificado que el proyecto debe incluirlos. </p>
+            <p>En el caso de que estemos con un proyecto que contenga módulos (es decir, no es “Only Book”) por defecto incluiremos todos los módulos, aunque será la editorial, la que nuevamente nos indique los módulos que van a estar activos en cada uno de los proyectos Esta operación de activar o desactivar los módulos, será objeto de un manual posterior. Por el momento vamos a generar la totalidad de los módulos.</p>
+            <p>Para ello pulsamos en el script (denominado coloquialmente como “rayo”)</p>
+            <img src="img/PDF2XML/10.png">
+            <p>En la ventana que nos aparece seleccionamos la opción “Manifiesto Virgen”:</p>
+            <img src="img/PDF2XML/11.png">
+            <p>A continuación “Generar todo”:</p>
+            <img src="img/PDF2XML/12.png">
+            <p>Pulsamos modificar, esperamos al mensaje inferior izquierdo de que se ha producido el comit, cerramos la pantalla existente, y refrescamos el TOC:</p>
+            <img src="img/PDF2XML/6.gif">
+            <img src="img/PDF2XML/13.png">
+            <img src="img/PDF2XML/7.gif">
+            <p>Updateamos el repositorio verificando que se hayan guardado los cambios en el archivo imsmanifest.xml de la carpeta raíz (el de la carpeta dummie\MANIFIESTOS no ha sufrido cambios en este proceso)</p>
+            <img src="img/PDF2XML/14.png">
+            <p>Una vez hemos realizado todos estos procesos, ya tenemos preparado el contenido inicial del libro, para poder proceder a la organización de las paginas, renombrado de las mismas, así como la inclusión de todo el material interactivo que se mostrará en la plataforma (actividades, multimedia, etc.)</p>
+           
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<!-- Return to Top -->
+<a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>INTRODUCCIÓN</h2>
+            <p>El módulo EVAL de cada libro contiene un listado de preguntas que el profesor posteriormente puede utilizar para crear evaluaciones para los alumnos. Puede utilizar las preguntas ya creadas directamente, modificarlas o incluso crear nuevas. El formato de salida de las mismas puede ser .pdf o Word de cara a su impresión y posterior entrega a los alumnos.</p>
+            <p>Para todo lo anterior, hay disponible un editor de texto versátil (CKEditor) que permite la modificación o creación desde cero de cualquier pregunta. Este manual tiene como objetivo el describir y orientar cómo se pueden realizar todo lo anterior mediante este editor y  el módulo EVAL.</p>
+            <p>Comenzaremos con la descripción de las herramientas que vamos a utilizar en Oneclick. El editor de las preguntas en nuestro caso está dentro del entorno CAT, pero en el caso del usuario final (el profesor) está dentro del entorno web del propio libro.</p>
+            <p>También explicaremos el manejo de estas herramientas de cara a incluir en los libros web los contenidos que facilita la Editorial.</p>
+            <p>Por último, describiremos en detalle las funcionalidades disponibles y como afectan al resultado final, la impresión del documento (.pdf o Word), para maximizar la satisfacción del profesor de cara al uso de las preguntas generadas con el módulo EVAL.</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Entorno CAT y módulo EVAL</h3>
+            <p>El módulo EVAL para crear las unidades y preguntas está dentro del entorno CAT.</p>
+            
+                <section class="links">
+                    <div>
+                        <h5>Para acceder al mismo tenemos que ir a la dirección web:</h5>
+                        <a href="http://edelvives.ink2cloud.com/cat/#/login" target="_blank">http://edelvives.ink2cloud.com/cat/#/login</a>
+                    </div>
+                </section>
+            
+            <p>Las capturas de pantalla que vamos a incluir son de la aplicación Chrome, pueden variar algo en otros navegadores pero son básicamente iguales.</p>
+            <p>Son necesarios dos logins uno el de la Editorial (en el caso de ejemplo EDELVIVES) y otro el del propio usuario.</p>
+            <p>En el primero basta con introducir usuario y contraseña apropiados (diferentes de los del usuario):</p>
+            <img src="img/evaluaciones/entono_cat1.png">
+            <p>En el segundo hay que introducir el repositorio (svn) del libro, y el usuario y contraseña del usuario concreto (facilitado por Oneclick).</p>
+            <img src="img/evaluaciones/entono_cat2.png">
+            <p>El repositorio de cada libro figura en el drive de control de cada proyecto (en la imagen figura uno de ejemplo para ver la estructura del mismo). Es aconsejable, siempre que sea seguro por ser un ordenador no compartido, marcar la opción “Remember sesion”. Dura un día y facilita el trabajo evitando tener que repetir acciones.</p>
+            <p>En la pantalla inicial del entorno CAT tenemos el acceso a los diferentes módulos. En la imagen está remarcado el del módulo EVAL.</p>
+            <img src="img/evaluaciones/entono_cat3.png">
+            <img src="img/evaluaciones/entono_cat4.png">
+            <p>Pero antes de comenzar lo primero que tenemos que hacer, para evitar posibles conflictos de versiones, es actualizar el repositorio. En la parte superior derecha de la pantalla tenemos:</p>
+            <img src="img/evaluaciones/entono_cat5.png">
+                    <ul>
+                    <li>La ruta completa del repositorio (es aconsejable antes de ponernos a trabajar el verificar que es correcta, así evitaremos posibles errores).</li>
+                    <li>Debajo está el usuario conectado y el link de cierre de sesión (para salir del repositorio y acabar la sesión de trabajo).</li>
+                    <li>Por último hay una serie de iconos. En nuestro caso para realizar la operación de actualización vamos a pulsar la nube (update workingcopy). El resto de iconos no son objeto de este manual (no se utilizan).</li>
+                    </ul>            
+            <img src="img/evaluaciones/entono_cat6.png">
+            <p>Para poder pulsar el icono hay que activar esta zona de la página. Hay que pasar con el puntero del ratón  por encima de nuestro usuario (no es necesario hacer clic) de este modo se habilita el puntero para poder pulsar update workingcopy, se nota porque el puntero cambia a “mano” (imagen anterior).</p>           
+            <p>Cuando pulsamos se abre una pestaña nueva en el navegador con un resumen del proceso.</p>           
+            <img src="img/evaluaciones/entono_cat7.png">
+            <p>Tras verificar que no aparecen errores en el mismo, podemos continuar con el módulo EVAL.</p>
+            <p>Pulsamos en el icono del modulo</p>
+            <img src="img/evaluaciones/entono_cat8.png">  
+            <p>Se activa en color azul y tenemos a nuestra disposición una serie de botones en una barra naranja.</p>
+            <p>A la izquierda de la pantalla:</p>
+            <img src="img/evaluaciones/entono_cat9.png"> 
+            
+            <section class="template">
+                    <p><b>Añadir unidad</b>: añade una unidad al libro, dentro de la misma están las preguntas (evaluaciones)</p>
+                    <p><b>Añadir pregunta</b>: añade una pregunta dentro de una unidad.</p>
+                    <p><b>Guardar evaluación</b>: guarda el trabajo que llevamos realizado (es conveniente realizar guardados periódicos para evitar posibles pérdidas por error). Se realizan “commit” automáticos al repositorio para que todo quede actualizado.</p>
+            </section>
+            
+            <p>La descripción de los botones ya nos muestra la estructura del módulo EVAL que determina el método de trabajo. Cada libro se divide en unidades y estas en preguntas. Nuestra misión es trasladar las preguntas facilitadas por la Editorial de la manera más fiel posible al módulo EVAL.</p>
+            <p>A la derecha:</p>
+            <img src="img/evaluaciones/entono_cat10.png"> 
+            
+            <section class="template">
+                <p><b>Borrar JSON</b>: Este botón, situado a la derecha borra todo el trabajo realizado. Es conveniente usarlo, solo si estamos muy seguros. A su lado figura el número de revisión con carácter informativo.</p>
+            </section>
+            
+            <p>Básicamente, en el módulo EVAL, creamos las unidades y las preguntas que aparecen posteriormente en el libro que los profesores utilizan.</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Creación de unidad</h3>
+            <p>Pulsamos el botón “Añadir unidad”</p>
+            <img src="img/evaluaciones/creacion_unit1.png">             
+            <p>Y se crea la misma</p>
+            <img src="img/evaluaciones/creacion_unit2.png">      
+            <p>Como vemos se puede seleccionar número de índice (en el ejemplo 35) pero con los botones de bajar-subir se puede modificar a cualquiera que deseemos, por ejemplo el  1.</p>
+            <img src="img/evaluaciones/creacion_unit3.png">  
+            <p>Pulsando en “Título unidad” (el ratón al pasar por encima toma forma de cursor de mover).</p>
+            <img src="img/evaluaciones/creacion_unit4.png">  
+            <p>Al pulsar aparece esta pantalla:</p>
+            <img src="img/evaluaciones/creacion_unit5.png">              
+            <img src="img/evaluaciones/creacion_unit6.png">    
+            <p>Damos título a la unidad. Habitualmente debemos poner el título de unidad que viene  en el fichero Word facilitado por la Editorial. Si no viene debemos comprobar el título de la misma que aparece en el índice del fichero .pdf del propio libro (está en la carpeta PDF del repositorio del libro).</p>
+            <p>Cambiamos el texto por el que corresponda y pulsamos “Yes”</p>
+            <img src="img/evaluaciones/creacion_unit7.png">
+            <p>Si hubiera que poner subtítulo, pulsaríamos sobre “Subtitulo unidad”, lo escribimos y pulsamos “Yes” del mismo modo. Habitualmente no hay que poner subtítulo, por ello lo que haríamos es borrar el texto que aparece por defecto y pulsar “Yes” de ese modo quedaría sin subtitulo.</p>
+            <img src="img/evaluaciones/creacion_unit8.png">             
+            <p>Los tres guiones (- - -) identifican esta situación (la unidad no tiene subtítulo) y son el botón que usaríamos si posteriormente necesitamos poner un subtítulo. El título funciona de la misma forma.</p>
+            <img src="img/evaluaciones/creacion_unit9.png">               
+            <p>Los tres guiones (- - -) superiores indican que hemos borrado el título y los inferiores como ya hemos visto el subtítulo.</p>
+            <p>El botón rojo con una x blanca al lado de la U naranja</p>            
+            <img src="img/evaluaciones/creacion_unit10.png">
+            <p>Es el botón de eliminar unidad. Si lo pulsamos se elimina la unidad que hemos creado (por ejemplo si creamos una unidad de más) es un botón que debemos manejar con prudencia.</p>
+            <p>Las unidades también se pueden mover, con el ratón pinchamos en la deseada y la cambiamos de sitio en la lista. La posición en que va a quedar se resalta en verde.</p>     
+            <img src="img/evaluaciones/creacion_unit11.png">            
+            <p>Podemos reorganizarlas como deseemos.</p>
+            <p>Ya tenemos creada la primera unidad y puesto su título.</p>
+            <img src="img/evaluaciones/creacion_unit12.png">
+            <p>La seleccionamos (se nota porque se destaca azul y  tiene un tamaño mayor que el resto).</p>
+            <img src="img/evaluaciones/creacion_unit13.png">
+        </section>       
+        
+        <section class="tutorial">
+            <h3>Creación pregunta</h3>
+            <p>Y creamos la primera pregunta, botón añadir pregunta</p>
+            <img src="img/evaluaciones/creacion_pregun1.png">    
+            <img src="img/evaluaciones/creacion_pregun2.png">  
+                          
+            <section class="template">
+                <h4>Las preguntas, tienen algunas funciones parecidas a las que ya hemos visto de las unidades:</h4>
+                <ul>
+                    <li>Se borran con el botón rojo con la x al lado de la P naranja.<br>
+                        <img src="img/evaluaciones/creacion_pregun3.png">
+                    </li>
+                    <li>Y se pueden reordenar como las unidades, quedando destacado en color verde el lugar donde se van a ubicar.<br>
+                        <img src="img/evaluaciones/creacion_pregun4.png">
+                    </li>
+                </ul>
+            </section>
+            
+            <img src="img/evaluaciones/creacion_pregun5.png">
+            <section class="template">
+                <h4>Los botones de las preguntas son:</h4>
+                <p><b>Editar texto enunciado y solución</b>: inicia el CKEditor, que es el programa que utilizamos para dar la forma más parecida posible a la indicada en los documentos Word de la Editorial a las preguntas.</p>
+                <p><b>Añadir imagen en enunciado y solución</b>: permite añadir una imagen al enunciado y a la solución pero de manera general, se sitúa debajo del texto y no se integra en el mismo. Para poder incluir imágenes integradas en el texto tenemos que trabajar directamente sobre CKEditor.</p>
+                <p><b>Añadir Estandar de aprendizaje</b>: aquí se introducen los estándares de aprendizaje facilitados para cada pregunta por la Editorial.</p>
+                <p><b>Añadir Competencia clave</b>: para incluir las competencias clave facilitadas para cada pregunta por la Editorial.</p>
+                <p><b>Añadir Tabla</b>: al pulsar este botón se crea una tabla para incluir la rúbrica facilitada por la Editorial.</p>
+            </section>
+            
+            <p>Para una mejor comprensión de todo esto aquí tenemos una pregunta ejemplo incluida en un Word facilitado por EDELVIVES.</p>
+            <img src="img/evaluaciones/creacion_pregun6.png">
+            <p>El texto e imágenes de enunciado y solución se realizan principalmente con el CKEditor y lo vamos a tratar en un apartado específico. Por ello pasamos al resto de elementos.</p>
+            <p>A pulsar el botón de “Añadir Estandar de aprendizaje” aparece la siguiente pantalla:</p>
+            <img src="img/evaluaciones/creacion_pregun7.png">
+            <p>Simplemente hay que copiar y pegar del Word original el/los estándares que figuran en la pregunta en concreto en el campo donde está escrito “Estándares de aprendizaje” borrando este texto. Y después pulsar “Aceptar”. Si sólo hay uno lo hacemos una vez, si hay más repetimos y se van añadiendo uno debajo del otro. En el ejemplo propuesto aparece:</p>
+            <img src="img/evaluaciones/creacion_pregun8.png">
+            <p>Únicamente copiaríamos y pegaríamos “Identifica algunos recursos retóricos como el pareado.” Sin el número inicial y verificando que también se copia el punto final de la frase. Quedaría así:</p>
+            <img src="img/evaluaciones/creacion_pregun9.png">
+            <p>Si necesitáramos modificarlo por haber cometido un error, basta con pinchar de nuevo sobre el texto que acabamos de introducir y aparece la pantalla de posibilidad de edición.</p>
+            <img src="img/evaluaciones/creacion_pregun10.png">
+            <p>Pulsando el botón “Editar” podemos cambiarlo, en lugar de hacerlo directamente en el campo de texto como la primera vez, aparece una ventana de edición de texto. “Eliminar” elimina lo introducido completamente.</p>
+            <p>Es importante, en caso de haber varios estándares, respetar el orden de los mismos. También debemos fijarnos en que no se producen caracteres no deseados por el copia-pega directo. Si sucede esto último, borramos los erróneos e introducimos correctamente a mano.</p>
+            <p>Al pulsar “Añadir Competencia clave”:</p>
+            <img src="img/evaluaciones/creacion_pregun11.png">
+            <p>Es un menú desplegable donde aparecen todas las posibilidades:</p>
+            <img src="img/evaluaciones/creacion_pregun12.png">
+            <p>Elegimos y pulsamos aceptar. Al igual que los estándares, si hay más de una competencia pondremos todas en el mismo orden que vienen en el Word original. En el ejemplo:</p>
+            <img src="img/evaluaciones/creacion_pregun13.png">
+            <p>Vienen cuatro, por lo que hay que repetir cuatro veces la operación. Este sería el resultado.</p>
+            <img src="img/evaluaciones/creacion_pregun14.png">
+            <p>También de la misma forma que en los estándares, si queremos eliminar una por haber cometido un error, pinchando directamente sobre el texto de la misma, nos aparece el cuadro de dialogo para poder eliminarla.</p>
+            <p>Al pulsar “Añadir Tabla”:</p>
+            <img src="img/evaluaciones/creacion_pregun15.png">
+            <p>Vemos que tiene casi la misma estructura que la Rúbrica del ejemplo.</p>
+            <img src="img/evaluaciones/creacion_pregun16.png">
+            <p>Pinchando en las celdas 1, 2, 3 y 4.</p>
+            <img src="img/evaluaciones/creacion_pregun17.png">
+            <p>(Atención, como anteriormente, no sale puntero sino cursor de mover)</p>
+            <img src="img/evaluaciones/creacion_pregun18.png">
+             <p>En el ejemplo, pulsamos  en el  1, sale el editor y copiamos-pegamos el texto borrando el número 1 y “Aceptar”. Queda así:</p>
+            <img src="img/evaluaciones/creacion_pregun19.png">
+            <p>Repetimos la misma operación para los 4 niveles de Rúbrica (Excelente, Satisfactorio, Elemental e Inadecuado).</p>
+            <img src="img/evaluaciones/creacion_pregun20.png">
+            <p>Y ya estará completa la Tabla.</p>
+            <p>Si queremos modificar una de las celdas de la tabla pinchamos sobre la misma y salta el cuadro de edición de texto, modificamos lo deseado y “Aceptar”.</p>
+            <p>Si queremos borrar toda la tabla, vemos que existe un botón rojo con una x blanca como en las Unidades y en las Preguntas, funciona de la misma manera.</p>   
+            <img src="img/evaluaciones/creacion_pregun21.png">
+            <p>Pulsando en el mismo (también sale cursor de mover en lugar de puntero) da la opción de “Eliminar tabla”.</p>
+            <img src="img/evaluaciones/creacion_pregun22.png">
+        </section>
+    
+            
+        <section class="tutorial">
+            <h3>Añadir textos e imágenes de enunciado y solución - CKEditor</h3>
+            <p>Lo primero que tenemos que tener en cuenta es algo que ya se menciona en la introducción de este manual.</p>
+            <p>El propósito principal del módulo EVAL de los libros consiste en que el profesor disponga de una serie de materiales:</p>
+                    <ul>
+                    <li>Preguntas directamente disponibles.</li>
+                    <li>Preguntas fácilmente modificables.</li>
+                    <li>Posibilidad de realizar sus propias preguntas.</li>
+                    </ul>          
+            <p>Es <b>muy importante</b> por tanto que el contenido sea editable. Esto afecta principalmente al uso de imágenes. Lo correcto es usar imágenes sólo cuando sea imprescindible. En cualquier otro caso hay que usar texto. De esta forma conseguiremos que, si el profesor lo desea, sea posible la edición para la personalización de las preguntas.</p>
+            <p>Primero vamos a explicar cómo introducir imágenes en preguntas que son muy visuales y no existe la posibilidad de usar texto.</p>
+        </section>
+            
+        <section class="tutorial">
+            <h3>Añadir imágenes de enunciado y solución con botón</h3>
+            <p>Este es el método que se usa en preguntas como la de este ejemplo:</p>
+            <img src="img/evaluaciones/anadir_img_cb1.png">  
+            <p>Este sería el enunciado tal cual aparece en el Word facilitado. El texto de enunciado lo copiaríamos pegaríamos en el botón <b>Editar texto enunciado</b> y la imagen la añadiríamos directamente con el botón <b>Añadir imagen en enunciado</b>.</p>
+            <p>Vemos los pasos, primero:</p>
+            <img src="img/evaluaciones/anadir_img_cb2.png">  
+            <p>Sale la ventana del CKEditor:</p>
+            <img src="img/evaluaciones/anadir_img_cb3.png"> 
+            
+            <section class="template">
+                <h4>ATENCION IMPORTANTE:</h4>
+                <p>Antes de pegar el texto,  hay que asegurarse de que este no lleve ningún formato o imagen asociado (de hecho si pegamos inadvertidamente una imagen esta no se va  a ver en el editor). El motivo es que todo lo que peguemos que no sea texto puede afectar al archivo JSON final provocando errores en el mismo. Como habitualmente vamos a copiarlo de un documento Word o .pdf, y estos tipos de documentos llevan formatos asociados e imágenes,  hay que pasarlo a texto plano primero. </p>
+            </section>
+            
+            <p>Por ello al pegar texto en la aplicación este editor no permite el pegado directo con el menú del botón derecho del ratón / pegar. Cada vez que realicemos esta operación va a saltar un cuadro de dialogo como este:</p>
+            <img src="img/evaluaciones/anadir_img_cb4.png">      
+            <p>La operación hay que realizarla con Ctrl + V y pulsar “Aceptar”.</p>
+            <p>Pero si lo hacemos de este modo no evitamos que las posibles imágenes arrastradas inadvertidamente se peguen con el posible problema que producen.</p>
+            <p>Para pegar el texto de forma absolutamente segura hay que hacerlo mediante el botón:</p>        
+            <img src="img/evaluaciones/anadir_img_cb5.png">      
+            <p>Sale el cuadro de dialogo:</p>
+            <img src="img/evaluaciones/anadir_img_cb6.png">     
+            <p>Ctrl + V y pulsar “Aceptar”</p>
+            <img src="img/evaluaciones/anadir_img_cb7.png">     
+            <p>Normalmente el texto se dejará así, a no ser que la Editorial haya solicitado una fuente específica, o haya que introducir algún formato como negrita, cursiva, etc. Esto lo veremos en detalle cuando expliquemos las funciones en detalle del CKEditor. Pero en el caso del ejemplo planteado quedaría sin formato alguno en el CKEditor.</p>
+            <p>Pasamos a la imagen:</p>
+            <p>Previamente hay que sacar la imagen del texto de Word original, tiene que ser una imagen de formato .png. La herramienta de recorte de Windows es válida, pero pueden usarse otros programas como Photoshop, etc. De esta tarea puede encargarse previamente otra persona para acelerar el proceso (extrae todas las imágenes de preguntas soluciones y las deja en una carpeta ad hoc).</p>
+            <p>Una vez recortada y en una carpeta a la que tengamos acceso.</p>
+            <img src="img/evaluaciones/anadir_img_cb8.png">    
+            <p>Al clicar en “Añadir imagen en enunciado” nos aparece una ventana del explorador de Windows donde localizaremos la imagen previamente preparada.</p>
+            <img src="img/evaluaciones/anadir_img_cb9.png">    
+            <p>Hacemos clic en “Abrir”.</p>
+            <img src="img/evaluaciones/anadir_img_cb10.png">  
+            <p>Con lo que ya tenemos el enunciado y la imagen, pasamos a la solución.</p>
+            <p>En el Word original tenemos.</p>
+            <img src="img/evaluaciones/anadir_img_cb11.png">  
+            <p>Realizamos la misma operación con la imagen de solución que con la de enunciado. Clic en “Añadir imagen solución”. </p>
+            <img src="img/evaluaciones/anadir_img_cb12.png">  
+            <p>Sale la ventana del explorador de Windows y seleccionamos la imagen correcta.</p>
+            <p>Añadimos como vimos antes los Estándares de aprendizaje y las competencias clave y como resultado…</p>
+            <img src="img/evaluaciones/anadir_img_cb13.png"> 
+            <p>Ya tendríamos la pregunta finalizada.</p>
+            
+            <section class="template">
+                <h4>De esta misma forma se pueden generar:</h4>
+                    <ul>
+                    <li>Todas las preguntas que tengan como propuesta únicamente un texto en enunciado y solución (bastaría con no añadir las imágenes).</li>
+                    <li>Todas las preguntas que tengan como propuesta (ya sea en el enunciado, en la solución o en ambos) un texto sin formato y/o una imagen que se sitúa justo debajo del texto o que en sí misma es el enunciado y/o la solución.</li>
+                    </ul>   
+            </section>
+            <p>Este sería el tipo más básico de preguntas/soluciones que son las que no requieren un manejo más profundo del CKEditor.</p>
+            
+        </section>
+            
+        <section class="tutorial">
+            <h3>CKEditor</h3>
+            <p>Es el programa de edición de texto del que disponemos para trasladar las preguntas facilitadas por la Editorial al entorno web (EVAL).</p>
+            <p>Es un procesador de texto avanzado, con muchas funciones, pero no es equivalente a Word. Esto implica que muchas de las cosas que aparecen en los documentos de facilitados por la editorial no se pueden trasladar directamente a CKEditor.</p>
+            <section class="template">
+                <h4>Las diferencias principales son:</h4>
+                    <ul>
+                    <li>La distribución de elementos de la pregunta en el programa: cuadros de texto, textos justificados y diferentes áreas de texto ha de realizarse mediante tablas visibles o invisibles..</li>
+                    <li>La ubicación de las imágenes en la pregunta, en el Word pueden colocarse de una manera directa, arrastrar y soltar. En CKEditor normalmente hay que utilizar una tabla o pueden integrarse en la línea de texto con la última versión.</li>
+                    <li>El problema que ya hemos visto del copia-pega directo de texto imágenes, que afecta al fichero JSON, hay que tener cuidado al pegar para no arrastrar imágenes o formatos no deseados.</li>
+                    <li>Las listas con viñetas. Por algún motivo cuando generamos una lista con viñetas en CKEditor esta no pasa al entorno web. Este tipo de listas hay que hacerlo a mano. Si funcionan las listas numeradas, pero no las de viñetas. </li>
+                    </ul>
+            </section>
+        </section>
+
+        <section class="tutorial">
+            <h3>Interfaz del programa</h3>
+            <img src="img/evaluaciones/interfaz1.png"> 
+            <img src="img/evaluaciones/interfaz2.png"> 
+            <p>Permite ver el código HTML que generamos con el texto introducido en el área de texto.</p>
+            <img src="img/evaluaciones/interfaz3.png"> 
+            <p>Cortar / Copiar / Pegar / Pegar como texto plano / Deshacer / Rehacer.</p>
+            <p>Realizamos las funciones habituales de estos comandos. Ya hemos visto la importancia de pegar como texto plano.</p>
+            <img src="img/evaluaciones/interfaz4.png">
+            <p>Buscar / Reemplazar / Seleccionar Todo</p>
+            <p>Para buscar y reemplazar cadenas de texto, como habitualmente en los programas de edición de texto. Seleccionar todo selecciona todo lo introducido en la ventana de texto.</p>
+            <img src="img/evaluaciones/interfaz5.png">
+            <p>Es el área para crear formularios, pero dado que el propósito del módulo EVAL no es interactivo sino la impresión de preguntas para alumnos tiene un uso marginal.</p>
+            <img src="img/evaluaciones/interfaz6.png">
+            <p>Negrita / Cursiva / Subrayado / Tachado / Subíndice / Superíndice  / Eliminar Formato.</p>
+            <p>Permiten dar este tipo de formatos a los textos.</p>
+            <img src="img/evaluaciones/interfaz7.png">
+            <p>Numeración / Viñetas / Disminuir Sangría / Aumentar Sangría / Alinear a Izquierda / Centrar / Alinear a Derecha / Justificado / Dirección del texto de izquierda a derecha / Dirección del texto de derecha a izquierda.</p>
+            <p>Con Numeración creamos listas numeradas, con Viñetas listas de viñetas (como ya dijimos, no es funcional, hay que crearlas a mano), disminuir/ aumentar sangría y el resto de los botones de justificación/dirección del texto tienen la función habitual de los procesadores de texto.</p>
+            <img src="img/evaluaciones/interfaz8.png">
+            <p>Imagen / Tabla / Insertar Línea Horizontal / Insertar Carácter Especial.</p>
+            <p>En este grupo están los botones más importantes para dar formato adecuadamente al texto para la distribución de la pregunta. Especialmente Imagen y Tabla que permiten la integración imagen, texto y distribución de este último de forma óptima en la pregunta. Mencionar también que Insertar Carácter Especial permite la visualización de todos los caracteres posibles que no son texto en el programa (especialmente útil en las preguntas de matemáticas).</p>
+            <img src="img/evaluaciones/interfaz9.png">
+            <p>Estilos para formatear / Formato / Fuente / Tamaño</p>
+            <p>El botón de estilo tiene una función muy importante en la alineación de imágenes al texto.</p>
+            <p> Formato, habitualmente debe estar en Normal. Fuente permite cambiar la fuente del texto a la solicitada por la Editorial. Si no cambiamos estos dos aspectos, la fuente que aparece en la plataforma EVAL es la definida por la Editorial, con lo que sólo se han de cambiar en situaciones específicas. Tamaño, varía el tamaño de la fuente.</p>
+            <img src="img/evaluaciones/interfaz10.png">
+            <p>Color de Texto / Color de Fondo</p>
+            <p>Cambian el color de la fuente.</p>
+            <img src="img/evaluaciones/interfaz11.png">
+            <p>Maximizar / Mostrar bloques</p>
+            <p>Maximizar, hace que la ventana del CKEditor ocupe todo el espacio posible del navegador. Y mostrar bloques muestra los párrafos HTML en el editor.</p>
+            <p>En la parte inferior de la ventana tenemos:</p>
+            <img src="img/evaluaciones/interfaz12.png">
+            <p>Yes / No</p>
+            <p>Yes cierra la ventana del editor manteniendo los cambios que hayamos realizado y No la cierra sin guardar los cambios.</p>
+
+        </section>
+        
+        <section class="tutorial">
+            <h3>Inserción de imágenes en el texto</h3>
+            <p>Con las últimas novedades del programa, se pueden añadir imágenes integradas con el texto. Para poder hacerlo previamente han de estar en el repositorio. Es decir, primero tenemos que comitear previamente todas las imágenes dentro del repositorio y luego entrar al CAT, updatear (nube) y ya estarían preparadas para el proceso.</p>
+            <p>Para añadirla de forma correcta integrada en el texto pulsaríamos el botón:</p>
+            <img src="img/evaluaciones/inser_img_text1.png">
+            <p>Aparece el siguiente cuadro de dialogo:</p>
+            <img src="img/evaluaciones/inser_img_text2.png">
+            <p>Seleccionamos la imagen deseada. Después de hacerlo es importante que verifiquemos que el en el campo URL aparece la dirección.</p>
+            <img src="img/evaluaciones/inser_img_text3.png">
+            <p>Pulsamos “Aceptar” y la imagen ya aparece en el campo de texto.</p>
+            <section class="template">
+                <h4>Truco: </h4>
+                    <p>Si vamos a repetir la imagen (hay que ponerla varias veces en una pregunta o en preguntas diferentes, por ejemplo una pauta de escritura) copiando y pegando esta URL evitamos tener que volver a seleccionar la imagen.</p> 
+            </section>
+            <p>La imagen siempre se va a posicionar en el punto en que esté el cursor y se alinea con el texto.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Posibilidades de inserción de imágenes en el texto</h3>
+            <p>Hay tres formas de integrar una imagen en el texto:</p>
+                <ol>
+                <li>como imagen independiente pero precedida por texto y con texto posterior.<br>
+                    <img src="img/evaluaciones/posi_insert1.png"></li>
+                <li>como imagen alineada con el texto en sí (normalmente pautas de texto).<br>
+                    <img src="img/evaluaciones/posi_insert2.png"></li>
+                <li>como imagen en relación a varios textos/imágenes (en una tabla) ya tenga bordes visibles o no.<br>
+                    <img src="img/evaluaciones/posi_insert3.png"></li>
+                </ol>            
+            <p>Dependiendo de la forma en que se quiera integrar posicionaremos el cursor en el sitio adecuado.</p>
+                <ul>
+                <li>En el caso 1 en la línea en que queramos que aparezca la imagen, después pulsaremos intro y continuaremos con el texto.<br>
+                <li>En el caso dos, en la posición exacta en el texto, después pulsaremos la imagen y esto hace cambiar el menú “Estilo” a “Imagen”.<br>
+                <img src="img/evaluaciones/posi_insert4.png"><br>
+                <p>Eligiendo Imagen centro queda alineada con el texto.</p>
+                <img src="img/evaluaciones/posi_insert5.png">
+                </li>
+                <li>El caso tres lo vamos a ver en un punto aparte, Tablas. Básicamente situando el cursor en cualquier celda de la tabla y pulsando botón imagen, la misma queda incluida en dicha celda de la tabla.<br>
+                </ul>     
+        </section>
+        
+        <section class="tutorial">
+            <h3>Tablas</h3>
+            <p>Para insertar una tabla en el cuadro de texto de CKEditor hay que pulsar el botón tabla:</p>
+            <img src="img/evaluaciones/tablas1.png">
+            <p>Aparece el cuadro de Propiedades de la Tabla:</p>
+            <img src="img/evaluaciones/tablas2.png">
+            <p>En el mismo se puede definir:</p>
+                <ul>
+                <li>Filas / Columnas: el número de filas y columnas de la tabla.</li>
+                <li>Anchura / Altura (si dejamos sin rellenar el tamaño de la tabla se adapta automáticamente al contenido). Se define en pixeles.</li>
+                <li>Encabezados: se puede definir como encabezado de la tabla la primera fila, la primera columna o ambas. Esto tiene como efecto que se centra el texto y se pone en negrita.</li>
+                <li>Esp. e/celdas son los pixeles de separación entre celdas de la tabla (valor cero si queremos sólo línea como borde).</li>
+                <li>Esp. interior son los pixeles que separan el texto interior del borde de la tabla, hay que tener en cuenta que si se aumenta el tamaño de la celda aumenta en la misma medida.</li>
+                <li>Tamaño de Borde: define el grosor de los bordes de la tabla en px. Si elegimos cero la tabla es invisible (esta es una característica muy útil para poder distribuir las diferentes partes de una pregunta en la pantalla).</li>
+                <li>Alineación: la alineación de la propia tabla en el texto.</li>
+                <li>Título y síntesis, para nombrar la tabla, en las preguntas normalmente se dejan vacíos.</li>
+                </ul>          
+            <p>Cuando la tabla ya está creada al pulsar botón derecho ratón sobre cualquier celda de la misma aparece el siguiente menú:</p>
+            <img src="img/evaluaciones/tablas3.png">
+                <ul>
+                <li>Pegar: pega lo que tengamos en el cortapapeles.</li>
+                <li>Celda: permite definir una serie de opciones para configurar las celdas que son muy útiles a la hora de dar la forma que deseemos a la tabla:<br>
+                <img src="img/evaluaciones/tablas4.png">
+                </li>
+                    <ul>
+                    <li>Insertar celdas a derecha o izquierda de la cela en la que nos posicionados.</li>
+                    <li>Eliminar celdas, se eliminan las celdas que tengamos marcadas al hacer clic en el botón derecho.</li>
+                    <li>Combinar se combinan las celdas para hacer una única celda.</li>
+                    <li>Dividir celdas, la celda se divide en dos.</li>
+                    <li>Propiedades de celda, si la elegimos se abre otro menú que permite:<br>
+                    <img src="img/evaluaciones/tablas5.png">
+                    </li>
+                        <ul>
+                        <li>Definir la Altura Anchura de esa celda concreta (afecta a las relacionadas, en anchura a la columna, en altura a la fila).</li>
+                        <li>Ajustar el contenido, como ya establecimos, por defecto está en Sí.</li>
+                        <li>Alineación Horizontal y Vertical del texto dentro de la celda.</li>
+                        <li>Si es celda de datos o de encabezado. Datos normal y como ya dijimos encabezado centra y pone en negrita el texto.</li>
+                        <li>Expandir fila y columna aumenta los pixeles de ambas, pero pierde coherencia la tabla, no usar.</li>
+                        <li>Color de fondo y color de borde: dan color a la celda y al borde de la misma (por defecto está en negro). Esta es una característica esencial para dar formato a las tablas.</li>                        
+                        </ul>
+                    </ul>
+                <li>Fila / Columna: crear filas columnas (derecha izquierda arriba o debajo de la celda seleccionada. También para eliminar fila o columna respectivamente de la celda seleccionada.</li>
+                <li>Eliminar Tabla: elimina la tabla.</li>
+                <li>Propiedades de Tabla: ya vimos esta pantalla, es la misma que sale al crear una tabla. </li>
+                </ul>
+
+        </section>
+        
+        <section class="tutorial">
+            <h3>Tablas anidadas</h3>
+            <p>Si queremos conseguir varios cuadros que contienen texto (o en blanco para rellenar) distribuidos por la pantalla tenemos que usar una tabla invisible. Dentro de las celdas crearemos mini-tablas de 1 fila por 1 columna que serán los cuadros de texto. Aquí de cara a la distribución de los cuadros cobra importancia la alineación de la tabla izquierda, derecha y centro.</p>
+            <p>Un ejemplo:</p>
+            <img src="img/evaluaciones/tablas_anid1.png">
+            <p>En el entorno web se ve así:</p>
+            <img src="img/evaluaciones/tablas_anid2.png">
+            
+            <section class="template">
+                <h4>Truco: varios ejemplos de tabla para ver las posibilidades de todo lo anterior:</h4>
+                <p>Tabla típica con fila de títulos en color (gris).</p>
+                <img src="img/evaluaciones/tablas_anid3.png">
+                <p>Tabla de imágenes (bordes visibles).</p>
+                <img src="img/evaluaciones/tablas_anid4.png">
+                <p>Tabla de imágenes (bordes invisibles). En la imagen se ven difuminados, pero tanto en el entorno web como en la impresión final no se verían.</p>
+                <img src="img/evaluaciones/tablas_anid5.png">                
+                <p>Tabla con tablas anidadas (tablas dentro de una tabla), las interiores con bordes visibles las exteriores invisibles. Con esto se genera un efecto de cuadros de texto flotantes.</p>
+                <img src="img/evaluaciones/tablas_anid6.png">                
+                <p>Otro ejemplo de tabla invisible con tablas anidadas que tiene como efecto cuadros de vacíos para marcar.</p>
+                <img src="img/evaluaciones/tablas_anid7.png">                
+                <p>Otro ejemplo de lo mismo con cuadros de numeración (en este caso enunciado y solución).</p>
+                <p>Enunciado:</p>
+                <img src="img/evaluaciones/tablas_anid8.png">                
+                <p>Solución:</p>
+                <img src="img/evaluaciones/tablas_anid9.png">                
+                <p>Ejemplo de tabla invisible con imágenes (flechas y pautas) para simular una lista de alineación perfecta.</p>
+                <img src="img/evaluaciones/tablas_anid10.png">    
+            </section>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Cuestiones sobre la impresión final de las preguntas</h3>
+            <p>En esta lista vamos a definir una serie de conceptos a tener en cuenta para el resultado final.</p>
+                <ul>
+                <li>El texto que se introduce sin formato tiene el formato general que ha establecido la Editorial (definido en CSS). Sólo si se quiere algún tipo de letra especial para partes del texto (ejemplo: Edescolar) hay que cambiar la fuente en el editor. </li>
+                <li>Las tablas que se crean con Tamaño de borde 0 (cero) al imprimirse (.pdf o Word) son invisibles.</li>
+                <li>El interlineado normal (el que se consigue al pulsar una vez intro tras introducir texto y seguir escribiendo) en Word y en pdf da lugar al propio de estas aplicaciones (mayor que el que se aprecia en la pantalla del CKEditor). Por tanto no es necesario crear más líneas para dar separación al texto. A no ser que sea un espacio superior al de una línea normal. Si se abusa de crear líneas, el texto impreso se ve muy separado.</li>
+                <li>Las tablas anidadas (visible/invisible) al imprimirse dan lugar a cuadros de texto ordenados y alineados.</li>
+                <li>Cualquier distribución no natural del texto (diferente a de izquierda a derecha y arriba abajo). Es decir columnas, separaciones, distribuciones irregulares, etc. Puede hacerse mediante tablas (invisibles o combinación de visibles invisibles anidadas).</li>
+                </ul>
+        </section>
+        
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
