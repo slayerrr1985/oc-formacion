@@ -1,40 +1,30 @@
-setTimeout(function(){ 
-    if (window.innerWidth < 800){
-        $('body').css("margin-left","0");
-        $('.drawer').addClass('hidden-drawer');
-        $('.drawer-button').addClass('hidden-button');
-    }
-}, 1000);
+/*****************************************
+    CONTROLADOR WEB FORMACIÓN ONECLICK
+    Noviembre 2018
+******************************************/
+
+/* 
+ *  Creación de Drawer Menu
+ */
 
 $('.container').before("<ul></ul>")
 
+// enlaza la introducción
 $('.introduction').attr('id', 'introduction');
-$(".drawer ul").append('<li><a href="#introduction">Introducción</a></li>');
+$(".drawer ul").append('<li><a href="#introduction">' + $('.introduction h2').text() + '</a></li>');
 
-
+// toma los h3 como elementos del menú y los enlaza
 $('h3').each(function (index){
     $(this).attr('id', 'menu_' + index);
-    $(".drawer ul").append('<li><a href="#menu_' + index + '">' + $(this).html() + '</a></li>');
+    $(".drawer ul").append('<li><a href="#menu_' + index + '">' + $(this).text() + '</a></li>');
 
 });
 
 
+/* 
+ *  Control botón Drawer Menu
+ */
 
-// ===== Scroll to Top ==== 
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
-
-/* Drawer Menu */
 $('.drawer-button').click(function() {
     if (!$('.drawer').hasClass('hidden-drawer')){
         $('.drawer').addClass('hidden-drawer');
@@ -47,7 +37,23 @@ $('.drawer-button').click(function() {
     }
 });
 
-/* Smooth link scrolling */
+/* 
+ *  Muestra el Drawer Menu y lo oculta en pantalla estrecha
+ */
+
+ setTimeout(function(){ 
+    if (window.innerWidth < 800){
+        $('body').css("margin-left","0");
+        $('.drawer').addClass('hidden-drawer');
+        $('.drawer-button').addClass('hidden-button');
+    }
+}, 1000);
+
+
+
+/* 
+ *  Smooth link scrolling 
+ */
 
 $('a[href^="#"]').click(function(e) {    
     var id = $(this).attr('href');  
@@ -58,10 +64,28 @@ $('a[href^="#"]').click(function(e) {
     e.preventDefault();
     console.log($id.offset().top);
 
-    var pos = $id.offset().top + 2;
+    var pos = $id.offset().top - 20;
     console.log(pos);
     $('body,html').animate({
         scrollTop: pos
     }, 1000);
+});
+
+
+/* 
+ *  Scroll to Top
+ */
+
+ $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
 });
 

@@ -11,8 +11,6 @@ $azul_oc: #a6c2dd;
 $verde_oscuro_oc: #008d76;
 $azul_oscuro_oc: #0063a6;
 
-
-
 @import "_roboto.scss";
 @import "_layout.scss";
 
@@ -30,8 +28,6 @@ $azul_oscuro_oc: #0063a6;
         margin: 1em;
         border-radius: 5px;
         width: 280px;
-        // min-height: 148px;
-        // background-color: $verde_oscuro_oc;
         
         img{
             border-radius: 5px;
@@ -156,27 +152,35 @@ $azul_oscuro_oc: #0063a6;
 
 
 .drawer {
-    height: 100%; /* 100% Full-height */
-    width: 250px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; 
+    width: 250px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: #111; 
+    overflow-x: hidden; 
     transition: all 0.5s ease;
     -webkit-box-shadow: 5px 0px 30px -5px rgba(0,0,0,0.61);
     -moz-box-shadow: 5px 0px 30px -5px rgba(0,0,0,0.61);
     box-shadow: 5px 0px 30px -5px rgba(0,0,0,0.61);
-
+    
+    img{
+        display: block
+    }
     h2{
-        padding: 0.5em;
+        padding: 1em;
         color: $featured_color;
         margin:0;
         height: 70px;
-        line-height: 1.8em;
+        line-height: 2em;
         vertical-align: middle;
         display: inline-block;
+        font-size: 1em;
+        a{
+            text-decoration: none;
+            color: $featured_color;
+        }
     }
 
     ul{
@@ -190,6 +194,7 @@ $azul_oscuro_oc: #0063a6;
             border-bottom: 1px solid #111;
             padding: 0;
             margin: 0;
+            line-height: 1.5em;
             a{
                 display: block;
                 padding: 0.5em 1em;
@@ -208,6 +213,28 @@ $azul_oscuro_oc: #0063a6;
                 background-color: $verde_oscuro_oc;
             }
         }   
+    }
+
+    .pdf-download{
+        display: block;
+        padding: 0.8em 1em;
+        color: $featured_color;
+        font-size: 0.9em;
+        margin: 0;
+        img{
+            height: 1.8em;
+            display: inline-block;
+        }
+        span{
+            display: inline-block;
+            height: 1.8em;
+            vertical-align: top;
+            line-height: 1.8em;
+            padding-left: 0.5em;
+        }
+    }
+    .pdf-download:hover{
+        background-color: $verde_oscuro_oc;
     }
 }
 

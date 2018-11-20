@@ -209,32 +209,31 @@ footer {
 
 .drawer {
   height: 100%;
-  /* 100% Full-height */
   width: 250px;
-  /* 0 width - change this with JavaScript */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Stay on top */
   top: 0;
-  /* Stay at the top */
   left: 0;
   background-color: #111;
-  /* Black*/
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
   box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61); }
+  .drawer img {
+    display: block; }
   .drawer h2 {
-    padding: 0.5em;
+    padding: 1em;
     color: #f5f5f5;
     margin: 0;
     height: 70px;
-    line-height: 1.8em;
+    line-height: 2em;
     vertical-align: middle;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 1em; }
+    .drawer h2 a {
+      text-decoration: none;
+      color: #f5f5f5; }
   .drawer ul {
     display: block;
     background-color: #333333;
@@ -245,7 +244,8 @@ footer {
       list-style: none;
       border-bottom: 1px solid #111;
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      line-height: 1.5em; }
       .drawer ul li a {
         display: block;
         padding: 0.5em 1em;
@@ -258,6 +258,23 @@ footer {
       padding-left: 1em; }
       .drawer ul ul a:hover {
         background-color: #008d76; }
+  .drawer .pdf-download {
+    display: block;
+    padding: 0.8em 1em;
+    color: #f5f5f5;
+    font-size: 0.9em;
+    margin: 0; }
+    .drawer .pdf-download img {
+      height: 1.8em;
+      display: inline-block; }
+    .drawer .pdf-download span {
+      display: inline-block;
+      height: 1.8em;
+      vertical-align: top;
+      line-height: 1.8em;
+      padding-left: 0.5em; }
+  .drawer .pdf-download:hover {
+    background-color: #008d76; }
 
 .drawer-button {
   cursor: pointer;
