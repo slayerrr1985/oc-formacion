@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+<!-- Return to Top -->
+<a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_reader.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_reader.pdf"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual vamos a ver como se visualizan los libros en la plataforma digital, así como el procedimiento de publicación.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/reader/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/reader/02.png"></li> 
+            </ol>     
+        </section>
+
+        <section class="tutorial">
+            <h3>Acceder al Reader</h3>
+            <p>Como ya indicamos en manuales anteriores, siempre se debe updatear el proyecto en el CAT antes de realizar cualquier operación:</p>
+            <img src="img/reader/1.gif">
+            <p>Identificamos y pulsamos el botón de acceso de la herramienta:</p>
+            <img src="img/reader/03.png">
+            <p>Esperamos hasta que todo el proceso haya finalizado (desaparecerá el mensaje amarillo de la esquina superior derecha):</p>
+            <img src="img/reader/2.gif">
+            <p>Esta pantalla ofrece mucha información del libro que estamos utilizando, sin embargo, no es objeto de este manual de uso.</p>
+            <p>Desde esta herramienta, se pueden realizar diversas acciones, por lo que vamos a explicar cada una de las más habituales para los editores de forma independiente.</p>    
+        </section>
+        
+        <section class="tutorial">
+            <h3>GO TO READER</h3>
+            <p>En la parte central de la pantalla, observamos el botón azul “GO TO READER”</p>
+            <img src="img/reader/04.png">
+            <p>Este botón, nos permite acceder a la visión del libro en el que estamos trabajando tal y como se mostraría en la plataforma digital, por tanto, será una acción imprescindible para cualquier editor, puesto que debe ir comprobando el resultado final del trabajo que está realizando.</p>
+            <p>Una vez pulsado, se nos abrirá una pestaña nueva en el mismo navegador en la que se muestra todo el contenido digital que se haya editado hasta ese momento:</p>
+            <img src="img/reader/3.gif">
+            <p>La navegación por el libro digital dependerá del proyecto en el que nos encontremos, ya que no todos muestran el mismo aspecto. Adjunto algunos ejemplos diferentes:</p>
+            <img src="img/reader/4.gif">
+            <img src="img/reader/5.gif">
+            <img src="img/reader/6.gif">    
+            <p>La nueva pestaña que nos ha abierto la opción GO TO READER, tiene una dirección url que muestra la versión existente en el preciso instante que se genera denominada workingcopy (en adelante wc)</p>
+            <img src="img/reader/05.png">
+
+                <section class="links">
+                        <div>
+                            <h5>En el ejemplo que estamos mostrando la url sería esta:</h5>
+                            <a href="#">http://edelvives.ink2cloud.com/cat/workingcopy/b21c36776f070d00aebc7eb288781902/index.html?package=../a373a0c10a1c4d3e89fa27485c0d7451/&manifest=imsmanifest.xml&core_exercise=edelvives_guardianes</a>
+                        </div>
+
+                </section>
+            
+            <p>Esta url, siempre mostrará la misma versión, aunque se siga trabajando en el proyecto y se implementen cambios. Para mostrar los nuevos cambios deberá generarse una nueva url mediante la opción GO TO READER.</p>
+            <p>Para mostrar una versión a alguien que no tenga acceso al cat, puede proporcionársele la url de su wc, sin embargo, necesitará también las claves de acceso que se introducen al acceder al cat (usuario y contraseña)</p>
+            <img src="img/reader/06.png">
+        </section>       
+        
+        <section class="tutorial">
+            <h3>Tipos de publicación</h3>
+            <p>En la parte final de la pantalla del reader aparece el apartado de publicación “Publisher”</p>
+            <img src="img/reader/07.png">
+            <p>Como podemos observar, existen 2 botones diferentes: <b><mark style="background-color: darkslategray; color: white">PUBLISH BOOK</mark></b> y <b><mark style="background-color: darkslategray; color: white">PUBLISH READER</mark></b></p>
+            <p>Como su nombre indica:</p>
+            <ul>
+            <li>Publish Book publica el contenido del libro (normalmente el trabajo que realizan los editores).</li>
+            <li>Publish Reader publica el contenido del “motor de lectura del libro”. Este trabajo lo realizan los programadores.</li>
+            </ul>
+            <p>Tal y como ya hemos visto en los ejemplos anteriores de navegación, los libros digitales se muestran de diferente manera en los diversos proyectos. Esto se debe, a que utilizan diferentes readers o “motores de lectura”.</p>
+            <p>Hasta que no se publica (ya sea libro o reader), el contenido y/o aspecto no es visible para los usuarios finales, tan solo será visible para el personal que tenga acceso al cat y pueda generar el libro mediante la opción GO TO READER descrita en el párrafo anterior.</p>            
+        </section>
+        
+        <section class="tutorial">
+            <h3>Publish Reader</h3>
+            <p>La opción Publish Reader, actualiza los cambios de programación que hayan realizado los desarroyadores  sobre el “motor de lectura”.</p>
+            <p>Tal y como veíamos en el punto anterior, al publicar se actualiza la versión (en este caso de programación), a la existente en ese preciso instante. Esta actualización, afectará a todas las wc de los todos libros que utilicen este reader, por tanto, <b><u>este botón sólo debe ser utilizado por los programadores, o en su defecto, sólo pulsarlo por indicación de ellos.</u></b></p>
+            <p>La mayoría de los libros que ya han sido publicados, se autopublican diariamente mediante un CRON, por tanto, una publicación no autorizada del reader, podría afectar a infinidad de libros que están siendo utilizados por usuarios finales y dar lugar a multitud de incidencias a nuestros clientes.</p>
+            <p>Una vez pulsado el botón, la herramienta nos indicará que ha teminado el processo y mostrará el número de veces que ha sido publicado de forma manual:</p>
+            <img src="img/reader/7.gif"> 
+        </section>
+        
+        <section class="tutorial">
+            <h3>Publish Book</h3>
+            <p>La opción Publish Book, actualiza los cambios de contenido que hayan realizado los editores  sobre el libro concreto que estemos trabajando.</p>
+            <p>Tal y como veíamos en el punto anterior, al publicar se actualiza la versión (en este caso de contenido + última versión del reader que se haya publicado), a la existente en ese preciso instante. Esta actualización, generará la wc y será esta versión, la que se muestre a los usuarios finales.</p>
+            <p>Por todo lo expuesto,  <b><u>este botón sólo debe ser utilizado por indicación directa de editorial</u></b>, ya que podríamos mostrar versiones a los usuarios finales aún no autorizadas por nuestro cliente.</p>
+            <p>En el caso de esta opción, y dependiendo del proyecto en el que nos encontremos, podremos encontrar diferentes opciones posibles de publicación:</p>
+                <ol>
+                   <li>Teacher Version: Versión Profesor </li> 
+                   <li>Both: Versión alumno + Versión profesor</li> 
+                </ol>
+            <img src="img/reader/8.gif"> 
+            <p>La opción a elegir, nos vendrá indicada por editorial.</p>
+            <p>Una vez pulsado el botón, la herramienta nos indicará que ha teminado el processo y mostrará el número de veces que ha sido publicado de forma manual:</p>
+            <img src="img/reader/9.gif"> 
+
+        </section>       
+       
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
