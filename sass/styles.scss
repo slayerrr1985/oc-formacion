@@ -115,6 +115,8 @@ $azul_oscuro_oc: #0063a6;
 }
 
 
+
+
 #return-to-top {
     position: fixed;
     bottom: 20px;
@@ -146,6 +148,39 @@ $azul_oscuro_oc: #0063a6;
     top: 5px;
 }
 
+
+
+
+#return-to-index {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+    // display: none;
+    transition: all 0.3s ease;
+}
+#return-to-index i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 17px;
+    top: 15px;
+    font-size: 19px;
+    transition: all 0.3s ease;
+}
+#return-to-index:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-index:hover i {
+    color: #fff;
+    left: 8px;
+}
 
 
 

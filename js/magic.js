@@ -73,6 +73,25 @@ $('a[href^="#"]').click(function(e) {
 
 
 /* 
+ *  Back to Index
+ */
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-index').fadeOut(150);    // Fade in the arrow
+    } else {
+        $('#return-to-index').fadeIn(150);   // Else fade out the arrow
+    }
+});
+
+$('#return-to-index').click(function() {      
+    window.location.href = "./index.html";
+});
+
+
+
+
+/* 
  *  Scroll to Top
  */
 
