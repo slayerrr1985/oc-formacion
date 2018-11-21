@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+    
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+    
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/manual_svn.png">
+        <ul></ul>
+        <a class="pdf-download" href="#"><img src="img/pdf-sm.png" target="_blank"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+        <section class="tutorial">
+            <h3>Subversión</h3>
+            <p>Apache Subversion (a menudo abreviado SVN, después del nombre de comando svn) es un sistema de control de versiones y revisiones de software distribuido como software libre. Los editores pueden usar Subversion para mantener versiones actuales e históricas de la documentación. SVN utiliza un modelo de servidor / cliente: esto significa que el repositorio está ubicado en un servidor remoto y el usuario necesita un programa o cliente local para descargar, confirmar y actualizar los cambios en el servidor. El cliente SVN más popular es TortoiseSVN. Una vez instalado, está totalmente integrado dentro del sistema shell de Windows</p>
+            <p>Todos los proyectos se almacenan en un repositorio central (servidor web). Los editores mantienen una copia local del proyecto en sus ordenadores. Los editores comparten regularmente información con el servidor para mantenerla actualizada con sus copias. Cada vez que los cambios se confirman en el servidor, se genera una nueva versión de los archivos modificados. Los usuarios siempre pueden volver a la revisión previa de cada archivo si es necesario.</p>
+            <p>Para empezar tenemos que tener instalado el Tortoise.</p>
+            <p><a target="_blank" href="https://tortoisesvn.net/downloads.html">Descarga Tortoise</a></p>
+            <p>Operaciones básicas:</p>
+            <ul>
+                <li><b>Checkout:</b> Esta opción se utiliza la primera vez que los usuarios descargan una copia de un proyecto. Tenemos que conocer la URL del proyecto. Todas las URL de SVN comienzan con "svn: //".</li>
+                <li><b>Update:</b> Esta operación se realiza cada vez que necesitamos actualizar nuestro repositorio. Ya que algún compañero a podido hacer algún cambio que afecte a nuestros archivos. Al tener el repositorio actualizado se evitan los conflictos.</li>
+                <li><b>Commit:</b> Los editores utilizan el comando Confirmar para sincronizar sus contenidos locales en el repositorio en el lado del servidor y compartirlos con otros editores. En otras palabras, cuando un editor realiza una serie de cambios en un repositorio, debe de compartirlos, comitear, para que el resto de compañeros tengan acceso a cambio realizado.</li>
+                <li><b>Revert:</b> Sirve para revertir el cambio realizado en los archivos del repositorio, se tiene que realizar antes de que esos cambios sean comiteados.</li>
+                <li><b>Resolve:</b> En algunas ocasiones surgen conflictos entre los archivos locales de un editor, ya que puede haber un archivo que no se haya actualizado.</li>
+                <li><b>Clean up:</b> Sirve para hacer una limpieza más a fondo del repositorio, eliminando los archivos que no sean correctos.</li>
+            </ul>
+            <video controls>
+                <source src="video/Subversion.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
