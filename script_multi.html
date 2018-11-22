@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="#" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h3>Introducción</h3>
+            <p>Como ya se comentó en manuales anteriores, nuestras ediciones digitales contienen otra serie de módulos además de la propia digitalización de los libros. Algunos de esos módulos recogen por tipologías los contenidos interactivos que hemos ido enlazando dentro del propio libro como por ejemplo actividades, multimedia, etc. y otros son módulos independientes como el generador de evaluaciones. En este manual vamos a ver como se trasladan los contenidos que ya tenemos enlazados en el libro, para que aparezcan también en los módulos que les corresponde además de la ubicación en la que ya los habíamos incluido.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/script/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/script/02.png"></li> 
+            </ol>                        
+        </section>
+        
+        <section class="tutorial">
+            <h3>Acceder al Script</h3>
+            <p>Para acceder al Script debemos entrar en la herramienta Markers Editor en la zona del TOC:</p>
+            <img src="img/script/03.png">
+            <p>Es importante resaltar, que esta herramienta debe utilizarse en fases avanzadas del montaje de un libro, cuando ya se ha realizado el enlace de los hotspots.</p>
+            <p>Recordaremos que, por regla general, las actividades o ejercicios, se han ubicado en el TOC como ítems hijos de cada una de las páginas a las que pertenecen, y que el resto de los contenidos interactivos se han ubicado dentro del apartado de Recursos Multimedia de cada unidad perfectamente ordenados según el orden de aparición en el libro.</p>
+            <p>Si analizamos el TOC y plegamos el ítem Libro digital, veremos que al final existen una serie de ítems a su mismo nivel en el árbol que hasta ahora se encuentran vacíos de contenido:</p>
+            <img src="img/script/1.gif">
+            <p>Estos ítems, serán los contenedores del material de los módulos que describíamos en la introducción:</p>
+            <img src="img/script/04.png">
+            <p>Es decir, en el módulo de actividades, deben volcarse todas las actividades que hayamos enlazado en el libro, en el de multimedia los contenidos de Recursos multimedia (audios, videos, dz, …) etc.</p>
+            <p>Por tanto, el script debe utilizarse cuando los mencionados contenidos han sido enlazados previamente. Antes de acceder al script, es imprescindible realizar un repaso previo de todo el TOC, asegurándose que todos los ítems hijos de contenidos interactivos están perfectamente ubicados y ordenados en las páginas y/o epígrafes de Recursos multimedia, y que no hay duplicidades de ninguno de ellos.</p>
+            <p>Una vez realizada la revisión, pulsamos el icono del rayo que hay en la parte superior del TOC. En la pantalla seleccionamos manifiesto editado (sale por defecto), pulsamos Modificar, nos aparecerá una pantalla que indica las operaciones que ha realizado el script y esperamos a que el comit se haya realizado. Tras ello, podremos cerrar la pantalla:</p>
+            <img src="img/script/2.gif">
+            <p>Esta operación es delicada, ya que modifica el manifiesto del libro, <b><u>en esta fase, JAMÁS SE SELECCIONARÁ LA OPCIÓN DE MANIFIESTO VIRGEN</u></b>, ya que podríamos arruinar todo el trabajo realizado hasta la fecha en el libro. Este uso del script sólo se realiza en el momento de la creación del manifiesto, como se explicó en el:</p>
+                <section class="links">
+                        <div>
+                            <a href="http://oneclick.es/formacion/HTML2XML.html">manual HTML2XML</a>                            
+                        </div>                                       
+                </section>
+            <p>Siempre, después de aplicar el Script, es necesario realizar una revisión exhaustiva de los contenidos que se han volcado en los módulos de actividades y multimedia, asegurándose que no haya duplicidades, nombres incorrectos, etc. Si se dieran cualquiera de estos supuestos, habría que corregirlos en el libro digital y volver a pasar el script. Este proceso se realizará tantas veces sea necesario hasta que quede perfecto, por tanto, el uso del script, es un proceso que habitualmente realiza un editor avanzado además de que es necesario que conozca a la perfección el contenido total que abarca el libro en cuestión.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Particularidades del Script</h3>
+            <p>Una vez pasado el script, se refresca el TOC y observamos que en el módulo de Actividades se ha creado una réplica de cada una de las unidades del libro que contiene un ítem clon de todas las actividades de cada unidad renombradas con la numeración de forma correlativa:</p>
+                
+            <img src="img/script/3.gif">
+            <p>El propio script, rellena los campos de como se denominan las unidades. Por defecto, y como se aprecia en el ejemplo que vemos invierte los campos Title y description de la unidad de partida del libro digital:</p>
+            <img src="img/script/4.gif">
+            <p>Sin embargo, este título puede ser modificado para que el script renombre las unidades con cualquier otro epígrafe. Para ello, tal y como se explicó en el manual del toc para el caso especial de las unidades trimestrales</p>
+                <section class="links">
+                        <div>
+                            <a href="http://oneclick.es/formacion/TOC.html">manual TOC</a>                    
+                        </div>                                       
+                </section>
+            <p>al renombrar el epígrafe de la unidad base del libro con el editor, pulsando el botón de Advanced Editor, se nos abre una nueva pantalla: </p>
+            <img src="img/script/05.png">
+            <p>Desplegamos el campo metadata pulsando el +:</p>
+            <img src="img/script/06.png">
+            <p>Pulsamos Add New Value</p>
+            <img src="img/script/07.png">
+            <p>En el campo newKey teclearemos: description_script_activity y en el campo null teclearemos: "Trimestre t1" (siendo t2 y t3 en el caso de los otros dos trimestres)</p>
+            <img src="img/script/08.png">
+            <p>Pulsamos SAVE CHANGES y esperamos como siempre a que el comit se haya producido.</p>
+            <p>Si quisiéramos que apareciera otro texto sustituiríamos “Trimestre t1” por el nuevo texto deseado.</p>
+            <p>De esta forma en el libro digital, nuestro módulo de actividades mostraría el siguiente contenido:</p>
+            <img src="img/script/5.gif">
+            <p>En el caso del módulo Multimedia (no confundir con el epígrafe de Recursos Multimedia de cada una de las unidades del libro) se ha creado una réplica de cada una de las unidades del libro que contiene un ítem clon de todos los recursos multimedia de cada unidad, con el mismo renombrado que tuviera cada uno de ellos en su ubicación original:</p>
+            <img src="img/script/6.gif">
+            <p>Como en el caso anterior, el propio script, rellena los campos de cómo se denominan las unidades. Por defecto, y como se aprecia en el ejemplo que vemos invierte los campos Title y description de la unidad de partida del libro digital:</p>
+            <img src="img/script/7.gif">
+            <p>De la misma forma que en el módulo de actividades este título puede ser modificado para que el script renombre las unidades con cualquier otro epígrafe (habitualmente en el caso de multimedia no se realiza, pero el cat está preparado para ello).</p>
+            <p>Se realizan las mismas operaciones indicadas en el caso de actividades, pero en los metadatos, al añadir uno nuevo (Add New Value), en el campo newKey teclearemos: description_script_multimedia y en el campo null teclearemos: "xxxx" siendo xxx el nuevo título que queramos que nos introduzca el script.</p>
+            <p>De esta forma en el libro digital, nuestro módulo de actividades mostraría el siguiente contenido:</p>
+            <img src="img/script/8.gif">
+            
+        </section>        
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
