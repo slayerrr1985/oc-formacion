@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_deepzoom.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual, vamos a ver cómo se crea un Deep Zoom, para poder enlazarlo posteriormente como contenido adicional de nuestras ediciones digitales. Su enlace al libro es objeto de otro manual específico: </p>
+            
+            <section class="links">
+                        <div>
+                            <a href="http://oneclick.es/formacion/hotspots.html">Manual Hotspots</a>                            
+                        </div>                                       
+            </section>
+        </section>
+
+        <section class="tutorial">
+            <h3>¿Qué es un Deep Zoom?</h3>
+            <p>Se denomina Deep Zoom (también denominado dz) a una imagen concreta del libro que se pretende resaltar por diversos motivos. Esta imagen será extraída del libro, y tras varios procesos de edición permitirá al usuario final que, al hacer clic sobre la imagen, esta se muestre en pantalla completa a mayor tamaño y de forma individual al resto del contenido de la página a la que pertenece. Además, los dz pueden contener información adicional que no tenía la imagen original, o bien mostrar los mismos de forma interactiva:</p>
+            <img src="img/deepzoom/1.gif">
+            <p>Por tanto, vamos a explicar las fases de edición para conseguir generar un dz.</p>            
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Elección de las imágenes</h3>
+            <p>Desde editorial, se nos indicará el listado las imágenes de cada página que deben convertirse en dz. Además, deberán proporcionarnos la mismas en formato editable mediante Photoshop (en adelante PS) y con tamaño y calidad suficiente para mostrarse a pantalla completa.</p>            
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Tratamiento de las imágenes</h3>
+            <p>Desde editorial, se nos indicará el listado las imágenes de cada página que deben convertirse en dz. Además, deberán proporcionarnos la mismas en formato editable mediante Photoshop (en adelante PS) y con tamaño y calidad suficiente para mostrarse a pantalla completa.</p>
+            <ul>
+                <li><b>Imagen horizontal</b>: procuraremos que el tamaño horizontal de la imagen de origen del DZ esté entre 1100 y 600 px de ancho manteniendo el alto proporcional que resulte para no deformar la imagen. Si la original es mayor de 1100 se reduce a este tamaño y si es menor de 600px debemos solicitar a editorial una imagen mayor o bien indicar que se debe descartar. La resolución debe dejarse siempre a 72 ppp.</li>
+                <li><b>Imagen vertical</b>: procuraremos que el tamaño vertical de la imagen de origen del DZ esté entre 1000 y 600 px de alto, con el ancho proporcional correspondiente. Si la original es mayor de 1100 se reduce a este tamaño y si es menor de 600px debemos solicitar a editorial una imagen mayor o bien indicar que se debe descartar. La resolución debe dejarse siempre a 72 ppp.</li>
+            </ul>
+            <p>Las dimensiones indicadas son algo aproximado, una orientación inicial, ya que la infinidad de proporciones diferentes que pueden tener las imágenes nos obligará en ciertas ocasiones a rehacer el proceso hasta dar con el tamaño más adecuado. Esto suele pasar en aquellas imágenes que son “muy alargadas” tanto horizontales como verticales.</p>
+            <p>Para redimensionarlas, utilizaremos las opciones que proporciona el PS:</p>
+            <img src="img/deepzoom/2.gif">
+            <p>Una vez redimensionada se exporta para web en PNG-24 con transparencia y sin halo:</p>
+            <img src="img/deepzoom/3.gif">
+            <p>Con la imagen redimensionada menú Archivo/Exportar/Zoomify:</p>
+            <img src="img/deepzoom/4.gif">
+            <p>Damos ruta de la carpeta de destino (debe ser una carpeta de trabajo, fuera del repositorio del libro en el que estemos trabajando), nombre fácilmente identificable y mantenemos el resto de las opciones como muestra la siguiente captura:</p>
+            <img src="img/deepzoom/01.png">
+            <p>Pulsamos ok y esperamos que PS realice el trabajo:</p>
+            <img src="img/deepzoom/5.gif">
+            <p>En la carpeta indicada se nos habrá creado lo siguiente:</p>
+            <img src="img/deepzoom/6.gif">
+            <p>Copiamos la carpeta denominada con el nombre que habíamos introducido en el proceso de Zoomify y la llevamos al repositorio del libro en el que estemos trabajando dentro de la carpeta DEEPZOOM. Los otros dos archivos no deben ser copiados (en el ejemplo: 06_motivadora_unit01---copia.html y ZoomifyImageViewer-min.js):</p>
+            <img src="img/deepzoom/02.png">
+            <img src="img/deepzoom/7.gif">
+            <p>Procedemos al renombrado correcto de la carpeta que acabamos de copiar en nuestro repositorio según el siguiente criterio (U01_019_01):</p>
+            <ul>
+                <li>U01_: unidad a la que pertenece (siempre U+2dígitos+guión bajo)</li>
+                <li>019_: página a la que pertenece (siempre con 3 dígitos+guión bajo)</li>
+                <li>01: número de dz dentro de la página (siempre 2 dígitos)</li>
+            </ul>
+            <img src="img/deepzoom/8.gif">
+            <p>Una vez renombrado comiteamos en el repositorio.</p>
+            <p>Todos estos pasos, habrá que realizarlos con cada una de las imágenes que se nos haya solicitado (y proporcionado) desde editorial para generar como dz.</p>
+            <p>El proceso se puede automatizar, para ello recomiendo:</p>
+            <ol>
+                <li>Abrir una carpeta de trabajo denominada DZ</li>
+                <li>Guardar en ella cada una de las imágenes ya redimensionada, en el formato y calidad indicados (72 ppp, png24). Además, es conveniente renombrarla con el nombre correcto que deberá llevar posteriormente la carpeta a introducir en el repositorio. Este paso debe ser manual, una a una, ya que cada caso tiene sus propias particularidades.</li>
+                <li>Una vez tengamos todos los png juntos, se puede grabar previamente un automatismo en el PS que nos genere el proceso de Zoomify. De esta forma, pondremos en marcha el automatismo, seleccionando todas las imágenes de origen (previamente tratadas) y en la carpeta destino (es recomendable que sea diferente a la que contiene los png) obtendremos todas las carpetas que tendremos que llevar al repositorio más los archivos que desechamos.</li>
+                <li>Si el png de origen ya está bien renombrado, tan sólo nos tendremos que llevar las carpetas a nuestro repositorio y comitearlas todas juntas.</li>
+            </ol>
+            <p>Es evidente que, si automatizamos los procesos, cada vez que pulsemos una opción, tanto el PS como el comit, tardarán algún tiempo (dependiendo del número de imágenes que estemos transformando y subiendo), pero el automatismo genera una gran ganancia de tiempo, dado que ni tenemos que hacerlo una a una, y mientras los programas están trabajando, podemos dedicarnos a realizar otra tarea en un programa diferente.</p>
+            <p>Una vez que tenemos todas nuestras carpetas de dz comiteadas en el repositorio, tenemos que acceder al CAT.</p>            
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/deepzoom/03.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/deepzoom/04.png"></li> 
+            </ol>                        
+        </section>
+        
+        <section class="tutorial">
+            <h3>Acceso al DeepZoom Editor</h3>
+            <p>Para acceder a la herramienta del Cat que nos ayudará a terminar de generar los dz, denominada DeepZoom Editor pulsamos el siguiente icono: </p>
+            <img src="img/deepzoom/05.png">                         
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Creación de un Deep Zoom sencillo (solo imagen)</h3>
+            <p>Pulsamos New Project, tecleamos el nombre del dz que vamos a editar, en nuestro ejemplo U01_019_01, seleccionamos la carpeta (ojo debe ser el mismo código):</p>
+            <img src="img/deepzoom/9.gif">
+            <p>y se nos abre nuestra imagen para ser editada:</p>
+            <img src="img/deepzoom/06.png">
+            <p>En el caso de que fuera un dz simplemente de imagen, daríamos a Save en la botonera de TOOLS y detrás Close, que nos llevará de nuevo a la pantalla principal del DeepZoom Editor. </p>
+            <p>En este momento, nuestro dz ya estaría listo para poder enlazarse en el libro.</p>
+            <p>Realizaríamos esta misma operación con todos y cada unos de los dz que hemos preparado con el PS y comiteado en el repositorio.</p>            
+        </section>
+        
+        <section class="tutorial">
+            <h3>Creación de un Deep Zoom interactivo (muestra contenidos)</h3>
+            <p>Previamente tendremos que realizar el paso anterior, es decir, inicialmente se pueden generar todos los dz como sencillos y posteriormente editamos los que sean necesarios.</p>
+            <p>Para ello, puesto que el dz ya ha sido creado, al volver a la pantalla principal del DeepZoom Editor, pulsaremos “Open Project”</p>
+            <img src="img/deepzoom/07.png">
+            <p>Seleccionamos el dz a editar en nuestro ejemplo U01_019_01:</p>
+            <img src="img/deepzoom/10.gif">
+            <p>Desde el panel de herramientas TOOLS se pueden realizar múltiples opciones, sin embargo, nos vamos a centrar en el caso más habitual, que es que vayan apareciendo contenidos (ya sean títulos o pequeños textos) a medida que pulsamos en los puntos que marquemos en la imagen mediante un icono preestablecido en la herramienta.</p>
+            <p>Este tipo de dz se hacen utilizando la opción MARKERS pulsando el botón Add marker.</p> 
+            <p>Nada mas pulsarlo, nos aparecerá el icono en la parte central, tan solo tenemos que arrastrarlo al lugar deseado de la imagen:</p>
+            <img src="img/deepzoom/11.gif">
+            <p>En el campo Action por defecto aparece None, debemos seleccionar Popup: </p>
+            <img src="img/deepzoom/12.gif">
+            <p>En el campo Description debemos introducir el texto que debe aparecer al hacer clic sobre el icono. Se nos abre un editor de texto en el que podremos introducirlo:</p>
+            <img src="img/deepzoom/13.gif">
+            <p>Podemos introducir tantos markers sean necesarios para obtener el resultado deseado, simplemente pulsando de nuevo Add Marker y comprobar desde la imagen que muestra todos y cada uno de ellos:</p>
+            <img src="img/deepzoom/14.gif">
+            <p>Una vez terminados concluidos todos los markers, se pulsa save (permanece rojo mientras haya cambios sin guardar) y después close. Nuestro dz interactivo estaría listo para enlazar: </p>
+            <img src="img/deepzoom/15.gif">
+            <p>Repetimos la operación con todos los dz de este tipo que haya en el proyecto que estamos trabajando.</p>     
+        </section>
+        
+        <section class="tutorial">
+            <h3>Particularidades de Deep Zoom</h3>
+            <p>Como ya indicamos al inicio del manual, el tamaño de las imágenes de origen y sus proporciones influyen mucho en el resultado final. Por tanto, es buena práctica de trabajo el realizar todos los dz como sencillos, enlazarlos y comprobar su aspecto real en la plataforma.</p>
+            <p>En ocasiones, puede ser necesario ampliar o reducir la imagen, lo que nos obligará a realizar todo el proceso en ese determinado dz.</p>
+            <p>Por tanto, es conveniente comprobar todos los dz (uno a uno) en su fase de sencillo, y una vez el resultado sea optimo, proceder a hacerlos interactivos.</p>
+        </section>
+        
+             
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
