@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_presentaciones.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual, vamos a ver cómo se crea una Presentación, para poder enlazarla posteriormente como contenido adicional de nuestras ediciones digitales. Su enlace al libro es objeto de otro manual específico:</p>
+            <section class="links">
+                    <div>
+                        <a href="http://oneclick.es/formacion/hotspots.html">manual  hotspost</a>
+                    </div>                                      
+                </section>
+            
+            
+        </section>
+
+        <section class="tutorial">
+            <h3>¿Qué es una Presentación?</h3>
+            <p>Se denomina Presentación a una imagen concreta del libro que se pretende resaltar por diversos motivos en la que van apareciendo diferentes partes de la misma de forma secuencial. Esta imagen será extraída del libro, y tras varios procesos de edición permitirá al usuario final que, al hacer diversos clics sobre la imagen, esta vaya mostrando contenido adicional de forma interactiva:</p>
+            <img src="img/presentaciones/1.gif">
+            <p>Por tanto, vamos a explicar las fases de edición para conseguir generar una presentación.</p>                        
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Elección de las imágenes</h3>
+            <p>Desde editorial, se nos indicará el listado las imágenes de cada página que deben convertirse en Presentación. Además, deberán proporcionarnos la mismas en formato editable mediante Photoshop (en adelante PS) y con tamaño y calidad suficiente para mostrarse a pantalla completa.</p>                        
+        </section>
+        
+        <section class="tutorial">
+            <h3>Tratamiento de las imágenes</h3>
+            <p>Dado que las pantallas digitales tienen unas dimensiones determinadas, lo primero que hay que hacer es adaptar las imágenes de origen proporcionadas por editorial a un tamaño adecuado, en este caso, el tamaño se refiere a la imagen completa o final de toda la presentación. Además, dado que las imágenes no se pueden deformar, habrá que diferenciar entre imágenes de sentido horizontal o vertical:</p>      
+            <ul>
+                <li><b>Imagen horizontal</b>: procuraremos que el tamaño horizontal de la imagen de origen esté entre 1100 y 600 px de ancho manteniendo el alto proporcional que resulte para no deformar la imagen. Si la original es mayor de 1100 se reduce a este tamaño y si es menor de 600px debemos solicitar a editorial una imagen mayor o bien indicar que se debe descartar. La resolución debe dejarse siempre a 72 ppp.</li>
+                <li><b>Imagen vertical</b>: procuraremos que el tamaño vertical de la imagen de origen esté entre 1000 y 600 px de alto, con el ancho proporcional correspondiente. Si la original es mayor de 1100 se reduce a este tamaño y si es menor de 600px debemos solicitar a editorial una imagen mayor o bien indicar que se debe descartar. La resolución debe dejarse siempre a 72 ppp.</li>
+            </ul>
+            <p>Las dimensiones indicadas son algo aproximado, una orientación inicial, ya que la infinidad de proporciones diferentes que pueden tener las imágenes nos obligará en ciertas ocasiones a rehacer el proceso hasta dar con el tamaño más adecuado. Esto suele pasar en aquellas imágenes que son “muy alargadas” tanto horizontales como verticales.</p>
+            <p>Para redimensionarlas, utilizaremos las opciones que proporciona el PS:</p>
+            <img src="img/presentaciones/2.gif">
+            <p>Una vez redimensionada el proceso más sencillo es duplicar la imagen en varias capas, en las que iremos borrando las partes que no son necesarias en cada una de las secuencias. En el ejemplo que vamos a utilizar, necesitamos de inicio la misma imagen en 6 capas distintas: </p>
+            <img src="img/presentaciones/3.gif">
+            <img src="img/presentaciones/4.gif">
+            <p>En cada una de esas capas borramos mediante el PS la parte que no nos interesa:</p>
+            <img src="img/presentaciones/5.gif">
+            <p>Guardaremos las imágenes en png, superponiendo capas de forma incremental, para ir consiguiendo en cada una de ellas la totalidad de contenido a mostrar. En el ejemplo será:</p>
+            <ol>
+                <li>Fondo + imagen de la planta.</li>
+                <li>Fondo + imagen de la planta + recuadro 1.</li>
+                <li>Fondo + imagen de la planta + recuadro 1 + recuadro 2.</li>
+                <li>Y así sucesivamente hasta conseguir la imagen completa.</li>
+            </ol>
+            <p>El guardado se efectuará siempre mediante la opción de PS Archivo/Exportar/Guardar para web/ en png 24 con transparencia y sin halo:</p>
+            <img src="img/presentaciones/01.png">
+            <p>Cada una de las imágenes a guardar deben nombrarse de la siguiente forma atendiendo al orden de aparición en la que queremos que se vayan a mostrar:</p>
+            <ol>
+                <li>ppt_01.png</li>
+                <li>ppt_02.png</li>
+                <li>ppt_03.png</li>
+                <li>ppt_04.png</li>
+                <li>ppt_05.png</li>
+                <li>ppt_06.png</li>
+            </ol>
+            <img src="img/presentaciones/02.png">
+            <p>Es buena practica generar estas imágenes en una carpeta de trabajo fuera del repositorio del que estemos trabajando.</p>
+            <p>Una vez que las tenemos generadas, en el repositorio del libro, en la carpeta PRESENTATIONS generamos una carpeta denominada de la siguiente manera (U02_032_01):</p>
+            <ul>
+                <li>U02_: Unidad a la que pertenece la presentación (siempre U+2dígitos+guión bajo).</li>
+                <li>032_: Página a la que pertenece la presentación (siempre con 3 dígitos+guión bajo).</li>
+                <li>01: número de presentación dentro de la misma página (siempre 2 dígitos).</li>                
+            </ul>
+            <p>Dentro de esta carpeta generaremos una carpeta images, y dentro de ella pondremos las imágenes que hemos creado con el PS:</p>
+            <img src="img/presentaciones/6.gif">
+            <p>Realizamos el mismo proceso con todas y cada una de las presentaciones del libro en el que estamos trabajando y comiteamos el repositorio.</p>
+            <p>Una vez que tenemos todas nuestras presentaciones comiteadas en el repositorio, tenemos que acceder al CAT.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta CAT</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/presentaciones/03.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/presentaciones/04.png"></li> 
+            </ol>     
+        </section>
+        
+        <section class="tutorial">
+            <h3>Acceso a Presentation</h3>
+            <p>Para acceder a la herramienta del Cat que nos ayudará a terminar de generar las presentaciones, denominada Presentation pulsamos el siguiente icono:</p>
+            <img src="img/presentaciones/05.png">                     
+        </section>
+        
+        <section class="tutorial">
+            <h3>Creación de una Presentación</h3>
+            <p>Observaremos que todas las carpetas nuevas que hemos creado con las imágenes aparecen en el menú izquierdo con una “x” roja:</p>
+            <img src="img/presentaciones/06.png">
+            <p>Si pulsamos sobre ella, nos aparecen las imágenes que hemos generado previamente en el PS:</p>
+            <img src="img/presentaciones/7.gif">
+            <p>En la preview podremos comprobar que el tamaño y orden de colocación es el correcto:</p>
+            <img src="img/presentaciones/8.gif">
+            <p>En caso afirmativo cerramos la presentación y la generamos, observamos que se sincroniza con el repositorio y aparece en el menú izquierdo con una “v” verde:</p>
+            <img src="img/presentaciones/9.gif">
+            <p>Si updateamos nuestro repositorio veremos que en nuestra carpeta nos aparece el archivo “data.json”:</p>
+            <img src="img/presentaciones/10.gif">
+            <p>De esta forma, ya tenemos nuestra presentación lista para ser enlazada.</p>
+            <p>Repetiremos esta operación con todas y cada una de las presentaciones que hayamos creado para nuestro libro.</p>
+        </section>
+
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
