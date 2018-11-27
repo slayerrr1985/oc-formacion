@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_html2xml_lp.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>La herramienta PDF to XML (Manifest) del CAT permite generar el manifiesto de un libro. Dicho archivo es el que contiene los datos específicos de cada uno de los libros que permiten su inclusión en la plataforma digital. </p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/HTML2XML_lp/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/HTML2XML_lp/02.png"></li> 
+            </ol>     
+        </section>
+        
+        <section class="tutorial">
+            <h3>Paso previo</h3>
+            <p>Antes de utilizar la herramienta propiamente dicha, es necesario haber realizado el proceso de PDF to HTML explicado en el manual anterior.</p>                
+        </section>
+        
+        <section class="tutorial">
+            <h3>Uso de la Herramienta HTML to XML (Manifes)</h3>
+            <p>Lo primero que se debe hacer al entrar al CAT es asegurarnos que el proyecto está perfectamente updateado:</p>
+             <img src="img/HTML2XML_lp/1.gif">
+            <p>Al igual que en el caso de la herramienta anterior, se trata de una operación sumamente importante, ya que, una vez montado el libro, realizar cambios a este respecto, supone en muchas ocasiones tener que iniciar todo el proceso desde cero.</p>
+            <p>Para comenzar a utilizar la herramienta objeto de este manual. Identificamos y pulsamos su botón de acceso:</p>
+             <img src="img/HTML2XML_lp/03.png">
+            <p>Se iniciará el proceso de sincronización del CAT con el repositorio, y nos mostrará en pantalla todas las carpetas que contenga la carpeta HTML del repositorio.</p>
+            <p>En el ejemplo que nos ocupa, que es el montaje del libro del profesor, estarán correspondientes a las unidades del libro del alumno más la correspondiente al libro del profesor que habíamos preparado previamente:</p>
+             <img src="img/HTML2XML_lp/2.gif">
+            <p>Seleccionamos en el menú de la izquierda la carpeta del LP y la arrastramos hacia la parte derecha en la zona indicada como libro del profesor, pulsamos el botón generar y esperamos hasta que la herramienta nos indique que el proceso ha finalizado:</p>
+             <img src="img/HTML2XML_lp/3.gif">
+            <p>Pulsamos aceptar y updateamos el repositorio.</p>
+            <p>Verificamos que en la carpeta dummie\MANIFIESTOS se nos ha creado el archivo “imsmanifest_LP01_Contenidos_B1.xml”</p>
+             <img src="img/HTML2XML_lp/4.gif">
+        </section>
+        
+
+        <section class="tutorial">
+            <h3>Enlace del manifiesto del libro del profesor al libro digital</h3>
+            <p>Para poder enlazar el Libro del profesor (LP) al libro digital necesitamos utilizar la herramienta makers editor:</p>
+             <img src="img/HTML2XML_lp/04.png">
+            <p>Pulsamos sobre el ítem denominado Libro digital para que nos salga la barra de herramientas lateral y escogemos la opción “Import from XML”</p>
+             <img src="img/HTML2XML_lp/05.png">
+            <p>En la pantalla que se nos abre seleccionamos el manifiesto que acabamos de crear (imsmanifest_LP01_Contenidos_B1.xml):</p>
+             <img src="img/HTML2XML_lp/5.gif">
+            <p>Una vez seleccionado, hacemos la importación:</p>
+             <img src="img/HTML2XML_lp/6.gif">
+            <p>Cerramos la pantalla, y volvemos a la pantalla principal del Markers editor. Observaremos en el TOC que justo después de la última unidad del libro del alumno, se nos han introducido las páginas del Libro del Profesor:</p>
+             <img src="img/HTML2XML_lp/7.gif">
+            <p>Reconoceremos fácilmente estas páginas, ya que todas ellas llevan el icono de un candado, lo que indica que son contenidos que no se mostrarán en la versión alumno.</p>
+            <p>La edición de los títulos y epígrafes de este nuevo volumen dentro de nuestro libro digital es objeto del siguiente manual (Manual de Uso herramientas CAT: TOC. -Libro del profesor)</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Comprobación del manifiesto del Libro del profesor</h3>
+            <p>Es necesario comprobar que el manifiesto que se ha generado es correcto, verificando que cada una de las paginas del libro están perfectamente numeradas y en el orden correcto. En caso contrario, eliminaríamos en el TOC el ítem denominado “Contenidos” y volveríamos a iniciar el proceso, hasta que el LP esté correcto:</p>
+             <img src="img/HTML2XML_lp/8.gif">
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
