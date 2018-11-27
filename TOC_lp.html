@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_toc_lp.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual vamos a ver como se organizan y nombran las páginas en el libro del profesor, sus epígrafes, y múltiples características de manejo de la herramienta para poder conseguir el resultado deseado por la editorial.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/toc_lp/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/toc_lp/02.png"></li> 
+            </ol>     
+        </section>
+
+        <section class="tutorial">
+            <h3>Acceder al TOC</h3>
+            <p>Como ya indicamos en manuales anteriores, el TOC es el menú lateral izq. de la herramienta “Makers editor” en el que se encuentran todas y cada una de las pág. que contiene nuestro libro:</p>
+             <img src="img/toc_lp/03.png">
+            <p>Para la preparación del TOC, es necesario tener en todo momento abierto el archivo pdf del libro del profesor que estemos generando.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Epígrafes principales</h3>
+            <p>Los dos primeros ítems del TOC son los Epígrafes principales. Se denominan respectivamente:</p>
+            <ol>
+                <li>Propuesta didáctica (o su traducción al idioma que corresponda)</li>
+                <li>Contenidos (o su traducción al idioma que corresponda)</li>
+            </ol>
+             <img src="img/toc_lp/04.png">           
+        </section>
+        
+        <section class="tutorial">
+            <h3>Títulos de las páginas</h3>
+            <p>La primera de las páginas se denominará siempre como el primer ítem, es decir, Propuesta didáctica (o su traducción al idioma que corresponda). Esta página siempre debe llevar el título visible (is visible=si), ya que, de lo contrario, el Libro del profesor tendrá problemas de navegación web.</p>
+            <p>El resto de las páginas dependerán del pdf. Sólo se renombrarán las páginas que contengan un epígrafe en el pdf y además deberán llevar el campo is visible=si:</p>
+             <img src="img/toc_lp/1.gif">
+            <p>El resto de las páginas se dejan tal cual han sido volcadas desde el manifiesto, dado que, sus títulos no se mostrarán en el menú de la plataforma digital:</p>
+             <img src="img/toc_lp/2.gif">
+            <p>Si hubiera alguna duda de como se editan los títulos de cualquiera de los ítems puede consultarse el manual:</p>            
+            <section class="links">
+                    <div>
+                        <a href="http://oneclick.es/formacion/TOC.html">Manual de TOC</a>
+                    </div>              
+             </section>            
+        </section>
+
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
