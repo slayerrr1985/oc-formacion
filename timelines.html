@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_timelines.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual, vamos a ver cómo se crea un Timeline, para poder enlazarla posteriormente como contenido adicional de nuestras ediciones digitales. Su enlace al libro es objeto de otro manual específico:</p>
+            <section class="links">
+                    <div>
+                        <a href="http://oneclick.es/formacion/hotspots.html">Manual Hotspots</a>                 
+                    </div>                                     
+                </section>            
+        </section>
+
+        <section class="tutorial">
+            <h3>¿Qué es un Timeline?</h3>
+            <p>Como su propio nombre indica, se denomina timeline a una línea de tiempo que ayuda a la comprensión de ciertos contenidos en los que es importante remarcar las fases o el tiempo en los que han acontecido. Los timelines pueden contener audios, vídeos, imágenes, etc. para completar la información de forma interactiva:</p>
+            <img src="img/timelines/1.gif">
+            <p>Por tanto, vamos a explicar las fases de edición para conseguir generar un Timeline.</p>            
+        </section>
+        
+        <section class="tutorial">
+            <h3>Elección de las Timeline</h3>
+            <p>Desde editorial, se nos indicará el listado de líneas de tiempo que hay que incluir en el libro, además del contenido adicional (imágenes, audios, videos) que haya que incluir en ellas.  </p>            
+        </section>
+        
+        <section class="tutorial">
+            <h3>Tratamiento de las imágenes</h3>
+            <p>Lo primero que hay que hacer es adaptar las imágenes de origen proporcionadas por editorial a un tamaño adecuado, en este caso, el tamaño se refiere a cada una de las imágenes a insertar. Además, dado que las imágenes no se pueden deformar, la dimensión mayor no debería exceder de 200 px y su resolución a 72 ppp. Las imágenes deben guardarse mediante la opción de PS Archivo/Exportar/Guardar para web/ en png 24 con transparencia y sin halo.</p>
+            <p>Renombraremos cada una de las imágenes de la siguiente manera (U06_108_01a.png):</p>
+            <ul>
+                <li>U06_: Unidad a la que pertenece el timeline (siempre U+2dígitos+guión bajo).</li>
+                <li>108_: Página a la que pertenece el timeline (siempre con 3 dígitos+guión bajo).</li>
+                <li>01: número de timeline dentro de la misma página (siempre 2 dígitos).</li>
+                <li>a.png: posición de la imagen dentro del timeline</li>
+            </ul>
+            <img src="img/timelines/01.png">
+            <p>Es buena práctica generar estas imágenes en una carpeta de trabajo fuera del repositorio del que estemos trabajando.</p>
+            <p>Una vez que las tenemos generadas, en el repositorio del libro, en la carpeta TIMELINE generamos una carpeta denominada de la siguiente manera (U01_018_01):</p>
+            <ul>
+                <li>U01_: Unidad a la que pertenece el timeline (siempre U+2díitos+guión bajo).</li>
+                <li>018_: Página a la que pertenece el timeline (siempre con 3 dígitos+guión bajo).</li>
+                <li>01: número de timeline dentro de la misma página (siempre 2 dígitos).</li>
+            </ul>
+                <p>Dentro de esta carpeta generaremos una carpeta res, y dentro de ella pondremos las imágenes que hemos creado con el PS:</p>
+                <img src="img/timelines/2.gif">
+                <p>El resto de contenidos si los hubiere como audios, videos, etc., irán nombrados del mismo modo y ubicados en la misma carpeta.</p>
+                <p>Realizamos el mismo proceso con todos y cada uno de los timelines del libro en el que estamos trabajando y comiteamos el repositorio.</p>
+                <p>Una vez que tenemos todas nuestras carpetas de timeline comiteadas en el repositorio, tenemos que acceder al CAT.</p>       
+            </section>
+        
+            <section class="tutorial">
+                <h3>Login en la herramienta CAT</h3>
+                <p>Para poder logarse en el CAT es necesario disponer de:</p>
+                <ol>
+                   <li>Usuario y contraseña del CAT a utilizar:<br>
+                    <img src="img/timelines/02.png"></li> 
+                   <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                    <img src="img/timelines/03.png"></li> 
+                </ol>     
+            </section>
+        
+            <section class="tutorial">
+                <h3>Acceso a Timeline Editor</h3>
+                <p>Para acceder a la herramienta del Cat que nos ayudará a terminar de generar los Timeline, denominada Timeline Editor pulsamos el siguiente icono:</p> 
+                 <img src="img/timelines/04.png">
+            </section>
+        
+            <section class="tutorial">
+                <h3>Creación de un Timeline</h3>
+                <p>Pulsaremos sobre el botón “Nueva línea temporal”, en la pantalla que se nos abre rellenaremos el campo de nombre con el código del timeline (el nombre de la carpeta U01_018_01) y en el directorio del proyecto seleccionaremos la carpeta que ya tenemos creada (U01_018_01):</p> 
+                 <img src="img/timelines/3.gif">
+                <p>Tras dar a aceptar, la herramienta volverá a la pantalla inicial.</p>
+                <p>Ahora pulsamos el botón “Abrir línea temporal” y seleccionamos el que acabamos de crear:</p>
+                
+                <p>Se nos abrirá una pantalla de opciones en la que podemos definir desde el idioma en el que irán las anotaciones de la interface, a los aspectos propios del contenido del timeline:</p>
+                 <img src="img/timelines/05.png">
+                <p>La herramienta permite múltiples combinaciones, por tanto, procedemos a enumerar los aspectos más habituales, aunque podrían realizarse líneas de tiempo mucho más complejas.</p>
+                <p>La herramienta necesita introducir ciertas fechas (mínimo comienzo y fin), sin embargo, en algunas ocasiones, necesitaremos crear líneas de tiempo en las que las fechas no aparezcan (ejemplo una línea de tiempo en la que aparezcan hitos antes de cristo y después de cristo A.D y D.C) para casos como estos, seleccionaremos la opción ocultar fechas:</p>
+                 <img src="img/timelines/5.gif">
+                <p>Habitualmente no añadimos portada, por lo que nos saltaremos este paso (el uso de esta opción es muy intuitivo si hiciera falta utilizarlo):</p>
+                 <img src="img/timelines/6.gif">
+                <p>Añadir era: podemos determinar periodos dentro de los cuales posteriormente destacaremos ciertas fechas o eventos:</p>
+                 <img src="img/timelines/7.gif">
+                <p>En cada una de las eras, rellenamos los campos correspondientes:</p>
+                 <img src="img/timelines/06.png">
+                <p>En cada era, mientras la tenemos abierta en el menú izquierdo, podemos crear tantos eventos como sean necesarios:</p>
+                 <img src="img/timelines/8.gif">
+                <p>De cada uno de ellos debemos rellenar los campos:</p>
+                 <img src="img/timelines/07.png">
+                <p>En el campo de media, se nos abrirá un selector que nos lleva a la carpeta res que habíamos creado en el repositorio, por tanto, podremos elegir cualquiera de los archivos que hayamos introducido previamente (imágenes, audio, video, etc…)</p>
+                 <img src="img/timelines/9.gif">
+                <p>En el campo de miniatura, se nos abrirá un selector que nos lleva a la carpeta res que habíamos creado en el repositorio, por tanto, podremos elegir cualquiera de los archivos de imagen que hayamos introducido previamente</p>
+                 <img src="img/timelines/10.gif">
+                <p>Según vamos rellenando eventos, podemos ir pulsando mostrar, para ir viendo el aspecto del timeline que estamos creando:</p>
+                 <img src="img/timelines/11.gif">
+                <p>Una vez hayamos creado todos los eventos de todas las eras, y comprobado que el efecto es el deseado, pulsamos el botón guardar (ya sea desde la previsualización o desde la pantalla principal):</p>
+                 <img src="img/timelines/12.gif">
+                <p>Si updateamos el repositorio, observaremos que en nuestra carpeta se ha creado el archivo “content.timeline.json”</p>
+                 <img src="img/timelines/13.gif">
+                <p>De esta forma tenemos nuestra línea temporal preparada para ser enlazada en nuestro libro.</p>
+                <p>Realizaremos esta operación con todos los timelines que contenga el libro en el que estemos trabajando.</p>
+            </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
