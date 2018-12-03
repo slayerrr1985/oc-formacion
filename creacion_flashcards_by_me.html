@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/manual_creacion_flashcards_by_me.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual, vamos a ver cómo se crea el módulo interactivo de Flashcards de los libros de ByMe. Habitualmente, este módulo no necesitará ser enlazado al libro, dado que su enlace estará preestablecido en el map del repositorio, por tanto, una vez se haya generado el contenido, podremos tener el módulo funcionando. </p>
+        </section>
+
+        <section class="tutorial">
+            <h3>¿Qué son los Flashcards?</h3>
+            <p>Como su propio nombre indica, se denominan Flashcards a una serie de tarjetas interactivas, con una imagen que lleva asociada su palabra en inglés, así como el audio de la misma. Además de la presentación de las diferentes tarjetas ordenadas por unidades y/o categorías, el módulo incluye una serie de juegos interactivos, para que el usuario final pueda practicar con las imágenes, palabras y audios: </p>
+            <img src="img/creacion_flashcards_by_me/1.gif">
+            <img src="img/creacion_flashcards_by_me/2.gif">
+            <img src="img/creacion_flashcards_by_me/3.gif">
+            <p>Por tanto, vamos a explicar las fases de edición para conseguir generar el módulo de flashcards.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Elección de las Flashcards</h3>
+            <p>Desde editorial, se nos proporcionarán las imágenes, los audios y el texto que debe ir en cada tarjeta (flashcard) además de indicarnos tanto la unidad a la que pertenece cada una, la categoría y el orden de aparición dentro de cada unidad. Habitualmente suelen proporcionarnos un doc con toda esta información similar a éste (puede ser diferente):</p>
+            <img src="img/creacion_flashcards_by_me/01.png">       
+        </section>
+        
+        <section class="tutorial">
+            <h3>Tratamiento de las imágenes</h3>
+            <p>Lo primero que hay que hacer es adaptar las imágenes de origen proporcionadas por editorial a un tamaño y formato adecuado, en este caso, sería:</p>
+            <ul>
+                <li>Tamaño: 613x460 px</li>
+                <li>Resolución: 72ppp</li>
+                <li>Formato: .jpg</li>
+            </ul>
+            <p>Estas serían las imágenes proporcionadas por editorial (observamos que pueden venir en diferentes formatos, tamaños y resoluciones):</p>
+            <img src="img/creacion_flashcards_by_me/02.png">
+            <p>Es buena práctica generar estas imágenes en una carpeta de trabajo fuera del repositorio del que estemos trabajando. Estas serían nuestras imágenes una vez tratadas:</p>
+            <img src="img/creacion_flashcards_by_me/03.png">
+            <p>Una vez tenemos todas las imágenes preparadas, las dejamos reservadas para el montaje posterior mediante la herramienta correspondiente del CAT.</p>
+            <p>Se ha de resaltar, que la nomenclatura de los archivos no puede contener ni espacios, ni caracteres especiales (como tildes, ñ, &#64;, &#33;, &#63;, apóstrofos, etc.), sin embargo, de momento no trataremos este problema, ya que la herramienta de edición de flashcards, realizará este proceso de forma automática.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Tratamiento de los audios</h3>
+            <p>Lo primero que hay que hacer es comprobar que los audios de origen proporcionadas por editorial vienen en formato adecuado:</p>
+            <ul>
+                <li>Formato: .mp3</li>
+            </ul>
+            <p>En caso contrario, o bien se solicitan de nuevo, o habría que pasar uno a uno por un conversor, para conseguirlo. Es buena práctica generar estos audios en una carpeta de trabajo fuera del repositorio del que estemos trabajando. Estas serían nuestros audios:</p>
+            <img src="img/creacion_flashcards_by_me/04.png">
+            <p>Una vez tenemos todas los audios preparados, los dejamos reservados para el montaje posterior mediante la herramienta correspondiente del CAT.</p>
+            <p>Se ha de resaltar, que la nomenclatura de los archivos no puede contener ni espacios, ni caracteres especiales (como tildes, ñ, &#64;, &#33;, &#63;, apóstrofos, etc.), sin embargo, de momento no trataremos este problema, ya que la herramienta de edición de flashcards, realizará este proceso de forma automática.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta CAT</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/creacion_flashcards_by_me/05.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/creacion_flashcards_by_me/06.png">
+            </ol>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Acceso a Flashcards</h3>
+            <p>En primer lugar, nos aseguramos de que el CAT está perfectamente updateado:</p>
+            <img src="img/creacion_flashcards_by_me/4.gif">
+            <p>Para acceder a la herramienta del Cat que nos ayudará a generar los flashcards pulsamos el siguiente icono, denominado Flashcards: </p>
+            <img src="img/creacion_flashcards_by_me/07.png">
+            <img src="img/creacion_flashcards_by_me/5.gif">
+        </section>
+        
+        <section class="tutorial">
+            <h3>Carga del material en el repositorio</h3>
+            <p>Tal y como hemos anticipado antes, nuestra herramienta nos permite cargar el material previamente tratado (imágenes y audios) en el repositorio del libro en el que estemos trabajando. Además, durante este proceso, realizará una “limpieza” de la nomenclatura de los archivos, para evitar posibles errores posteriores de carga en la plataforma web (espacios, caracteres especiales, etc). Por tanto, a partir de este momento, es probable que alguno de los archivos de imagen o audio que vienen reflejados en el doc, no tengan exactamente la misma nomenclatura, pero sí será muy similar y fácilmente identificable.</p>
+            <p>Comprobamos que, en nuestro repositorio, no existe la carpeta flashcards:</p>
+            <img src="img/creacion_flashcards_by_me/08.png">
+            <p>Desde la herramienta Flashcards pulsamos el botón “Repo”, en la pantalla que nos aparece pulsamos “Add asset” y se nos abrirá un explorador desde el que podremos acceder a las carpetas en las que hemos reservado nuestras imágenes y nuestros audios:</p>
+            <img src="img/creacion_flashcards_by_me/6.gif">
+            <p>Seleccionamos todas nuestras imágenes:</p>         
+            <img src="img/creacion_flashcards_by_me/7.gif">
+            <p>Repetimos pulsar “Add asset” y seleccionamos todos nuestros audios:</p>
+            <img src="img/creacion_flashcards_by_me/8.gif">
+            <p>Pulsaremos “Add new ones to the repository”, para que nos las cargue automáticamente en nuestro libro (esta operación puede tardar más o menos tiempo dependiendo del peso de los archivos a subir):</p>
+            <img src="img/creacion_flashcards_by_me/9.gif">
+            <p>Una vez cargadas, la pantalla de “Repo”, ya no las muestra en color verde (este color indica que los asset o archivos son nuevos y no están en el repositorio) y podemos filtrar por audios e imágenes, para comprobar que están todas las que vamos a necesitar:</p>
+            <img src="img/creacion_flashcards_by_me/10.gif">
+            <p>Si posteriormente necesitáramos cargar algún archivo nuevo, realizaríamos el mismo proceso.</p>
+            <p>Updateamos ahora nuestro repositorio y comprobamos que se nos ha generado la carpeta flashcards, dentro de ella habrá otras 2 carpetas que contienen de forma independiente las imágenes y los audios que acabamos de cargar desde la herramienta, perfectamente renombrados sin espacios ni caracteres especiales:</p>
+            <img src="img/creacion_flashcards_by_me/11.gif">
+        </section>
+        
+        <section class="tutorial">
+            <h3>Edición de las unidades</h3>
+            <p>En primer lugar, vamos a definir las unidades, que serán los bloques que nos aparecen en la pantalla principal, en nuestro ejemplo (Interaction, Our bodies, Animals, etc):</p>
+            <img src="img/creacion_flashcards_by_me/09.png">
+            <p>Para ello, pulsamos el botón “Open” y seleccionamos el archivo “flashcards.json” (nunca debe cambiarse de nombre)</p>
+            <img src="img/creacion_flashcards_by_me/12.gif">
+            <p>En el desplegable de “Units on the json”, seleccionamos “New unit” y observaremos que se nos activan los campos “Show” y “Unit title”, además de aparecer una nueva línea en la parte derecha:</p>
+            <img src="img/creacion_flashcards_by_me/13.gif">
+            <p>El campo “Show” viene marcado por defecto, si desactiváramos el check, la unidad correspondiente no se mostraría en la plataforma digital. Esta opción puede ser necesaria en algunos casos durante el proceso de edición, ya que es posible, que haya que dejar activas ciertas unidades (que ya estarían completas en contenido) y dejar ocultas otras (por ejemplo, porque están a medias de montar por falta de algún contenido o material pendiente de proporcionar desde editorial).</p>
+            <p>En el campo “Unit title” escribiremos el nombre de la unidad, tal y como nos lo hayan definido en el doc desde editorial, en nuestro ejemplo (Interaction, Our bodies, Animals, etc):</p>
+            <img src="img/creacion_flashcards_by_me/14.gif">
+            <p>Si intentamos salvar en este momento, nos avisará que existe un problema. Por lo que, para poder guardar una unidad, al menos debemos tener una card (que será cada una de las flashcard o tarjetas interactivas que se mostrarán). Esto es un sistema de seguridad, ya que no se pueden generar unidades sin contenido.</p>
+            <p>Por tanto, vamos a ver el proceso para generar cada una de las flashcards.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Edición de las flashcards</h3>
+            <p>Dentro de la unidad, nos posicionamos sobre la línea &#35;1 que apareció en el lado derecho de la pantalla, al pulsar sobre la zona morada se desplegará y nos aparecerán ciertos campos para editarla:</p>
+            <img src="img/creacion_flashcards_by_me/15.gif">
+            <p>Rellenaremos los campos siguiendo lo indicado en el doc de editorial, texto, imagen, audio y categoría:</p>
+            <img src="img/creacion_flashcards_by_me/10.png">
+            <img src="img/creacion_flashcards_by_me/11.png">
+            <p>El campo categoría, permite insertar más de una ya que la misma palabra puede pertenecer a varias. Para ello, volveremos a pulsar el botón “Add categories”, tantas veces nos sean necesarias. Además, si la categoría que necesitamos no está en el desplegable existente, nos permite la opción de definir la categoría que nosotros necesitemos:</p>
+            <img src="img/creacion_flashcards_by_me/16.gif">
+            <p>Una buena práctica de trabajo sería pulsar el botón “Save” cada vez que completamos una card (de esta forma el cambio queda guardado automáticamente en el repositorio):</p>
+            <img src="img/creacion_flashcards_by_me/17.gif">
+            <p>Del mismo modo, vamos generando todas y cada una de las cards de la unidad, para ello pulsaremos el botón + situado en la parte inferior derecha de la pantalla principal:</p>
+            <img src="img/creacion_flashcards_by_me/18.gif">
+            <p>Podemos ir comprobando el funcionamiento de los que llevamos creado pulsando el botón Test del menú superior:</p>
+            <img src="img/creacion_flashcards_by_me/19.gif">
+            <p>Una vez guardada la primera unidad, podemos proceder a generar más unidades repitiendo el mismo procedimiento:</p>
+            <img src="img/creacion_flashcards_by_me/20.gif">
+            <p>Una vez que hayamos cargado los contenidos, updatearemos nuestro repositorio, comprobando que en nuestra carpeta se ha creado e ido actualizando el archivo ”flashcards.json”</p>
+            <img src="img/creacion_flashcards_by_me/21.gif">
+        </section>
+        
+            
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
