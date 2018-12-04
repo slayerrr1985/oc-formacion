@@ -24,6 +24,14 @@ $azul_oscuro_oc: #0063a6;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    h2{
+        font-size: 1.3em;
+        line-height: 1.3em;
+        width: 100%;
+        border-bottom: 1px solid #c5c5c5;
+        padding: 0.25em;
+        margin: 0.5em 1em 0.25em 1em;
+    }
     .card{
         margin: 1em;
         border-radius: 5px;
