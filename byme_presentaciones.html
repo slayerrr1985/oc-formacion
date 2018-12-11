@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_primaria.png">
+        <ul></ul>
+        <a class="pdf-download" href="pdf/creacion_presentaciones_byme.pdf" target="_blank"><img src="img/pdf-sm.png"><span>Descargar en PDF</span></a>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual, vamos a ver cómo se crea el módulo interactivo de Presentations de los libros de ByMe. Habitualmente, este módulo no necesitará ser enlazado al libro, dado que su enlace estará preestablecido en el map del repositorio, por tanto, una vez se haya generado el contenido, podremos tener el módulo funcionando.</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>¿Qué son las Presentations?</h3>
+            <p>Como su propio nombre indica, se denominan Presentations a una serie de diapositivas interactivas, con una imagen que lleva asociada un texto, así como el audio del mismo. Además, las diferentes diapositivas van ordenadas por unidades.</p>
+            <img src="img/creacion_presentaciones_byme/1.gif">
+            <p>Por tanto, vamos a explicar las fases de edición para conseguir generar el módulo de Presentations.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Elección de las Presentaciones</h3>
+            <p>Desde editorial, se nos proporcionarán las imágenes, los audios y el texto que debe ir en cada diapositiva además de indicarnos la unidad a la que pertenece cada una y el orden de aparición dentro de cada unidad. Habitualmente suelen proporcionarnos un doc con toda esta información similar a éste (puede ser diferente):</p>
+            <img src="img/creacion_presentaciones_byme/01.png">
+         </section>
+        
+        <section class="tutorial">
+            <h3>Tratamiento de las imágenes</h3>
+            <p>Lo primero que hay que hacer es adaptar las imágenes de origen proporcionadas por editorial a un tamaño y formato adecuado, en este caso, sería:</p>
+            <ul>
+                <li>Tamaño: 613x460 px</li>
+                <li>Resolución: 72ppp</li>
+                <li>Formato: .png</li>
+            </ul>
+            <p>Estas serían las imágenes proporcionadas por editorial (observamos que pueden venir en diferentes formatos, tamaños y resoluciones):</p>
+            <img src="img/creacion_presentaciones_byme/02.png">
+            <p>Es buena práctica generar estas imágenes en una carpeta de trabajo fuera del repositorio del que estemos trabajando. Estas serían nuestras imágenes una vez tratadas:</p>
+            <img src="img/creacion_presentaciones_byme/03.png">
+            <p>Una vez tenemos todas las imágenes preparadas, las dejamos reservadas para el montaje posterior mediante la herramienta correspondiente del CAT.</p>
+            <p>Se ha de resaltar, que la nomenclatura de los archivos no puede contener ni espacios, ni caracteres especiales (como tildes, ñ, &#64;, &#33;, &#63;, apóstrofos, etc.), sin embargo, de momento no trataremos este problema, ya que la herramienta de edición de presentations, realizará este proceso de forma automática.</p>
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Tratamiento de los audios</h3>
+            <p>Lo primero que hay que hacer es comprobar que los audios de origen proporcionadas por editorial vienen en formato adecuado:</p>
+            <ul>
+                <li>Formato: .mp3</li>                
+            </ul>
+            <p>En caso contrario, o bien se solicitan de nuevo, o habría que pasar uno a uno por un conversor, para conseguirlo. Es buena práctica generar estos audios en una carpeta de trabajo fuera del repositorio del que estemos trabajando. Estas serían nuestros audios:</p>
+            <img src="img/creacion_presentaciones_byme/04.png">
+            <p>Una vez tenemos todas los audios preparados, los dejamos reservados para el montaje posterior mediante la herramienta correspondiente del CAT.</p>
+            <p>Se ha de resaltar, que la nomenclatura de los archivos no puede contener ni espacios, ni caracteres especiales (como tildes, ñ, &#64;, &#33;, &#63;, apóstrofos, etc.), sin embargo, de momento no trataremos este problema, ya que la herramienta de edición de presentations, realizará este proceso de forma automática.</p>           
+        </section>
+        
+        <section class="tutorial">
+            <h3>Login en la herramienta CAT</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/creacion_presentaciones_byme/05.png"> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/creacion_presentaciones_byme/06.png"></li> 
+            </ol>     
+        </section>
+        
+        <section class="tutorial">
+            <h3>Acceso a Pesentation</h3>
+            <p>En primer lugar, nos aseguramos de que el CAT está perfectamente updateado:</p>
+            <img src="img/creacion_presentaciones_byme/2.gif">
+            <p>Para acceder a la herramienta del Cat que nos ayudará a generar las presentaciones pulsamos el siguiente icono, denominado Presentation: </p>
+            <img src="img/creacion_presentaciones_byme/07.png">
+            <img src="img/creacion_presentaciones_byme/3.gif">
+         </section>
+        
+        <section class="tutorial">
+            <h3>Carga del material en el repositorio</h3>
+            <p>Tal y como hemos anticipado antes, nuestra herramienta nos permite cargar el material previamente tratado (imágenes y audios) en el repositorio del libro en el que estemos trabajando. Además, durante este proceso, realizará una “limpieza” de la nomenclatura de los archivos, para evitar posibles errores posteriores de carga en la plataforma web (espacios, caracteres especiales, etc). Por tanto, a partir de este momento, es probable que alguno de los archivos de imagen o audio que vienen reflejados en el doc, no tengan exactamente la misma nomenclatura, pero sí será muy similar y fácilmente identificable.</p>
+            <p>Comprobamos que, en nuestro repositorio, no existe la carpeta presentations:</p>
+            <img src="img/creacion_presentaciones_byme/08.png">
+            <p>Desde la herramienta Flashcards pulsamos el botón “Repo”, en la pantalla que nos aparece pulsamos “Add asset” y se nos abrirá un explorador desde el que podremos acceder a las carpetas en las que hemos reservado nuestras imágenes y nuestros audios:</p>
+            <img src="img/creacion_presentaciones_byme/4.gif">
+            <p>Seleccionamos todas nuestras imágenes:</p>
+            <img src="img/creacion_presentaciones_byme/5.gif">
+            <p>Repetimos pulsar “Add asset” y seleccionamos todos nuestros audios:</p>
+            <img src="img/creacion_presentaciones_byme/6.gif">
+            <p>Pulsaremos “Add new ones to the repository”, para que nos las cargue automáticamente en nuestro libro (esta operación puede tardar más o menos tiempo dependiendo del peso de los archivos a subir):</p>
+            <img src="img/creacion_presentaciones_byme/7.gif">
+            <p>Una vez cargadas, la pantalla de “Repo”, ya no las muestra en color verde (este color indica que los asset o archivos son nuevos y no están en el repositorio) y podemos filtrar por audios e imágenes, para comprobar que están todas las que vamos a necesitar:</p>
+            <img src="img/creacion_presentaciones_byme/8.gif">
+            <p>Si posteriormente necesitáramos cargar algún archivo nuevo, realizaríamos el mismo proceso.</p>
+            <p>Updateamos ahora nuestro repositorio y comprobamos que se nos ha generado la carpeta presentations, dentro de ella habrá otras 2 carpetas que contienen de forma independiente las imágenes y los audios que acabamos de cargar desde la herramienta, perfectamente renombrados sin espacios ni caracteres especiales:</p>
+            <img src="img/creacion_presentaciones_byme/9.gif">
+        </section>
+        
+        <section class="tutorial">
+            <h3>Edición de las unidades</h3>
+            <p>En primer lugar, vamos a definir las unidades, que serán los bloques que nos aparecen en la pantalla principal, en nuestro ejemplo (Unit 1, Unit 2, Unit 3):</p>
+            <img src="img/creacion_presentaciones_byme/09.png">
+            <p>Para ello, pulsamos el botón “Open” y seleccionamos el archivo “presentations.json” (<b><u>inicialmente</u></b> no debe cambiarse de nombre)</p>
+            <img src="img/creacion_presentaciones_byme/10.gif">
+            <p>En el desplegable de “Units on the json”, seleccionamos “New unit” y observaremos que se nos activan los campos “Show”, “Identifier” y “Unit number”</p>
+            <img src="img/creacion_presentaciones_byme/11.gif">
+            <p>El campo “Show” viene marcado por defecto, si desactiváramos el check, la unidad correspondiente no se mostraría en la plataforma digital. Esta opción puede ser necesaria en algunos casos durante el proceso de edición, ya que es posible, que haya que dejar activas ciertas unidades (que ya estarían completas en contenido) y dejar ocultas otras (por ejemplo, porque están a medias de montar por falta de algún contenido o material pendiente de proporcionar desde editorial).</p>
+            <p>El campo “Identifier” es muy importante en las presentaciones, ya que, en ciertas partes del libro, muestran diferentes presentaciones asociadas a la misma unidad (pueden ser diferentes tipos de presentaciones, o bien la misma presentación en varios idiomas), esta asociación de presentaciones a una misma unidad sólo podrá ser realizada aplicándole el mismo identifier. Para ello, aplicaremos siempre el mismo criterio:</p>
+            <ul>
+                <li>Unidad 1.- Identifier: u1</li>
+                <li>Unidad 2.- Identifier: u2</li>
+                <li>Unidad 3.- Identifier: u3</li>
+                <li>Unidad X.- Identifier: uX</li>
+            </ul>
+            <img src="img/creacion_presentaciones_byme/10.png">
+            <img src="img/creacion_presentaciones_byme/11.png">
+            <p>En el campo “Unit number” definiremos el texto que aparecerá en la cabecera de la unidad, en nuestro ejemplo Unit 1:</p>
+            <img src="img/creacion_presentaciones_byme/12.png">
+            <p>Una vez definidos estos campos, procederemos a salvar los campos, mediante el botón “Comit”. Realizaremos la misma operación con todas y cada una de las unidades, teniendo en cuenta que para que nos guarde los cambios es necesario realizar un comit por cada ud:</p>
+            <img src="img/creacion_presentaciones_byme/12.gif">
+            <p>Posteriormente, iremos completando cada una de las unidades. Para ello, seleccionamos la primera, y pulsamos el botón “+”:</p>
+            <img src="img/creacion_presentaciones_byme/13.gif">
+            <p>Observamos que, en la parte derecha, aparecen los campos “Unit title” y “Unit subtitle”, además de aparecer una nueva línea debajo. En el campo “Unit title” escribiremos el nombre de la unidad seguido del tipo de presentación que estamos creando, tal y como nos lo hayan definido en el doc desde editorial, en nuestro ejemplo Unit 1 Overview presentation:</p>
+            <img src="img/creacion_presentaciones_byme/13.png">
+            <p>En el campo “Unit subtitle” escribiremos el nombre del tema de la unidad, tal y como nos lo hayan definido en el doc desde editorial, en nuestro ejemplo (Interaction, Our bodies, Animals, etc):</p>
+            <img src="img/creacion_presentaciones_byme/14.png">
+            <img src="img/creacion_presentaciones_byme/15.png">
+            <p>Si intentamos salvar en este momento, nos avisará que existe un problema. Por lo que, para poder guardar una unidad, al menos debemos tener una diapositiva. Esto es un sistema de seguridad, ya que no se pueden generar presentaciones sin contenido.</p>
+            <img src="img/creacion_presentaciones_byme/14.gif">
+            <p>Por tanto, vamos a ver el proceso para generar cada una de las presentaciones.</p>
+         </section>
+        
+        <section class="tutorial">
+            <h3>Edición de las presentaciones</h3>
+            <p>Dentro de la unidad, nos posicionamos sobre la línea #1, al pulsar sobre la zona verdosa se desplegará y nos aparecerán ciertos campos para editarla:</p>
+            <img src="img/creacion_presentaciones_byme/15.gif">
+            <p>Rellenaremos los campos siguiendo lo indicado en el doc de editorial, texto, imagen y audio:</p>
+            <img src="img/creacion_presentaciones_byme/16.png">
+            <img src="img/creacion_presentaciones_byme/17.png">
+            <p>Una buena práctica de trabajo sería pulsar el botón “Comit” cada vez que completamos una diapositiva (de esta forma el cambio queda guardado automáticamente en el repositorio):</p>
+            <img src="img/creacion_presentaciones_byme/16.gif">
+            <p>Del mismo modo, vamos generando todas y cada una de las diapositivas de la unidad, para ello pulsaremos el botón + situado en la parte inferior derecha de la pantalla principal:</p>
+            <img src="img/creacion_presentaciones_byme/17.gif">
+            <p>Podemos ir comprobando el funcionamiento de los que llevamos creado pulsando el botón Test del menú superior:</p>
+            <img src="img/creacion_presentaciones_byme/18.gif">
+            <p>Una vez guardada la primera unidad, podemos proceder a generar más unidades repitiendo el mismo procedimiento (<b><u>imprescindible hacer comit una vez acabada cada unidad, para que guarde los cambios</u></b>):</p>
+            <img src="img/creacion_presentaciones_byme/20.gif">
+            <p>Una vez que hayamos cargado los contenidos, updatearemos nuestro repositorio, comprobando que en nuestra carpeta se ha creado e ido actualizando el archivo “presentations.json”</p>
+            <img src="img/creacion_presentaciones_byme/21.gif">
+         </section>
+        
+        <section class="tutorial">
+            <h3>Duplicar el json</h3>
+            <p>Tal y como anticipábamos antes, las presentaciones se muestran en distintos módulos de nuestra publicación digital, ya sea la misma versión de diferente idioma, ya sean distintos tipos de presentaciones.</p>
+            <p>Hasta ahora hemos estado generando el archivo “presentations.json” que habitualmente coincidirá con la versión en ingles de las presentaciones tipo “Overview presentation”.</p>
+            <p>Es importante que este json esté completo antes de iniciar el siguiente paso, ya que de lo contrario nos supondrá duplicar, triplicar o incluso cuadriplicar el trabajo posteriormente.</p>
+            <p>En esta operación vamos a generar 2 copias de el archivo que se denominarán:</p>
+            <ul>
+                <li>presentations_eng.json : este archivo contendrá la versión de las presentaciones que mostrará nuestra plataforma en versión inglés.</li>
+                <li>presentations_spa.json : este archivo contendrá la versión de las presentaciones que mostrará nuestra plataforma en versión español.</li>
+            </ul>
+            <p>Es importante no variar ni un carácter a estos archivos, ya que, de lo contrario, no se mostrará nada en la plataforma.</p>
+            
+          <section class="template">
+                <h4>Para realizar esta operación realizaremos los siguientes pasos:</h4>
+                <ol>
+                    <li>abrimos el archivo “presentations.json”: <img src="img/creacion_presentaciones_byme/22.gif"> </li>
+                    <li>Pulsamos “Duplicate json”, tecleamos el nuevo nombre y pulsamos aceptar:<img src="img/creacion_presentaciones_byme/23.gif"></li>
+                    <li>Pulsamos nuevamente “Duplicate json”, tecleamos el nuevo nombre de la versión en español y pulsamos aceptar:<img src="img/creacion_presentaciones_byme/24.gif"></li>
+                    <li>Observamos que ya tenemos los 3 json con el mismo contenido:<img src="img/creacion_presentaciones_byme/25.gif"></li>
+                    <li>Si updateamos nuestro repositorio, veremos los tres json:<img src="img/creacion_presentaciones_byme/26.gif"></li>
+                </ol>
+              
+           </section>   
+            <p>A partir de este momento nuestro archivo “presentations_eng.json” será la versión en inglés de nuestra presentación que muestra la plataforma. Cualquier modificación posterior solicitada por editorial, deberá realizarse en este archivo.</p>
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Versión en otro idioma de la presentación</h3>
+            <p>Habitualmente, todas las presentaciones se muestran también en versión español. De ahí que, en el paso anterior, hayamos realizado también el duplicado de nuestro json al formato “presentations_spa.json”</p>
+            <p>La editorial, debe proporcionarnos un doc, con las especificaciones necesarias para esta versión, además del material necesario para montarla (audios y textos traducidos a la nueva versión, ya que las imágenes suelen ser las mismas en ambas versiones):</p>
+            <img src="img/creacion_presentaciones_byme/18.png">
+            <p>Por tanto, en nuestra herramienta del CAT, añadiremos al repositorio los nuevos audios en español, siguiendo los mismos pasos que explicamos en el epígrafe de carga de material en el repositorio:</p>
+            <img src="img/creacion_presentaciones_byme/27.gif">
+            <p>Con el material cargado abriremos el json de la versión en español (presentations_spa.json):</p>
+            <img src="img/creacion_presentaciones_byme/28.gif">
+            <p>Seleccionamos la primera unidad:</p>
+            <img src="img/creacion_presentaciones_byme/29.gif">
+            <p>Traducimos los campos “Unit number” y “Unit title” sustituyendo el contenido por el indicado por editorial, en nuestro ejemplo “Presentación general de la unidad 1:”</p>
+            <img src="img/creacion_presentaciones_byme/30.gif">
+            <p>Después, iremos traduciendo cada una de las diapositivas, para ello, las desplegamos, traducimos su texto, y sustituimos el audio:</p>
+            <img src="img/creacion_presentaciones_byme/31.gif">
+            <p>Una vez realizado esto con todas y cada una de las diapositivas de todas las unidades, deberíamos obtener dos archivos json con la misma estructura, los textos traducidos y los audios correspondientes a cada idioma. </p>
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Dos tipos de presentaciones distintas en la misma unidad</h3>
+            <p>Como ya indicamos antes, hay libros especiales, que tienen diferentes tipos de presentaciones dentro de la misma unidad. No se trata de la traducción de la misma presentación como veíamos en el epígrafe anterior, sino de una completamente diferente.</p>
+            <p>A pesar de ello, comenzaremos duplicando uno de los json de presentaciones que ya tenemos generados, ya que al menos parte de la estructura general será coincidente y podremos aprovechar esa parte del trabajo, modificando exclusivamente lo que vayamos necesitando.</p>
+            <img src="img/creacion_presentaciones_byme/19.png">
+            <p>En el ejemplo que vemos en la captura anterior, las unidades impares solo tienen presentaciones tipo “Overview” (las que hemos creado hasta ahora), pero las unidades pares llevan además presentaciones tipo “Create”. Por tanto, vamos a explicar el proceso de edición de las “Create”.</p>
+            <p>Al tratarse de unas presentaciones en versión inglés, procederemos a duplicar el archivo “presentations_eng.json” y lo denominaremos “presentations_eng_create.json”. es muy importante no variar ningún caracter, ya que el libro tendrá preenlazado este archivo y de lo contrario, la plataforma no mostrará su contenido:</p>
+            <img src="img/creacion_presentaciones_byme/32.gif">
+            <p>Seleccionamos el nuevo json que acabamos de crear, y en el caso de nuestro ejemplo, borraríamos las unidades impares:</p>
+            <img src="img/creacion_presentaciones_byme/33.gif">
+            <img src="img/creacion_presentaciones_byme/34.gif">
+            <p>Ahora editaríamos las unidades que tenemos, para ajustarlas a su contenido correspondiente:</p>
+            <img src="img/creacion_presentaciones_byme/35.gif">
+            <img src="img/creacion_presentaciones_byme/36.gif">
+            <p>Y lo mismo con cada una de las diapositivas:</p>
+            <img src="img/creacion_presentaciones_byme/37.gif">
+            <p>Una vez realizado con todas las unidades, tendríamos nuestras presentaciones tipo “Create” en versión inglés.</p>
+            <p>Dependiendo de los casos, según nos sea solicitado por editorial, este tipo de presentaciones podrá llevar solo versión inglesa o también la versión traducida al español.</p>
+            <p>Si nos solicitaran la segunda opción, una vez montado el archivo:</p>
+            <p>presentations_eng_create.json</p>
+            <p>Procederíamos a duplicar de nuevo este archivo y realizaríamos los mismos pasos detallados en el epígrafe anterior, con la única salvedad, que el nuevo archivo debería denominarse “presentations_spa_create.json".</p>
+        </section>
+        
+    
+        
+        <section class="tutorial">
+            <h3>Reordenación de unidades y&#47;o diapositivas</h3>
+            <p>Es probable que en alguna ocasión tengamos que hacer una reordenación de las presentaciones que van en cada unidad.</p>
+            <p>Para ello, abriremos el json que queramos modificar y pulsaremos el botón “Reorder Units”. En la pantalla que nos aparece, recolocaremos las unidades en el nuevo orden que nos interese, y pulsaremos “Save changes”</p>
+            <img src="img/creacion_presentaciones_byme/38.gif">
+            <p>Posteriormente, editaremos cada una de ellas, para que indiquen el nuevo título que les corresponde, según la nueva ordenación:</p>
+            <img src="img/creacion_presentaciones_byme/39.gif">
+            <p>En el caso de las diapositivas, también podemos reordenarlas si fuera necesario, para ello, iremos a la unidad en cuestión, y tan solo tendremos que arrastrar la línea que contiene cada una de ellas para proceder a su nueva ordenación:</p>
+            <img src="img/creacion_presentaciones_byme/40.gif">
+            <p>Una vez salvemos los cambios, nos mostrará el contenido tal y como lo hemos reordenado.</p>
+            
+        </section>
+        
+        
+        <section class="tutorial">
+            <h3>Eliminación de json</h3>
+            <p>Como hemos ido viendo, se generan diversos archivos json, según las necesidades de cada libro. Sin embargo, es necesario eliminar aquellos que no sean necesarios. En concreto el archivo de partida que nos sirvió a modo de plantilla para ir generando todos los demás, debe ser eliminado, ya que no va a ser utilizado por la plataforma.</p>
+            <p>Para ello, le abrimos mediante el botón “Open” y una vez seleccionado pulsamos el botón “Delete” en la parte correspondiente al json:</p>
+            <img src="img/creacion_presentaciones_byme/41.gif">
+            <p>Updateamos el repositorio, para confirmar que sólo estén los json que necesita nuestro proyecto:</p>
+            <img src="img/creacion_presentaciones_byme/42.gif">
+        </section>
+                    
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
