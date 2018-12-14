@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/cat_toc.png">
+        <ul></ul>
+       
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual vamos a ver como se organizan y nombran las páginas en un libro, sus epígrafes, y múltiples características de manejo de la herramienta para poder conseguir el resultado deseado por la editorial. Combinando las diferentes opciones que vamos a ir viendo, se pueden obtener diversos resultados, por lo que es imposible abarcar todos los casos posibles. Comenzaremos realizando un ejemplo con un libro perteneciente al proyecto ByMe Learn Together, aunque en otros proyectos, las opciones pueden variar. A medida que un editor esté familiarizado con la herramienta, será capaz de combinar las opciones, para poder conseguir un resultado final u otro.</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+               <li>Usuario y contraseña del CAT a utilizar:<br>
+                <img src="img/TOC_byme/01.png"></li> 
+               <li>Svn del proyecto a trabajar, usuario de svn y contraseña:<br>
+                <img src="img/TOC_byme/02.png"></li> 
+            </ol>                        
+        </section>
+
+        <section class="tutorial">
+            <h3>Acceder al TOC</h3>
+            <p>Como ya indicamos en manuales anteriores, el TOC es el menú lateral izq. de la herramienta “Makers editor” en el que se encuentran todas y cada una de las pág. que contiene nuestro libro:</p>
+            <img src="img/TOC_byme/03.png"> 
+            <p>Para la preparación del TOC, es necesario tener en todo momento abierto el archivo pdf de la unidad o parte del libro que estemos generando.</p>
+        </section>
+
+        <section class="tutorial">
+            <h3>Preparación de las unidades</h3>
+            <p>Comenzaremos la explicación con una unidad intermedia, ya que las unidades especiales tipo introducción, repaso o trimestral, tienen características especiales.</p>
+            <p>Abrimos el pdf de la unidad 1, en nuestro caso de ejemplo el archivo: 01_Alumno-U01_Contenidos.pdf de la carpeta PDF del repositorio:</p>
+            <img src="img/TOC_byme/04.png">
+            <p>En el cat, sobre el TOC, elegimos el ítem correspondiente con la misma unidad, que será la carpeta que contiene todas las pág. que comienzan con el mismo nombre del archivo pdf seguidas del nº de pág. real de impresión:</p>
+            <img src="img/TOC_byme/05.png">
+            <p>Haciendo doble clic sobre el ítem, se nos abre la pantalla de edición, en su modalidad de “Simple Editor”</p>
+            <img src="img/TOC_byme/06.png">    
+            <p>En el campo Title copiamos y pegamos el título de la unidad existente en el pdf (ojo, revisar que todos los caracteres se han pegado correctamente, ya que a veces podemos arrastrar algún formato no deseado, si esto ocurriera, debemos eliminar formato en un editor externo al cat) y en el campo Description el número de la unidad a la que corresponde. En este caso, el resto de opciones disponibles en esta pantalla se dejan como vienen por defecto:</p>
+            <img src="img/TOC_byme/07.png">
+            <img src="img/TOC_byme/07b.png">
+            <p>Pulsamos Save changes y esperamos a que nos salga mensaje de comit efectuado y que se recargue automáticamente el TOC:</p>
+            <img src="img/TOC_byme/1.gif">
+            <p>Todas las demás unidades se irán renombrando del mismo modo. En el caso de las unidades especiales, deberán darnos las pautas deseadas desde editorial. En el ejemplo que nos ocupa se nombrarían de la siguiente manera:</p>
+            <ul>
+                <li>00_Alumno-U00: Contiene la cubierta, el indice y la ud 0, por lo que debemos recolocar las páginas para dejar esta estructura:<img src="img/TOC_byme/07c.png"><img src="img/TOC_byme/07d.png"></li>
+                <li>Las unidades tipo “T” (trimestrales) se denominarán: TERM 1 description: T1 (T2 o T3 según corresponda)<img src="img/TOC_byme/07e.png"></li>
+                <li>Las unidades tipo “P” (project) se descuelgan dentro del trimestral, añadiendo exclusivamente sus páginas, hasta conseguir esta estructura: <img src="img/TOC_byme/07k.png"></li>
+                <li>Las unidades tipo “Pd” se renombrarán dependiendo de cada libro, teniendo en cuenta que en el campo description, solo se deben poner un máximo de 2 caracteres normalmente será editorial quien nos determine los caracteres a poner, aunque los más habituales son:<img src="img/TOC_byme/07f.png"><img src="img/TOC_byme/07g.png"><img src="img/TOC_byme/07h.png"><img src="img/TOC_byme/07i.png"><img src="img/TOC_byme/07j.png"></li>
+            </ul>
+            
+            
+
+        </section>
+        
+        <section class="tutorial">
+            <h3>Renombrado y colocación de páginas unidades tipo</h3>
+            <p>También comenzaremos la explicación con una unidad intermedia, ya que las unidades especiales tipo introducción, repaso o trimestral, tienen características especiales (mismo motivo que antes).</p>
+            <p>Abrimos el pdf de la unidad 1, en nuestro caso de ejemplo el archivo: 01_Alumno-U01_Contenidos.pdf de la carpeta PDF del repositorio:</p>
+            <img src="img/TOC_byme/16.png">
+            <p>En el cat, sobre el TOC, elegimos el ítem correspondiente con la primera página de misma unidad, que será la carpeta que contiene todas las pág. que comienzan con el mismo nombre del archivo pdf seguidas del nº de pág. real de impresión.</p>
+            <img src="img/TOC_byme/17.png">
+            <p>Hacemos doble clic en el ítem y se nos abrirá el editor de nuevo, como en el apartado anterior. Normalmente la primera página se denomina igual que el título que hemos colocado en el epígrafe de la unidad. El campo description se deja vacío, y de momento el resto de opciones como vienen por defecto:</p>
+            <img src="img/TOC_byme/18.png">
+            <p>Las siguientes páginas que existan en el pdf, hasta que nos encontremos un nuevo epígrafe, se denominarán del mismo modo, ya que se trata de pág. que pertenecen al epígrafe que acabamos de crear.</p>
+            <p>En este caso, la 2ª pág. o posteriores que sean pertenecientes al epígrafe anterior, además de mantener el nombre, deberán tener la opción habilitada de is visible=no, para que no se nos muestre el mismo título más de una vez:</p>
+            <img src="img/TOC_byme/19.png">
+            <img src="img/TOC_byme/20.png">
+            <p>Observaremos al refrescarse el TOC, que este título nos aparece en un tono más claro, lo que indica a simple vista que la opción is visible=no ha sido activada:</p>
+            <img src="img/TOC_byme/21.png">
+            <p>Por ultimo, dado que esta página pertenece al epigrafe anterior, debemos descolgarla como item hijo, arrastrandola mediante el cursor y dando al save que nos aparece en la parte superior del TOC:</p>
+            <img src="img/TOC_byme/2.gif">
+            <p>Esperaremos a que nos salga el mensaje de que el comit se ha realizado y se refresque el toc, para continuar con el proceso:</p>
+            <p>Se repite el proceso en todas y cada una de las pags de nuestro libro hasta que tengamos todas perfectamente renombradas y colocadas. Basta con ir siguiendo el pdf de cada tema añadiendo cada epigrafe nuevo del pdf como título, y el resto de las páginas que lo conforman se descuelgan de él como items hijos y título identico con opción is visible=no.</p>
+            <p>Una vez se genere el libro en la plataforma (se explicará en manual posterior cómo se realiza), el proceso de renombrado se iría viendo así:</p>
+            <img src="img/TOC_byme/23.png">
+            <p>Como podemos observar, los títulos que hemos ido dejando con la opción is visible=no, no se muestran en el índice del libro en el apartado de contenidos.</p>
+                        
+            <p>Siguiendo estas pautas, iremos renombrando todas las páginas de cada una de las unidades, hasta que hayamos completado la totalidad del libro.</p>
+        </section>
+        <section class="tutorial">
+            <h3>Renombrado y colocación de páginas unidades especiales</h3>
+            <p>En el caso de las unidades especiales, no requieren mención especial, dado que no hay más que seguir el pdf correspondiente utilizando las pautas indicadas en el apartado anterior.</p>
+            <p>La unidad 00_Alumno-U00_Contenidos.pdf, si suele tener un tratamiento especial, ya que como recordaremos, al inicio ya comentamos que contenía la cubierta, el índice y la unidad 0. </p>
+            <p>Iremos por tanto en el TOC al item correspondiente a la pag 1 que corresponde a la cubierta.</p>
+            <img src="img/TOC_byme/31.png">
+            <p>Renombraremos el item como Cover y lo colocaremos justo debajo del item que se ha generado por defecto en el manifiesto denominado Cubierta.</p>  
+            <p>Editamos el item llamandolo cover y con propiedad is visible=no</p>
+            <img src="img/TOC_byme/31b.png">
+            <p>Las páginas 2 y 3, se renombran como Contens 1 y 2 y se descuelgan de la Cover, hasta conseguir esta estructura: </p>
+            <img src="img/TOC_byme/31c.png">
+            <p>Por tanto, el epígrafe correspondiente a la Ud 0, ya contendrá sólo las páginas correspondientes a esta unidad, que se renombrará del mismo modo que las unidades intermedias.</p>
+            
+        </section>        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
