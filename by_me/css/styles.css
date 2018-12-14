@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.eot");
+  src: url("../fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.eot");
+  src: url("../fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.eot");
+  src: url("../fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Medium.eot");
+  src: url("../fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Bold.eot");
+  src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: "roboto";
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 120px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px;
+  min-height: calc(100vh - 212px);
+  width: 92%;
+}
+
+h2 {
+  line-height: 1.3em;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+h3 {
+  color: #0063a6;
+  line-height: 1.3em;
+}
+
+ul, ol {
+  line-height: 1.6em;
+  padding: 0 1.1em;
+}
+ul li, ol li {
+  margin: 0.8em 0;
+}
+
+video {
+  width: 100%;
+  margin: 2em auto;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 75px;
+}
+footer .footer-content {
+  width: 80%;
+  margin: 25px auto;
+}
+footer .footer-content .logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.header_logo {
+  margin: 0 auto;
+  display: block;
+}
+
+.main_menu {
+  margin: 1em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main_menu h2 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+  width: 100%;
+  border-bottom: 1px solid #c5c5c5;
+  padding: 0.25em;
+  margin: 0.5em 1em 0.25em 1em;
+}
+.main_menu .card {
+  margin: 1em;
+  border-radius: 5px;
+  width: 280px;
+}
+.main_menu .card img {
+  border-radius: 5px;
+  object-fit: cover;
+}
+.main_menu .card p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  height: 100%;
+  line-height: 148px;
+}
+.main_menu .card a {
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+}
+.main_menu .card:hover img {
+  opacity: 0.8;
+}
+.main_menu .deactivate {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
+}
+
+.introduction {
+  padding: 0.5em 1.5em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.tutorial {
+  padding: 0.5em 1.5em;
+  border-top: solid 1px grey;
+  margin-top: 1em;
+}
+.tutorial img {
+  display: block;
+  margin: 2em auto;
+}
+
+.template {
+  padding: 0.5em 1.5em;
+  margin-top: 2em;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+.template .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4em;
+  margin: 0 0 0.5em 0;
+}
+.template .links h5 {
+  font-size: 0.9em;
+  margin: 0;
+}
+.template .links a {
+  display: block;
+  margin: 1em 0;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  background-color: #008d76;
+  color: #ffffff;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+.template .links a:hover {
+  background-color: #6eb7a6;
+}
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  border-radius: 35px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+
+#return-to-index {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+}
+
+#return-to-index i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 17px;
+  top: 15px;
+  font-size: 19px;
+  transition: all 0.3s ease;
+}
+
+#return-to-index:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-index:hover i {
+  color: #fff;
+  left: 8px;
+}
+
+.drawer {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+}
+.drawer img {
+  display: block;
+}
+.drawer h2 {
+  padding: 1em;
+  color: #f5f5f5;
+  margin: 0;
+  height: 70px;
+  line-height: 2em;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1em;
+}
+.drawer h2 a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+.drawer ul {
+  display: block;
+  background-color: #333333;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+.drawer ul li {
+  list-style: none;
+  border-bottom: 1px solid #111;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
+}
+.drawer ul li a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+.drawer ul li a:hover {
+  background-color: #0063a6;
+}
+.drawer ul ul {
+  font-size: 0.9em;
+  padding-left: 1em;
+}
+.drawer ul ul a:hover {
+  background-color: #008d76;
+}
+.drawer .pdf-download {
+  display: block;
+  padding: 0.8em 1em;
+  color: #f5f5f5;
+  font-size: 0.9em;
+  margin: 0;
+}
+.drawer .pdf-download img {
+  height: 1.8em;
+  display: inline-block;
+}
+.drawer .pdf-download span {
+  display: inline-block;
+  height: 1.8em;
+  vertical-align: top;
+  line-height: 1.8em;
+  padding-left: 0.5em;
+}
+.drawer .pdf-download:hover {
+  background-color: #008d76;
+}
+
+.drawer-button {
+  cursor: pointer;
+  display: block;
+  background-color: #111;
+  color: #f5f5f5;
+  position: fixed;
+  /* Stay in place */
+  left: 180px;
+  top: 0;
+  /* Stay at the top */
+  z-index: 1;
+  /* Stay on top */
+  text-align: center;
+  transform: rotate(-90deg);
+  transform-origin: 100% 0;
+  height: 30px;
+  width: 70px;
+  line-height: 25px;
+  margin: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 7px 7px;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 0px 30px -5px rgba(0, 0, 0, 0.61);
+}
+
+.body_with_drawer {
+  margin-left: 250px;
+  transition: all 0.5s ease;
+}
+
+.hidden-drawer {
+  left: -250px;
+}
+
+.hidden-button {
+  left: -70px;
+}
+
+/*# sourceMappingURL=styles.css.map */
