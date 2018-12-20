@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OC Formación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Styles -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+      
+    <!-- Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+
+    <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="body_with_drawer">
+    
+    <!-- Back to Index -->
+    <a id="return-to-index" href="./index.html"><i class="icon-chevron-left"></i></a>
+        
+    <!-- Return to Top -->
+    <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    <header class='thetop'>
+        <h1><img class="header_logo" src="img/logo-claim.png" alt="Oneclick"></h1>
+    </header>
+
+    <div class="drawer">
+        <div class="drawer-button">menu</div>
+        <img src="img/card_hotspots.png">
+        <ul></ul>
+    </div>
+
+    <div class="container">
+
+        <section class="introduction">
+            <h2>Introducción</h2>
+            <p>En este manual vamos a ver como se enlazan los contenidos interactivos que contienen nuestras publicaciones digitales. Algunos de ellos irán vinculados a las propias páginas del libro, otros en módulos independientes creados a tal fin y en algunas ocasiones pueden ir enlazados en varias ubicaciones a la vez.  </p>
+        </section>
+
+        <section class="tutorial">
+            <h3>¿Qué es un Hotspot?</h3>
+            <p>Como su propio nombre indica un Hotspot es una “zona caliente”. Esto quiere decir, que es un área de la página web que se muestra en pantalla en la que, al pasar el cursor por encima, permite pulsar y abrirá una acción determinada:</p>
+            <img src="img/hotspots_byme/1.gif">
+            <p>Los hotspot pueden ser de múltiples contenidos diferentes como actividades, audios, karaokes, etc. Cada uno de estos contenidos tiene que ser creado de forma independiente, aunque su creación es objeto de un manual posterior.</p>
+            <p>En este manual, vamos a aprender como vincular este tipo de contenidos a un libro, por lo que éste debe estar previamente digitalizado tal y como se ha explicado en los manuales precedentes.</p>
+            <p>Para enlazar los contenidos interactivos a nuestro libro, necesitamos de nuevo la herramienta CAT.</p>
+            
+            
+        </section>
+
+        <section class="tutorial">
+            <h3>Login en la herramienta</h3>
+            <p>Para poder logarse en el CAT es necesario disponer de:</p>
+            <ol>
+                <li>Usuario y contraseña del CAT a utilizar: <img src="img/hotspots_byme/01.png"></li>
+                <li>Svn del proyecto a trabajar, usuario de svn y contraseña: <img src="img/hotspots_byme/02.png"></li>
+            </ol>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Markers panel</h3>
+            <p>Para la creación de los hotspot, necesitamos la herramienta de edición del CAT “Markers Editor”.</p>
+            <img src="img/hotspots_byme/03.png">
+            <p>En primer lugar, debemos seleccionar la página del TOC en la que queremos crear un hotspot. Para ello, tan solo debemos pulsar (un solo clic) la página. En este punto hay que recordar que, para la creación de las páginas del libro, se tuvo especial cuidado a la hora de mantener la paginación real desde el corte de los pdf hasta la creación del manifiesto, precisamente para que, en este momento, podamos identificar cada una de las páginas del libro.</p>
+            <p>Al pulsar sobre la página, en la parte derecha de la zona de trabajo, se nos mostrará además de la imagen digitalizada de la página, un panel denominado “Markers panel”:</p>
+            <img src="img/hotspots_byme/2.gif">
+            <p>Este panel, es la herramienta de trabajo necesaria para la creación de los hotspot. En primer lugar, vemos que nos muestra información de la página que vamos a editar. En el apartado “Workspace” nos indica el HTML de la página que nos está mostrando, y la simple lectura de la nomenclatura del archivo nos indica mucha información. Analicemos el ejemplo de la captura que se adjunta a continuación: </p>
+            <img src="img/hotspots_byme/04.png">
+            <p>02_Alumno-U02_Contenidos_022.html:</p>
+            <ul>
+                <li>02_: página correspondiente al pdf 02</li>
+                <li>Alumno-: página correspondiente al Libro del Alumno</li>
+                <li>U02_Contenidos_: página correspondiente a los contenidos de la unidad 2</li>
+                <li>022: numeración real de la página en formato impreso</li>
+            </ul>
+            <img src="img/hotspots_byme/05.png">
+            <p>Por tanto, para conocer toda la información de cualquiera de las páginas, tan solo bastará con pulsar en el TOC cada una de ellas y leer la información que nos proporciona el Workspace. </p>
+            <p>Si el proceso de creación del manifiesto no ha seguido los pasos descritos desde el inicio de forma estricta, el resto de los procesos a partir de aquí darán lugar a problemas en el libro, por lo que, si cualquier editor detecta un error de nomenclatura o paginación en cualquiera de las páginas del libro, debe avisar al supervisor para solucionarlo antes de continuar implementando contenidos.</p>
+            <p>El panel de Markers panel puede aparecer en diferentes zonas de la pantalla de trabajo dependiendo del navegador elegido, aunque el mismo permite ser arrastrado por el usuario, para colocarlo en la zona que le resulte más cómoda para realizar el trabajo:</p>
+            <img src="img/hotspots_byme/3.gif">
+        </section>        
+            
+        <section class="tutorial">
+            <h3>Creación de un Hotspot</h3>
+            <p>Para crear un hotspot en el Markers panel pulsamos el botón “Add mark area”. Observamos que bajo el epígrafe Markers se despliega un pequeño panel denominado “Mark 1” y en la imagen de la pag nos aparece un cuadrado sombreado:</p>
+            <img src="img/hotspots_byme/4.gif">
+            <p>Para abrir (o cerrar) el Mark 1 pulsamos el icono “Resources properties”:</p>
+            <img src="img/hotspots_byme/06.png">
+            <img src="img/hotspots_byme/5.gif">
+            <p>En el campo Type hay un desplegable que nos permite seleccionar el tipo de contenido que vamos a enlazar (actividad, audio, video, etc.):</p>
+            <img src="img/hotspots_byme/6.gif">
+            <p>El campo Browser nos abre un buscador de archivos para seleccionar el archivo correspondiente a contenido a enlazar, aunque también podríamos teclear directamente la ruta en el recuadro que tiene encima si la conociéramos (procedimiento nada recomendable). Una vez seleccionemos el archivo en el buscador, la ruta nos aparecerá directamente en el recuadro indicado:</p>
+            <img src="img/hotspots_byme/7.gif">
+            <p>En el Area propiertries (pixels) existen unos cursores de desplazamiento que nos permiten dimensionar el cuadro sombreado que nos apareció de inicio sobre la página. Puede utilizarse: </p>
+            <ul>
+                <li>Tecleando los pixels directamente: <img src="img/hotspots_byme/8.gif"></li>
+                <li>Mediante las flechas de crecimiento o decrecimiento para conseguir un ajuste más preciso (cada pulsación corresponde a 1px): <img src="img/hotspots_byme/9.gif"></li>
+                <li>Arrastrando y dimensionando el área sobre la propia pág.: <img src="img/hotspots_byme/10.gif"></li>
+            </ul>
+            <p>El resto de las opciones disponibles en este panel, se irán explicando en cada uno de los tipos específicos de hotspots que podemos generar.</p>
+            <p>Una vez, se han rellenado todos los campos necesarios del mark 1, podemos pulsar:</p>
+            <ul>
+                <li>Preview: <img src="img/hotspots_byme/11.gif"></li>
+                <li>Save: que guardará los cambios y añadirá el nuevo contenido al TOC: <img src="img/hotspots_byme/12.gif"></li>
+                <li>Reset: Borra todos los marks guardados previamente en la página. Es una opción delicada que veremos más adelante.</li>
+            </ul>
+            <p>Podemos añadir cuantos marks sean necesarios a cada página, pulsando el botón Add mark área:</p> 
+            <img src="img/hotspots_byme/13.gif">
+            <p>Cada guardado del Markers panel, guardará todos los cambios que se hayan introducido en todos los marks existentes en la pag, por lo que hay que tener cuidado de no modificar marks correctos generados previamente.</p>  
+        </section>
+        
+        <section class="tutorial">
+            <h3>Eliminación de un Hotspot</h3>
+            <p>La eliminación de un hotspot que ya ha sido guardado requiere 2 pasos a realizar en el siguiente orden:</p>
+            <ol>
+                <li>Localizamos el hotspot a eliminar en el TOC. Pulsamos con un solo clic para que salga la barra de opciones lateral. Pulsamos la papelera. Confirmamos su eliminación. Esperamos al mensaje de comit y recarga del TOC. Volvemos a la página en la que se encontraba dicho hotspot. Observamos en ese momento, que ya no aparece como ítem hijo de la página, aunque sigue existiendo dentro del Markers panel como mark 1: <img src="img/hotspots_byme/14.gif"><img src="img/hotspots_byme/07.png"></li>
+                <li>Eliminamos el mark 1 en el Markers panel pulsando el icono del aspa situado junto a su icono de opciones. Se pulsa save del Markers panel para que guarde el borrado:<img src="img/hotspots_byme/15.gif"></li>
+            </ol>
+            <p>Si no se realizan ambos pasos, el hotspot no desaparece del todo del libro. Este doble borrado, es una de las opciones imprescindibles para los diferentes tipos de enlace que tendrán nuestros contenidos y que se irán comprendiendo a lo largo de este manual, ya que, dependiendo de las ocasiones, necesitaremos que un hotspot se encuentre en el TOC y en la página, sólo en el TOC o sólo en la página.</p>
+            <p>Tal y como hemos visto, hay gran diversidad de hotspot, y diferentes opciones de configuración. Por tanto, vamos a ir viendo los casos más habituales uno por uno.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Hotspot de actividades</h3>
+            <p>Como se ha explicado en el apartado de creación de un hotspot, generamos un mark nuevo. En el campo Type debemos seleccionar Exercise (es la que aparece por defecto).</p>
+            <p>En el ejemplo vamos a enlazar la actividad que corresponde con el ejercicio 1 de la pag, por tanto, definimos el area sobre la misma: </p>
+            <img src="img/hotspots_byme/16.gif">
+            <p>Seleccionamos el archivo que contiene dicha actividad pulsando el botón Browser:</p>
+            <img src="img/hotspots_byme/17.gif">
+            <p>El buscador, está programado para localizar la ruta en la que se encuentran las actividades (siempre y cuando previamente se haya seleccionado el type exercise). Además, mostrará por defecto las actividades que pertenezcan a la pagina en la que nos encontramos, dado que las actividades habrán sido creadas previamente a su enlace y nombradas según el siguiente criterio (U01_018_01.html): </p>            
+            <ul>
+                <li>U01_: unidad a la que pertenece (siempre U+2díitos+guión bajo)</li>
+                <li>018_: página a la que pertenece (siempre con 3 dígitos+guión bajo)</li>
+                <li>01: número de la actividad (siempre 2 dígitos)</li>
+            </ul>
+            <img src="img/hotspots_byme/08.png">
+            <p>Cuando vamos a seleccionar el archivo correspondiente en el browser, si pinchamos en el icono de la lupa, se nos abrirá una previsualización, que nos permite revisar la actividad antes incluso de enlazarla (utilizamos otro libro para ver este ejemplo):</p>
+            <img src="img/hotspots_byme/18.gif">
+            <p>Del mismo modo, se generan tantos marks como actividades tenga la página en cuestión y al finalizar pulsamos el Save del Markers panel para que guarde cambios en la página y nos transfiera la actividad al TOC:</p>
+            <img src="img/hotspots_byme/19.gif">
+            <p>Habitualmente, las actividades no necesitas ser renombradas en la parte del TOC, ya que, por defecto, el CAT las denomina con el número indicado en el nombre del archivo de la misma. Pero si fuera necesario editar el nombre por algún motivo, se accedería al editor, y se editaría del mismo modo que se han editado los títulos de las páginas explicado en el :</p>
+                <section class="links">
+                        <div>
+                            <a href="http://oneclick.es/formacion/TOC.html">manual de uso de TOC</a>
+                        </div>
+                </section>
+            <p>Las actividades deben colocarse en el TOC como hijos de la página a la que pertenecen, por tanto, en las pág. de epígrafe como en el ejemplo que estamos viendo, deberán recolocarse del mismo modo que hicimos con las páginas en la configuración del TOC y guardar pulsando el SAVE de la zona de TOC:</p>
+            <img src="img/hotspots_byme/20.gif">
+            <p>Esta operación, ha de realizarse con todas y cada una de las actividades del libro que se hayan generado como actividad interactiva, incluyéndolas página a página.</p>
+            <p>Para comprender mejor el funcionamiento vamos a ver como ha quedado este tipo de enlace en un libro.</p>
+            <p>Las áreas que hemos dimensionado sobre la imagen de la página aparecerán sombreadas en el libro cuando pasemos el cursor por encima, éste cambiará a mano y nos permitirá pulsar para abrir la actividad. Todo este proceso, funcionará con todos y cada uno de los marks que existan en el Markers panel:</p>
+            <img src="img/hotspots_byme/21.gif">
+            <p>Además, si presionamos el primer botón situado junto al buscador, nos mostrará todos los hotspot que contenga la página:</p>
+            <img src="img/hotspots_byme/22.gif">
+            <p>De esta manera, si realizamos el primer paso del borrado del hotspot de una actividad, ésta desaparecerá del índice, pero seguirá estando activa en la página. Si por el contrario borramos el mark dejando el ítem hijo en el toc, no se podrá acceder a la actividad desde la página, pero seguirá apareciendo y estando activa como actividad dentro del índice.</p>
+            <p>Para que la actividad desaparezca por completo, habría que realizar el doble borrado explicado en el apartado eliminación de un hotspot.</p>
+            <p>Lo habitual es que las actividades estén en ambos lugares, sin embargo, habrá que ceñirse a las directrices marcadas por la editorial, en cada proyecto concreto.</p>
+        </section>
+        
+        <section class="tutorial">
+            <h3>Hotspot de audios</h3>
+            <p>Como se ha explicado en el apartado de creación de un hotspot, generamos un mark nuevo. En el campo Type debemos seleccionar Audio.</p>
+            <p>En el ejemplo vamos a enlazar el audio, corresponde con un texto de la página, por tanto, definimos el área sobre el mismo: </p>
+            <img src="img/hotspots_byme/09b.png">
+            <p>Seleccionamos el archivo que contiene dicho audio pulsando el botón Browser:</p>
+            <img src="img/hotspots_byme/23.gif">
+            <p>El buscador, está programado para localizar la ruta en la que se encuentran los audios (siempre y cuando previamente se haya seleccionado el type audio). Además, mostrará por defecto los audios que pertenezcan a la página en la que nos encontramos, dado que los mismos deberían haber sido creados previamente a su enlace y nombrados según el siguiente criterio (U01_018_01.html): </p>  
+            <ul>
+                <li>U01_: unidad a la que pertenece (siempre U+2díitos+guión bajo)</li>
+                <li>018_: página a la que pertenece (siempre con 3 dígitos+guión bajo)</li>
+                <li>01: número de audio dentro de la página (siempre 2 dígitos)</li>
+            </ul>
+            <p>Cuando vamos a seleccionar el archivo correspondiente en el browser, si pinchamos en el icono de la lupa, se nos abrirá una previsualización, que nos permite escuchar el audio antes incluso de enlazarlo:</p>
+            <img src="img/hotspots_byme/24.gif">
+            <p>En muchas ocasiones, los audios, no siguen este sistema de renombrado, ya que, por motivos de editorial, es necesario que muestren por ejemplo un código interno de la pista de audio. En este caso, el buscador no nos lo mostraría directamente, pero podemos teclear .mp3 en el buscador, y nos mostrará todos los archivos de audio disponibles para seleccionar el que nos interese:</p>
+            <img src="img/hotspots_byme/25.gif">
+            <p>Del mismo modo, se generan tantos marks como audios tenga la página en cuestión y al finalizar pulsamos el Save del Markers panel para que guarde cambios en la página y nos transfiera la actividad al TOC:</p>
+            <img src="img/hotspots_byme/26.gif">
+            <p>Observamos que se nos ha creado un ítem hijo, con icono de micrófono, lo que indica que es un audio. Observamos que por defecto aparece con el nombre del archivo y en texto más diluido que indica que tiene el parámetro is visible=no, y por tanto dicho título no sería visible en el índice del libro interactivo.</p>
+            <p>Esta operación, ha de realizarse con todos y cada uno de los audios del libro que nos hayan proporcionado, incluyéndolos página a página. </p>
+        </section>
+      
+        
+        <section class="tutorial">
+            <h3>Hotspot de Deep zoom (Dz)</h3>
+            <p>Los hotspots de Dz se realizan exactamente igual que los audios. Tan sólo cambiaremos la opción del type del Markers panel por Deep Zoom:</p>
+            <img src="img/hotspots_byme/13.png">
+            <p>En el caso del Browser, los dz deben llevar siempre la nomenclatura correcta para que los muestre por defecto por página:</p>
+            <img src="img/hotspots_byme/14.png">
+            <p>Una vez salvado, el icono que nos aparece en el TOC es diferente y muestra una especie de X con volumen:</p>
+            <img src="img/hotspots_byme/15b.png">
+            <p>Las opciones de renombrado y colocación son exactamente las mismas explicadas en el apartado de audios.</p>
+        </section>
+                    
+        
+        <section class="tutorial">
+            <h3>Hotspot de Time Lines</h3>
+            <p>Los hotspots de líneas de tiempo se realizan exactamente igual que los audios. Tan sólo cambiaremos la opción del type del Markers panel por Timeline:</p>
+            <img src="img/hotspots_byme/19.png">
+            <p>En el caso del Browser, los timelines deben llevar siempre la nomenclatura correcta para que los muestre por defecto por página:</p>
+            <img src="img/hotspots_byme/20b.png">
+            <p>Una vez salvado, el icono que nos aparece en el TOC es diferente y muestra un pequeño reloj:</p>
+            <img src="img/hotspots_byme/21b.png">
+            <p>Las opciones de renombrado y colocación son exactamente las mismas explicadas en el apartado de audios.</p>
+        </section>
+        
+         
+        
+        <section class="tutorial">
+            <h3>Hotspot de karaoke</h3>
+            <p>Los hotspots de karaoke se realizan exactamente igual que los audios. Tan sólo cambiaremos la opción del type del Markers panel por Karaoke:</p>
+            <img src="img/hotspots_byme/25.png">
+            <p>En el caso del Browser, los karaokes pueden llevar distintas nomenclaturas:</p>
+            <img src="img/hotspots_byme/26.png">
+            <p>Una vez salvado, el icono que nos aparece en el TOC es diferente y muestra unas notas musicales con letras:</p>
+            <img src="img/hotspots_byme/27.png">
+            <p>Las opciones de renombrado y colocación son exactamente las mismas explicadas en el apartado de audios.</p>
+        </section>
+    
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="img/oneclick.png">
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="js/magic.js"></script>
+
+</html>
